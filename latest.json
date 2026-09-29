@@ -1,0 +1,14 @@
+{
+  "versionCode": 2,
+  "versionName": "1.1.0",
+  "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/clone-by-ophelia-v1.1.0.apk",
+  "sha256": "c71f829948232a41a08e654166f63ffcc562f3ee3923520ed0c1fa12b45e7a9a",
+  "releaseNotes": [
+    "Full-screen icon editor: zoom in and out, drag your photo anywhere, pick the background fill — the icon exports exactly as you frame it",
+    "Icons now export edge-to-edge with rounded corners, like real app icons (fixes icons looking tiny or dark)",
+    "Uninstalled clones are removed from your list automatically",
+    "Curated apps & games: WhatsApp, Telegram, Facebook, Snapchat, Instagram, Free Fire, BGMI/PUBG, Clash of Clans, Brawl Stars and more",
+    "Loading screen credit: a small glowing 'Developed by Deadlock Studio' on clones",
+    "In-app updates: the app now checks this repo for new versions on every open"
+  ]
+}
