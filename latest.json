@@ -1,12 +1,13 @@
 {
-  "versionCode": 6,
-  "versionName": "1.5.0",
-  "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/clone-by-ophelia-v1.5.0.apk",
-  "sha256": "f1d2a187022acdc345beee90ad7abc423e824be0c6a654434d55bea7be459067",
+  "versionCode": 7,
+  "versionName": "1.6.0",
+  "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/clone-by-ophelia-v1.6.0.apk",
+  "sha256": "e0dc6867287b8c3c68c951f6dd9906a95e0afd0643bdbfd95832e4d55eeca034",
   "releaseNotes": [
-    "NEW: the icon editor is now a proper crop screen \u2014 dark 'Edit Image' editor with a square 1:1 crop window, rule-of-thirds grid, pinch/drag to position, a zoom slider with live percentage, and Rotate + Shape buttons (Shape previews how launchers mask your icon: square / rounded / squircle / circle)",
-    "FIXED: the 'Developed by Deadlock Studio' credit on clone loading screens was getting cut in half on Android 12+ phones (the splash logo is circle-masked there). It now sits in the always-visible centre of the splash and shows completely, including the last letters",
-    "NEW APP in the Products tab: Cool Widgets by Deadlock Studio \u2014 12 home screen widgets in 7 categories (digital & analog clocks, big date, countdowns, battery ring, weather for any city, sticky notes, daily quotes, flashlight, search, settings shortcuts, photo frames). Only 2 permissions total, both explained in the app",
-    "Engine: the credit-strip downscaler now samples every source pixel exactly once (integer rounding used to drop the right edge of the text)"
+    "NEW: ACCOUNT SWITCHER INSIDE CLONES — every clone now gets a second home-screen icon (⚡ Switch). Open it, tap CAPTURE CURRENT ACCOUNT to save a login, then switch between saved logins instantly. ONE clone, MANY accounts, no more extra downloads for more accounts.",
+    "NEW: QUICK SWITCH NOTIFICATION — a persistent notification with one-tap buttons for your clones. Pull the shade anywhere, tap a clone, you're in. Toggle it on the home screen.",
+    "How the switcher works (honest version): it snapshots the clone's saved login state and restores it on switch — the same trick power users do manually, automated. Discord's own login/session data stays on Discord's servers; nothing is shared or uploaded.",
+    "The account switcher is ON by default for new clones (switch it off in the options before creating). Old clones: tap the update (↻) button on their card to rebuild them with the switcher.",
+    "Full self-check in CI now also verifies the injected switcher on every build."
   ]
 }

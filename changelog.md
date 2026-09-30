@@ -2,6 +2,15 @@
 
 All notable stable releases of Clone by Ophelia (Deadlock Studio). The latest version is always described in [latest.json](latest.json), the feed the app checks on every open.
 
+## v1.6.0 — 2026-09-30
+
+- **THE BIG ONE — ACCOUNT SWITCHER INSIDE EVERY CLONE.** Every new clone ships with a second home-screen icon: **"Discord Alt ⚡ Switch"** (your clone's name + ⚡). Open it and you get the Ophelia Quick Switch screen: tap **CAPTURE CURRENT ACCOUNT** while logged in with account A, then log out / log in as account B and capture again — from then on, switching between the two logins is ONE TAP. One clone, many accounts, **no need to create more clones just for more accounts** (exactly what you asked for). The switcher snapshots the clone's saved login state and restores it on switch — fully offline, nothing uploaded anywhere
+- **Quick Switch notification** (home screen toggle): a silent persistent notification with one-tap buttons for your most-used clones — switch instances from anywhere via the notification shade
+- Old clones can be upgraded in place: tap **↻ (update)** on their card and they're rebuilt **with the switcher injected** — no reinstall of your accounts needed if you stay logged in during the update
+- **Ophelia Widgets v1.1.0** in the Products tab: 11 new widgets (total 23) — the neon Ophelia brand set (Ophelia Clock, crimson Battery ring, ornate Signature lockup), Year Progress, Day Progress, Moon Phase, World Clock, Storage gauge, RAM monitor, Tally counter, Decision spinner — plus the new studio wordmark icon and the "Ophelia Widgets" name
+- **NEW Deadlock Studio app — Junk Cleaner** (Products tab): one-tap Smart Clean with full review before deletion, a system cache boost that uses the official Android storage API (the same lever Google's Files app uses — no root), and a per-app cache dashboard. Lightweight, honest, 3 permissions all explained in the app
+- Engine: brand-new AXML node-injection capability — the manifest patcher can now ADD components (the switcher activity + permission), verified end-to-end on the real Discord 347.12 APK in CI
+
 ## v1.5.0 — 2026-09-30
 
 - **The icon editor is now a proper crop screen** (the design you asked for): a dark "Edit Image" editor with a centered square crop window, rule-of-thirds grid, white frame, pinch/drag to position the photo, a zoom slider with live percentage, and a Rotate button (90° steps) plus a Shape button that previews how launchers will mask your icon (square / rounded / squircle / circle)
