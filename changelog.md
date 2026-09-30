@@ -2,6 +2,13 @@
 
 All notable stable releases of Clone by Ophelia (Deadlock Studio). The latest version is always described in [latest.json](latest.json), the feed the app checks on every open.
 
+## v1.4.0 — 2026-09-30
+
+- **New app identity — the Ophelia brand package.** The app's internal package name is now `com.ophelia.appcloner` (the old build carried a leftover internal name). Because Android treats a different package as a different app, **install this update and then uninstall the old "Clone by Ophelia" icon** — both will appear on your launcher until you remove the old one. Your cloned apps are NOT affected; they keep working exactly as before
+- **~3x bigger Deadlock Studio credit** on clone loading screens: a bold two-line "DEVELOPED BY / DEADLOCK STUDIO" lockup with gradient + glow — clearly visible on every splash
+- **Google sign-in / passkey awareness while cloning**: the configure screen now shows a heads-up card when the target app's only login is Google (YouTube, Gmail, Google Photos…) and a tip card for apps with clone-friendly logins (Discord / WhatsApp / Telegram QR login). Help → "Google sign-in & passkeys" got per-app guidance
+- Pic Hider **v1.2.0** in the Products tab: the photo-import and custom-icon crashes are fixed at the root (the vault used to lock itself the moment the gallery picker opened), fingerprint unlock now also works on Class-2 sensors (most budget face-unlock phones), the PIN setup / lock / change screens were rebuilt as a professional step-by-step wizard, and the app gained a 21-test self-check that runs on every release
+
 ## v1.3.0 — 2026-09-30
 
 - **Custom icons fixed for real** — clones now get genuine adaptive icons: your photo keeps full quality (no more black or blurry icons), and every icon variant of the app is replaced, including Discord's in-app icon styles (matte dark and friends)

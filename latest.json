@@ -1,15 +1,13 @@
 {
-  "versionCode": 4,
-  "versionName": "1.3.0",
-  "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/clone-by-ophelia-v1.3.0.apk",
-  "sha256": "5e7193a2f37b5b220bae39ced27f4304690e47dc75cdd527981f75351c663ae9",
+  "versionCode": 5,
+  "versionName": "1.4.0",
+  "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/clone-by-ophelia-v1.4.0.apk",
+  "sha256": "5fa9206805510f9682d5ba85f0e430b329be9fd94d136fff09a2bbe447ba024c",
   "releaseNotes": [
-    "Custom icons fixed for real — clones now get genuine adaptive icons: your photo keeps full quality (no more black or blurry icons), and every icon variant of the app is replaced, including Discord's in-app icon styles (matte dark and friends)",
-    "Icon editor redesigned: cleaner full-screen editor with live launcher previews (circle / squircle / rounded) so you see exactly what your home screen will show",
-    "Fixed 'Download failed' when installing Pic Hider from the Products tab",
-    "Downloaded APKs (app updates and studio products) are cleaned up automatically after install — your storage no longer fills up",
-    "Pre-installed apps updated from the Play Store (YouTube, Amazon, PhonePe…) can now be cloned like any normal app",
-    "New researched sections in About: why some apps show 'Get the app from Google Play' and how to handle Google sign-in / passkeys in clones",
-    "Pic Hider v1.1.0 in the Products tab: app disguise — switch its launcher name and icon (Calculator, Notes, Gallery, or your own custom shortcut)"
+    "NEW APP IDENTITY: the app now lives under the Ophelia brand package (com.ophelia.appcloner) instead of the old internal one. IMPORTANT: install this update, then uninstall the old 'Clone by Ophelia' from your launcher — both will coexist until you remove the old one. Your clones are not affected",
+    "The 'Developed by Deadlock Studio' credit on clone loading screens is now ~3x bigger — a proper two-line studio lockup you can actually read",
+    "Cloning screen now warns you upfront when an app's main login is Google sign-in / passkeys (YouTube, Gmail…) and shows which login actually works inside clones (Discord/WhatsApp/Telegram QR login, email+password)",
+    "Help section expanded: per-app guidance for signing in to clones without Google",
+    "Pic Hider v1.2.0 in the Products tab: photo import and custom-icon crashes fixed (root-caused), fingerprint unlock now works on Class-2 face/fingerprint sensors, all-new professional PIN screens"
   ]
 }

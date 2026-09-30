@@ -4,13 +4,13 @@
       "id": "pic-hider",
       "name": "Pic Hider",
       "tagline": "Private photo & video vault — locked behind your PIN",
-      "description": "Hide photos and videos behind a PIN-encrypted vault (AES-256). Optional fingerprint unlock, built-in viewer with zoom and video playback, and one-tap export back to your gallery. Nothing ever shows up in gallery apps or file managers. NEW in v1.1.0: disguise the app itself — switch its launcher name and icon to Calculator, Notes or Gallery, or add a custom home-screen shortcut with any name and picture.",
+      "description": "Hide photos and videos behind a PIN-encrypted vault (AES-256). Fingerprint/face unlock (works on Class-2 sensors too), built-in viewer with zoom and video playback, and one-tap export back to your gallery. NEW in v1.2.0: photo import and custom shortcut icons work on every phone (crashes root-caused and fixed), a professional step-by-step PIN setup, and fingerprint login that no longer says 'not available' on budget sensors. Also: disguise the app as Calculator, Notes or Gallery, or add a custom home-screen shortcut with any name and picture.",
       "packageName": "com.deadlockstudio.pichider",
-      "versionName": "1.1.0",
-      "versionCode": 2,
-      "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/pic-hider-v1.1.0.apk",
-      "sha256": "19356b7b14e7070f5a6fb2e96e42e66e1890ec1cc6a83efa6342310721578f58",
-      "sizeBytes": 7842411
+      "versionName": "1.2.0",
+      "versionCode": 3,
+      "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/pic-hider-v1.2.0.apk",
+      "sha256": "ba1f3c5d396eefadaa5bebd76ec140f965bfc224caddea9e8be485cbc37a9b4e",
+      "sizeBytes": 7876055
     }
   ]
 }
