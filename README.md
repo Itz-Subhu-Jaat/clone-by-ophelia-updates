@@ -2,7 +2,9 @@
 
 This is the **official update channel** for **Clone by Ophelia**, the app cloner by **Deadlock Studio**.
 
-The app's source code lives in a **private repository**. This separate, public repository exists for one purpose: **delivering stable OTA (over-the-air) updates** to installed copies of Clone by Ophelia.
+The app's source code lives in a **private repository**. This separate, public repository exists for two purposes: **delivering stable OTA (over-the-air) updates** to installed copies of Clone by Ophelia, and **distributing Deadlock Studio's other apps** (the Products tab inside Clone by Ophelia).
+
+Only **built APKs and metadata** live here — no source code of any Deadlock Studio app is published in this repo.
 
 ## How updates work
 
@@ -19,8 +21,9 @@ If the feed's `versionCode` is higher than the installed version, the app offers
 | Path | Purpose |
 |---|---|
 | `latest.json` | Machine-readable update feed the app reads on every open (`versionCode`, `versionName`, `apkUrl`, `sha256`, `releaseNotes`) |
+| `products.json` | Deadlock Studio app catalogue for the in-app Products tab (`id`, `name`, `tagline`, `description`, `packageName`, `versionName`, `versionCode`, `apkUrl`, `sha256`, `sizeBytes`) |
 | `changelog.md` | Human-readable update log / version history |
-| `apk/` | Stable release APKs (one file per version) |
+| `apk/` | Stable release APKs (one file per app and version, e.g. `clone-by-ophelia-v1.2.0.apk`, `pic-hider-v1.0.0.apk`) |
 
 The published branch is **`main`**.
 

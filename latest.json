@@ -1,14 +1,14 @@
 {
-  "versionCode": 2,
-  "versionName": "1.1.0",
-  "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/clone-by-ophelia-v1.1.0.apk",
-  "sha256": "c71f829948232a41a08e654166f63ffcc562f3ee3923520ed0c1fa12b45e7a9a",
+  "versionCode": 3,
+  "versionName": "1.2.0",
+  "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/clone-by-ophelia-v1.2.0.apk",
+  "sha256": "13c6e2f16683b2286ff1cbacd671e52cda3db83eac38daf53380f7e30c957c9d",
   "releaseNotes": [
-    "Full-screen icon editor: zoom in and out, drag your photo anywhere, pick the background fill — the icon exports exactly as you frame it",
-    "Icons now export edge-to-edge with rounded corners, like real app icons (fixes icons looking tiny or dark)",
-    "Uninstalled clones are removed from your list automatically",
-    "Curated apps & games: WhatsApp, Telegram, Facebook, Snapchat, Instagram, Free Fire, BGMI/PUBG, Clash of Clans, Brawl Stars and more",
-    "Loading screen credit: a small glowing 'Developed by Deadlock Studio' on clones",
-    "In-app updates: the app now checks this repo for new versions on every open"
+    "New Ophelia brand app icon \u2014 the official Clone by Ophelia mark",
+    "Products tab: install Deadlock Studio's other apps, starting with Pic Hider (private photo & video vault)",
+    "System apps (Play Store, Gallery\u2026) are now dimmed and blocked with a clear reason instead of failing at install",
+    "Curated apps that aren't installed get an \"install app\" tile that opens their Play Store page in one tap",
+    "Clones show a bold glowing \"Developed by Deadlock Studio\" credit on their loading screen (removable only under Advanced)",
+    "App source can't be cloned anymore only when it truly can't (sharedUserId apps are rejected up front with a clear message)"
   ]
 }

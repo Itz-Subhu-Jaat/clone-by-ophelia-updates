@@ -1,0 +1,16 @@
+{
+  "products": [
+    {
+      "id": "pic-hider",
+      "name": "Pic Hider",
+      "tagline": "Private photo & video vault \u2014 locked behind your PIN",
+      "description": "Hide photos and videos behind a PIN-encrypted vault (AES-256). Optional fingerprint unlock, built-in viewer with zoom and video playback, and one-tap export back to your gallery. Nothing ever shows up in gallery apps or file managers.",
+      "packageName": "com.deadlockstudio.pichider",
+      "versionName": "1.0.0",
+      "versionCode": 1,
+      "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/pic-hider-v1.0.0.apk",
+      "sha256": "1ff2e094f1d8a1d750ca98e33f9e2bda5d57dc357de34664f9f6de0e128bebd2",
+      "sizeBytes": 7821062
+    }
+  ]
+}
