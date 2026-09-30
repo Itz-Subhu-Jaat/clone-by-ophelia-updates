@@ -2,6 +2,13 @@
 
 All notable stable releases of Clone by Ophelia (Deadlock Studio). The latest version is always described in [latest.json](latest.json), the feed the app checks on every open.
 
+## v1.5.0 — 2026-09-30
+
+- **The icon editor is now a proper crop screen** (the design you asked for): a dark "Edit Image" editor with a centered square crop window, rule-of-thirds grid, white frame, pinch/drag to position the photo, a zoom slider with live percentage, and a Rotate button (90° steps) plus a Shape button that previews how launchers will mask your icon (square / rounded / squircle / circle)
+- **Fixed the Deadlock Studio credit being cut in half on Android 12+**: modern Android circle-masks the splash logo, and the credit used to sit outside the mask. It now lives in the always-visible centre of the splash — "DEVELOPED BY / DEADLOCK STUDIO" shows completely, including the last letters, on every Android version
+- **NEW Deadlock Studio app — Cool Widgets**: 12 home screen widgets in 7 categories (digital clock, analog clock, big date, countdown, battery ring, weather for any city you type, sticky note, daily quote, flashlight, quick search, settings shortcuts, photo frame). Only 2 permissions in the whole app, both explained up front. Install it from the Products tab
+- Engine: the credit-strip downscaler now samples every pixel of the studio lockup exactly once (integer rounding used to silently drop the right edge of the text)
+
 ## v1.4.0 — 2026-09-30
 
 - **New app identity — the Ophelia brand package.** The app's internal package name is now `com.ophelia.appcloner` (the old build carried a leftover internal name). Because Android treats a different package as a different app, **install this update and then uninstall the old "Clone by Ophelia" icon** — both will appear on your launcher until you remove the old one. Your cloned apps are NOT affected; they keep working exactly as before

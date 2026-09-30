@@ -3,7 +3,7 @@
     {
       "id": "pic-hider",
       "name": "Pic Hider",
-      "tagline": "Private photo & video vault — locked behind your PIN",
+      "tagline": "Private photo & video vault \u2014 locked behind your PIN",
       "description": "Hide photos and videos behind a PIN-encrypted vault (AES-256). Fingerprint/face unlock (works on Class-2 sensors too), built-in viewer with zoom and video playback, and one-tap export back to your gallery. NEW in v1.2.0: photo import and custom shortcut icons work on every phone (crashes root-caused and fixed), a professional step-by-step PIN setup, and fingerprint login that no longer says 'not available' on budget sensors. Also: disguise the app as Calculator, Notes or Gallery, or add a custom home-screen shortcut with any name and picture.",
       "packageName": "com.deadlockstudio.pichider",
       "versionName": "1.2.0",
@@ -11,6 +11,18 @@
       "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/pic-hider-v1.2.0.apk",
       "sha256": "ba1f3c5d396eefadaa5bebd76ec140f965bfc224caddea9e8be485cbc37a9b4e",
       "sizeBytes": 7876055
+    },
+    {
+      "id": "cool-widgets",
+      "name": "Cool Widgets",
+      "tagline": "Hand-crafted home screen widgets \u2014 clocks, weather, notes, quick tools",
+      "description": "12 real home screen widgets in 7 categories: a self-ticking Digital Clock (4 themes, 12/24h), Analog Clock, Big Date, event Countdowns, a live Battery Ring, Weather for ANY city you type (no location permission \u2014 looked up once), colourful Sticky Notes, a rotating Daily Quote, a permission-free Flashlight toggle, Quick Search, Settings Shortcuts and a Photo Frame. Only two permissions in the whole app (Internet for weather + boot-completed to keep schedules alive after restart), both explained up front. One tap adds any widget to your home screen.",
+      "packageName": "com.deadlockstudio.coolwidgets",
+      "versionName": "1.0.0",
+      "versionCode": 1,
+      "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/cool-widgets-v1.0.0.apk",
+      "sha256": "4c7c2521616efe89dc4a5d83fd711fae15ab83f9b7ea0b75e65757946e7166f5",
+      "sizeBytes": 6611484
     }
   ]
 }
