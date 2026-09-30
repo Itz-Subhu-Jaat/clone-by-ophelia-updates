@@ -2,6 +2,16 @@
 
 All notable stable releases of Clone by Ophelia (Deadlock Studio). The latest version is always described in [latest.json](latest.json), the feed the app checks on every open.
 
+## v1.3.0 — 2026-09-30
+
+- **Custom icons fixed for real** — clones now get genuine adaptive icons: your photo keeps full quality (no more black or blurry icons), and every icon variant of the app is replaced, including Discord's in-app icon styles (matte dark and friends)
+- **Icon editor redesigned**: cleaner full-screen editor with live launcher previews (circle / squircle / rounded) so you see exactly what your home screen will show — no more confusing crop box
+- Fixed "Download failed: Failed to find configured root" when installing Pic Hider from the Products tab
+- Downloaded APKs (app updates and studio products) are deleted automatically after the install finishes — your storage no longer fills up
+- Pre-installed apps that were updated from the Play Store (YouTube, Amazon, PhonePe, …) can now be cloned like any normal app; only true system apps stay dimmed
+- About screen: new researched sections on why some apps show "Get the app from Google Play" and how to sign in to clones without Google (email, QR, one-time links)
+- Pic Hider v1.1.0 in the Products tab: **app disguise** — switch its launcher name and icon to Calculator, Notes or Gallery, or pin a custom shortcut with any name and any picture
+
 ## v1.2.0 — 2026-09-30
 
 - New app icon: the official Ophelia brand mark

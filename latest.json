@@ -1,14 +1,15 @@
 {
-  "versionCode": 3,
-  "versionName": "1.2.0",
-  "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/clone-by-ophelia-v1.2.0.apk",
-  "sha256": "13c6e2f16683b2286ff1cbacd671e52cda3db83eac38daf53380f7e30c957c9d",
+  "versionCode": 4,
+  "versionName": "1.3.0",
+  "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/clone-by-ophelia-v1.3.0.apk",
+  "sha256": "4ba23f3d2dc7815a34150fb27f8c20d17f61cae2ea0455df7fad478e22b06b23",
   "releaseNotes": [
-    "New Ophelia brand app icon \u2014 the official Clone by Ophelia mark",
-    "Products tab: install Deadlock Studio's other apps, starting with Pic Hider (private photo & video vault)",
-    "System apps (Play Store, Gallery\u2026) are now dimmed and blocked with a clear reason instead of failing at install",
-    "Curated apps that aren't installed get an \"install app\" tile that opens their Play Store page in one tap",
-    "Clones show a bold glowing \"Developed by Deadlock Studio\" credit on their loading screen (removable only under Advanced)",
-    "App source can't be cloned anymore only when it truly can't (sharedUserId apps are rejected up front with a clear message)"
+    "Custom icons fixed for real — clones now get genuine adaptive icons: your photo keeps full quality (no more black or blurry icons), and every icon variant of the app is replaced, including Discord's in-app icon styles (matte dark and friends)",
+    "Icon editor redesigned: cleaner full-screen editor with live launcher previews (circle / squircle / rounded) so you see exactly what your home screen will show",
+    "Fixed 'Download failed' when installing Pic Hider from the Products tab",
+    "Downloaded APKs (app updates and studio products) are cleaned up automatically after install — your storage no longer fills up",
+    "Pre-installed apps updated from the Play Store (YouTube, Amazon, PhonePe…) can now be cloned like any normal app",
+    "New researched sections in About: why some apps show 'Get the app from Google Play' and how to handle Google sign-in / passkeys in clones",
+    "Pic Hider v1.1.0 in the Products tab: app disguise — switch its launcher name and icon (Calculator, Notes, Gallery, or your own custom shortcut)"
   ]
 }
