@@ -104,14 +104,23 @@
       "id": "junk-cleaner",
       "name": "Junk Cleaner",
       "tagline": "Smart clean + big files + duplicate finder (no root)",
-      "description": "One-tap SMART CLEAN scans shared storage for thumbnail caches, empty folders, leftover installers and temp files — everything reviewed before deletion. NEW in v1.1.0 — BIG FILES: the 25 largest files on your storage with per-file confirm-delete. DUPLICATES: byte-identical copies found via a 3-stage engine (size buckets → 64 KB head hash → full content hash) — one tap keeps the first copy and cleans the rest, always after a review dialog. Plus SYSTEM CACHE BOOST (the official Android storage API pattern, the same lever Google's own tools use) and the per-app APP CACHES dashboard. Never touches Android/data, never deletes without review, no fake RAM/CPU 'boost' nonsense.",
+      "description": "One-tap SMART CLEAN scans shared storage for thumbnail caches, empty folders, leftover installers and temp files — everything reviewed before deletion. BIG FILES and hash-verified DUPLICATES finders built in. NEW in v1.2.0: real runtime media permissions (the app asks for Photos/Videos/Audio like a normal app — the Android permissions page lists them now), and the launcher icon is your own Junk Cleaner artwork.",
       "packageName": "com.deadlockstudio.junkcleaner",
-      "versionName": "1.1.0",
-      "versionCode": 3,
-      "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/junk-cleaner-v1.1.0.apk",
-      "sha256": "bd32e77cea78a0976c77c71b1fd0d20d676e4ea09712c140422dc88436425229",
+      "versionName": "1.2.0",
+      "versionCode": 4,
+      "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/junk-cleaner-v1.2.0.apk",
+      "sha256": "3412f0b610f7138b7d86c607291affad2a224f399ef07921fffa1a183e8375c0",
       "sizeBytes": 6849094,
       "changelog": [
+        {
+          "version": "1.2.0",
+          "date": "2026-10-01",
+          "notes": [
+            "The app now asks for real Android permissions (Photos & videos, Music & audio) with a one-tap card — the app-info Permissions page lists them properly instead of showing 'no permissions requested'.",
+            "New launcher icon: your own Junk Cleaner artwork, full-bleed adaptive icon.",
+            "All v1.1.0 features unchanged: Big Files top-25, hash-verified duplicate finder, cache boost, per-app cache dashboard."
+          ]
+        },
         {
           "version": "1.1.0",
           "date": "2026-10-01",
@@ -140,14 +149,25 @@
       "id": "easypair",
       "name": "EasyPair",
       "tagline": "Offline high-speed sharing between two nearby phones — no data, no limits",
-      "description": "Offline transfer between two nearby phones — Wi-Fi Direct, hotspot, same Wi-Fi, USB cable (tethering) and Bluetooth; photos, videos, audio, files, folders, apps (APK) and clipboard text, no limits. NEW in v1.1.0: every received file is registered — the Received Files screen lets you browse everything that landed in Downloads/EasyPair, tap to open it, re-share it onward (single file or all at once) or delete it for good.",
+      "description": "Offline transfer between two nearby phones — Wi-Fi (UDP broadcast discovery like LocalSend), hotspot, same Wi-Fi, USB cable (tethering) and Bluetooth; photos, videos, audio, files, folders, apps (APK) and clipboard text, no limits. NEW in v1.2.0: the crash when tapping Photos & videos is fixed, an in-app gallery with multi-select tiles replaces the system photo picker, real Android permissions are requested (Photos/Videos/Audio show on the app's permissions page now), nearby devices pop up automatically on the same Wi-Fi or hotspot, and the app wears your own EasyPair artwork as its icon.",
       "packageName": "com.deadlockstudio.easypair",
-      "versionName": "1.1.0",
-      "versionCode": 2,
-      "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/easypair-v1.1.0.apk",
-      "sha256": "4f3242787e3e7a7cc25c2a63bb3e7acb41e8ee35e92132fc5b231447af9d0166",
+      "versionName": "1.2.0",
+      "versionCode": 3,
+      "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/easypair-v1.2.0.apk",
+      "sha256": "e7ada0fbeef20062b647ee0ef978919f8ee284db85e49e36fac0739903f87a66",
       "sizeBytes": 1308657,
       "changelog": [
+        {
+          "version": "1.2.0",
+          "date": "2026-10-01",
+          "notes": [
+            "Fixed the crash on tapping Photos & videos (the system photo picker was being asked for more items than Android allows — it threw a SecurityException at launch).",
+            "NEW in-app gallery (LocalSend-style): your photos and videos as a multi-select tile grid with thumbnails — permission asked once, system picker still available as fallback.",
+            "The app now actually ASKS for its permissions (Photos & videos, Music & audio, Nearby devices) — the Android app-info page finally lists them; a Permissions card in Settings shows and manages each.",
+            "Nearby discovery reworked on the LocalSend pattern: receivers announce themselves on the network every 2s and answer probes, so the sender's device list fills itself on the same Wi-Fi AND on a phone hotspot — no IP typing.",
+            "New launcher icon: your own EasyPair artwork, full-bleed."
+          ]
+        },
         {
           "version": "1.1.0",
           "date": "2026-10-01",

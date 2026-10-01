@@ -1,13 +1,12 @@
 {
-  "versionCode": 9,
-  "versionName": "1.7.1",
-  "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/clone-by-ophelia-v1.7.1.apk",
-  "sha256": "13b5bedc24393deb5366c3c64ac1866fca1ff1e632096bcc3232093d0d59ae76",
+  "versionCode": 10,
+  "versionName": "1.8.0",
+  "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/clone-by-ophelia-v1.8.0.apk",
+  "sha256": "0dc5e4fd98eb051e4d1e42c8d1ea984a6ff911b6c87bc4ef8ebeed170f4efd53",
   "releaseNotes": [
-    "NEW \u2014 HONEST COMPATIBILITY SYSTEM: the 'Popular' section is now SUPPORTED \u2014 only apps we have verified to run perfectly as clones (Discord, WhatsApp, Telegram, Instagram, Facebook, Messenger, Snapchat, X, Reddit, Signal, Threads, Spotify). No more pretending: games like Free Fire, BGMI, PUBG, Roblox, Supercell and Genshin are now marked NOT SUPPORTED, because their anti-cheat verifies the APK signature and crashes cloned builds (real-world tested \u2014 that's why your FF clone crashed).",
-    "Every game Android declares as a game gets the same protection automatically, and Google-only sign-in apps (YouTube, Gmail, Maps, Photos) are blocked too \u2014 their login refuses clone signatures, so cloning them is a waste of time.",
-    "Tapping a NOT SUPPORTED app now explains exactly WHY it can't be cloned instead of doing nothing \u2014 no more silent dead ends.",
-    "Everything else in ALL APPS that we haven't verified now shows an 'untested' badge and asks for a one-tap confirmation before cloning, with a clear heads-up that security-hardened apps may crash.",
-    "The badge under app tiles now reads 'supported' / 'untested' / 'not supported' \u2014 exactly what it is."
+    "FIXED — THE ACCOUNT SWITCHER IS REBUILT: the floating bubble and its button are GONE (that button was crashing the clone on open). Now it works the way Discord itself does — HOLD the app's own profile tab (bottom-right corner) and the Ophelia accounts drawer slides up: your logged-in account, one-tap switch, and an Add-account button that saves this login and restarts logged out for the next one. No logout, ever.",
+    "FIXED — CUSTOM APP LOGOS: whatever picture you pick, of ANY width or shape, is now fitted whole into the launcher's visible circle — the entire logo is shown, edge to edge, with zero blank space and no more cut-off wordmarks. Works in both the clone wizard and Edit clone.",
+    "REMOVED — the delete/uninstall button on clone cards. Uninstall a clone the normal Android way: hold its icon on the home screen/app drawer → Uninstall. Stale entries clean themselves up automatically.",
+    "Under the hood: the switcher now lives 100% inside the app's own window and main process (no more injected panel activity or secondary process) — the smallest possible footprint, and one less thing exotic ROMs can crash on."
   ]
 }
