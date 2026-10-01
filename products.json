@@ -164,15 +164,25 @@
     {
       "id": "easypair",
       "name": "EasyPair",
-      "tagline": "Offline high-speed sharing between two nearby phones — no data, no limits",
-      "description": "Offline file sharing with zero limits — Wi-Fi Direct, hotspot, same Wi-Fi, USB cable or Bluetooth, no router and no data needed. Photos, videos, audio, files, folders, installed apps (APK) and clipboard text. v1.5.0 adds the RECEIVER side of encryption: 'Encrypted receiver (HTTPS)' generates a self-signed certificate in the Android Keystore (hardware-backed, key never leaves the phone) and serves LocalSend port 53317 behind TLS, announcing the certificate's SHA-256 so senders pin it. v1.4.0 pinned ENCRYPTED LocalSend receivers on the send side; v1.3.0 brought full LocalSend v2 interop both ways, an in-app gallery and real runtime media permissions.",
+      "tagline": "Offline high-speed sharing — no data, no limits, and interrupted transfers RESUME",
+      "description": "Offline file sharing with zero limits — Wi-Fi Direct, hotspot, same Wi-Fi, USB cable or Bluetooth, no router and no data needed. Photos, videos, audio, files, folders, installed apps (APK) and clipboard text. v1.6.0 adds PARTIAL-FILE RESUME: big transfers (8 MB+) are received into a private .part buffer, so when the link drops mid-video the finished bytes STAY — tap RESUME and only the missing tail is re-sent (first-4KB SHA-256 proves it's the same file; works over every channel including Bluetooth and Wi-Fi Direct; partials self-clean after 14 days). v1.5.0 added the encrypted receiver (Android-Keystore TLS + pinned cert), v1.4.0 pinned encrypted LocalSend senders, v1.3.0 brought full LocalSend v2 interop, an in-app gallery and real runtime media permissions.",
       "packageName": "com.deadlockstudio.easypair",
-      "versionName": "1.5.0",
-      "versionCode": 6,
-      "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/easypair-v1.5.0.apk",
-      "sha256": "8d816aaacd3a54dc9c795e001f642294a1be4f19238276ad21f0e5b6bfe7dd7d",
-      "sizeBytes": 2177125,
+      "versionName": "1.6.0",
+      "versionCode": 7,
+      "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/easypair-v1.6.0.apk",
+      "sha256": "299396bae86a165ebd0942aaa334b6200ee71f6648c50218eb80005797429427",
+      "sizeBytes": 2193509,
       "changelog": [
+        {
+          "version": "1.6.0",
+          "date": "2026-10-01",
+          "notes": [
+            "NEW: PARTIAL-FILE RESUME — interrupted transfers continue from the exact byte, never from zero",
+            "Big files (8 MB+) are received into a private .part buffer; a drop at 80% of a video keeps those bytes safe",
+            "RESUME TRANSFER card on Home + Queue after a failed batch — one tap and only the missing tail travels",
+            "Same-file proof: first-4KB SHA-256 must match, so a different file with the same name can never corrupt a partial; stale partials (14 days) self-clean"
+          ]
+        },
         {
           "version": "1.5.0",
           "date": "2026-10-01",
@@ -202,36 +212,9 @@
             "NEW: incoming LocalSend files verified with SHA-256 when the sender provides a hash, saved to Downloads/LocalSend and listed in Received Files",
             "27 new JVM protocol tests; gesture/UI untouched — same look, same flow"
           ]
-        },
-        {
-          "version": "1.2.0",
-          "date": "2026-10-01",
-          "notes": [
-            "Fixed the crash on tapping Photos & videos (the system photo picker was being asked for more items than Android allows — it threw a SecurityException at launch).",
-            "NEW in-app gallery (LocalSend-style): your photos and videos as a multi-select tile grid with thumbnails — permission asked once, system picker still available as fallback.",
-            "The app now actually ASKS for its permissions (Photos & videos, Music & audio, Nearby devices) — the Android app-info page finally lists them; a Permissions card in Settings shows and manages each.",
-            "Nearby discovery reworked on the LocalSend pattern: receivers announce themselves on the network every 2s and answer probes, so the sender's device list fills itself on the same Wi-Fi AND on a phone hotspot — no IP typing.",
-            "New launcher icon: your own EasyPair artwork, full-bleed."
-          ]
-        },
-        {
-          "version": "1.1.0",
-          "date": "2026-10-01",
-          "notes": [
-            "NEW Received Files screen — browse, open, re-share and delete everything that arrived",
-            "Tap a file to open it · Share button re-shares to any app · Share-all in one tap",
-            "History screen gains a one-tap 'Browse received files' jump"
-          ]
-        },
-        {
-          "version": "1.0.0",
-          "date": "2026-10-01",
-          "notes": [
-            "Offline nearby transfer: Wi-Fi Direct, hotspot, same Wi-Fi, USB cable, Bluetooth — no limits"
-          ]
         }
       ],
-      "releasedAt": "2026-10-01T09:27:05Z"
+      "releasedAt": "2026-10-01T11:05:00Z"
     }
   ]
 }
