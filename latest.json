@@ -1,15 +1,16 @@
 {
-  "versionCode": 11,
-  "versionName": "1.9.0",
-  "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/clone-by-ophelia-v1.9.0.apk",
-  "sha256": "18946bd9d0445a10e37e384076e762420833fd6f53e344937cfc12b81a07fbcc",
+  "versionCode": 12,
+  "versionName": "2.0.0",
+  "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/clone-by-ophelia-v2.0.0.apk",
+  "sha256": "ebf35a55292489d90b74479262b2acdf7249cdfd2ff8ea365596b0e3b58470ff",
   "releaseNotes": [
-    "STUDIO UPDATE CENTER — the Products tab is now a real update center for the WHOLE family: every Deadlock Studio app shows its FULL release history (each version, its date, and what changed) right inside the app, straight from the official OTA feed. No need to visit the site to know what's new.",
-    "UPDATE BADGES — every app card now wears a badge: UPDATE v-ready (red) when a newer build is out, UP TO DATE (green) when you're current, NEW for apps you haven't installed. A status strip on top sums it up: how many updates are ready, how many of the family you have installed, and when the feed was last checked — with a manual refresh button.",
-    "REAL APP ICONS — every product card now shows the app's actual launcher icon (Ophelia Widgets, Junk Cleaner and EasyPair included — composited from their real adaptive icons), not the studio placeholder.",
-    "The tab is renamed Products → STUDIO with a new family-grid icon, and every install row now says it out loud: sha256-verified — because every download IS hash-checked before the installer ever sees it. Cloning engine untouched — everything that worked in v1.8.0 works exactly the same."
+    "ROBLOX IS SUPPORTED — removed from the blocked list and verified as a curated clone (username + password login). Clone Roblox exactly like Discord: unlimited parallel installs, separate accounts per clone.",
+    "SPLIT-SCREEN + SMALL-SCREEN UNLOCK FOR ROBLOX — the stock Roblox app ships locked (resizeableActivity=false, smallScreens=false, min-width 300dp), which is why it refuses split-screen and small windows. Every Ophelia Roblox clone rewrites all three locks in the manifest, so your clone runs side-by-side with anything, in any window size. Verified against the real Roblox 2.740.931 build.",
+    "DISCORD QUICK MENU (account switcher, rebuilt) — hold your own profile tab (bottom-right) and a Discord-style menu opens: SET STATUS (Online / Idle / Do Not Disturb / Invisible with the exact presence dots) and SWITCH ACCOUNTS below it. Status rows call Discord's own settings API; when the live token can't be read from inside the app they gracefully open your profile instead. The switcher is now Discord-only and inert everywhere else, exactly as designed.",
+    "Bug scan round across the whole family: this cloner release also hardens the patcher self-check (the new resize tests run in CI on every push) and fixes a stuck-drawer state in the switcher host plus a slot-naming off-by-one.",
+    "Cloning engine untouched where it was already solid — everything that worked in v1.9.0 works exactly the same."
   ],
   "date": "2026-10-01",
-  "releasedAt": "2026-10-01T08:44:49Z",
-  "apkSize": 7280384
+  "releasedAt": "2026-10-01T14:33:42Z",
+  "apkSize": 7293184
 }

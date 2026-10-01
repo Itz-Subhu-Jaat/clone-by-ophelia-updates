@@ -4,14 +4,24 @@
       "id": "pic-hider",
       "name": "Pic Hider",
       "tagline": "Private photo & video vault — locked behind your PIN",
-      "description": "Hide photos and videos behind a PIN-encrypted vault (AES-256). Fingerprint/face unlock (works on Class-2 sensors too), built-in viewer with zoom and video playback, and one-tap export back to your gallery. NEW in v1.3.0: the two biggest real-world bugs are fixed for good — 'gallery won't open' (phones whose gallery picker silently fails now get an instant one-tap file-browser fallback) and 'PIN won't save' (vault creation writes are now synchronous, so an aggressive memory killer can never eat a fresh setup; setup failures show a clear in-app message instead of crashing; the lock screen always has a manual Unlock button as a safety net). Plus app disguise (Calculator / Notes / Gallery / custom icon) and recovery question.",
+      "description": "Hide photos and videos behind a PIN-encrypted vault (AES-256). Fingerprint/face unlock (works on Class-2 sensors too), built-in viewer with zoom and video playback, and one-tap export back to your gallery. v1.3.1 is the durability pass: vault creation is a single atomic verified write with full rollback, broken half-written vaults self-heal, imports stream to disk (huge videos no longer OOM), unlocks run off the main thread, and the viewer decodes photos at screen size. Plus app disguise (Calculator / Notes / Gallery / custom icon) and recovery question.",
       "packageName": "com.deadlockstudio.pichider",
-      "versionName": "1.3.0",
-      "versionCode": 4,
-      "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/pic-hider-v1.3.0.apk",
-      "sha256": "7262cd4a9054962cc6139689269e345662403f96b0de8481b033e64c409cd8c8",
-      "sizeBytes": 7876055,
+      "versionName": "1.3.1",
+      "versionCode": 5,
+      "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/pic-hider-v1.3.1.apk",
+      "sha256": "f4fa0e2ce0354fa78c3b904c77b0edcee24d2a3d934fecedea3f5a86bfe03d79",
+      "sizeBytes": 7876059,
       "changelog": [
+        {
+          "version": "1.3.1",
+          "date": "2026-10-01",
+          "notes": [
+            "The REAL 'PIN won't save' fix: vault creation is now ONE atomic, verified write (index first, setup flag last, disk result checked, full rollback) — a kill or full disk can no longer fake a successful setup",
+            "Self-heal: a vault corrupted by the old partial writes is detected at launch, reset cleanly and the wizard tells you what happened (no more permanently-unlockable lock screen)",
+            "The REAL 'gallery won't open' hardening: the import guard survives process death mid-pick, thumbnails and durations read straight from the picker's file descriptor, and a half-typed PIN survives dark-mode/split-screen flips",
+            "Big imports stream-encrypt to disk (a 500 MB video used to run out of memory mid-import), the viewer decodes photos off the main thread at screen size, and every unlock/key change runs off the frozen-free path"
+          ]
+        },
         {
           "version": "1.3.0",
           "date": "2026-10-01",
@@ -45,20 +55,30 @@
           ]
         }
       ],
-      "releasedAt": "2026-10-01T04:39:19Z"
+      "releasedAt": "2026-10-01T14:33:42Z"
     },
     {
       "id": "cool-widgets",
       "name": "Ophelia Widgets",
       "tagline": "31 hand-crafted widgets — now with the NewThing-style DOT MATRIX set",
-      "description": "38 home-screen widgets in the Ophelia red-on-black look — clocks, weather, battery, notes, tools, gauges, fun — plus TWO full Nothing-style DOT MATRIX batches (15 dot widgets). NEW in v1.5.0: the Sunrise/Sunset widget runs in the CITY’s own timezone — Tokyo times are Tokyo wall-clock with a live NOW line and a UTC offset chip, and the day flips at the city’s local midnight. v1.4.0 added Game Score scoreboard, Days Since, Week Number, Uptime, Hydro hydration tracker (with optional reminders), live Currency Rate (USD→INR with change arrows) and Sunrise/Sunset (offline NOAA math). v1.3.0 added App Shortcut, App Folder, Month Calendar, Steps, Now Playing, Web Search, AI Bar and Contact Dial — all in the dot look. Everything is offline-first: no accounts, no analytics; only weather/rates fetch (keyless) when you place those widgets.",
+      "description": "38 home-screen widgets in the Ophelia red-on-black look — clocks, weather, battery, notes, tools, gauges, fun — plus TWO full Nothing-style DOT MATRIX batches. v1.5.1: photo frames survive reboots, battery/weather scheduling is single-source and reboot-proof, the sun widget's timezone flip survives reschedules, and the dot widgets' rendering is thread-safe. Everything is offline-first: no accounts, no analytics.",
       "packageName": "com.deadlockstudio.coolwidgets",
-      "versionName": "1.5.0",
-      "versionCode": 6,
-      "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/cool-widgets-v1.5.0.apk",
-      "sha256": "0101b02d851af807e1f1493f5e67ad116659fef256343bbca82f32ec1219f69f",
-      "sizeBytes": 7474078,
+      "versionName": "1.5.1",
+      "versionCode": 7,
+      "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/cool-widgets-v1.5.1.apk",
+      "sha256": "a338439da9cb29e56e581c7809246e67f0e5b411f6fc309f8737f2b4e4784c01",
+      "sizeBytes": 7474074,
       "changelog": [
+        {
+          "version": "1.5.1",
+          "date": "2026-10-01",
+          "notes": [
+            "Photo frame widgets survive reboots — picked photos are copied into the app's private storage at pick time (Android 13+ photo-picker grants were never persistable, the old widget went blank after a restart)",
+            "Battery widgets re-arm correctly after reboot (Ophelia-battery-only setups were frozen) and weather/battery stop quadruple-fetching (one scheduling source)",
+            "Sun widget's city-timezone midnight flip survives other widgets' reschedules; step counter's sensor listener no longer leaks and resets its baseline after reboot",
+            "Currency arrows work for rates ≥ 1000 and empty picks no longer silently no-op in the shortcut/dial configs"
+          ]
+        },
         {
           "version": "1.5.0",
           "date": "2026-10-01",
@@ -103,20 +123,30 @@
           ]
         }
       ],
-      "releasedAt": "2026-10-01T09:52:43Z"
+      "releasedAt": "2026-10-01T14:33:42Z"
     },
     {
       "id": "junk-cleaner",
       "name": "Junk Cleaner",
       "tagline": "Smart clean · duplicates · SIMILAR PHOTOS + VIDEOS (no root)",
-      "description": "Storage rescue without root: junk scan (thumbnail caches, empty folders, leftover installers, temp files), the 25 biggest files, byte-identical duplicate finder (full-hash verified), SIMILAR PHOTOS — a perceptual hash groups photos that LOOK the same (burst shots, WhatsApp re-sends) even when bytes differ — and now SIMILAR VIDEOS: four keyframes are sampled across each clip's timeline and fingerprinted, so a re-sent or re-encoded copy of the SAME video groups with its original (the 200 MB heavy hitters, not just photos). Each group keeps the LARGEST copy (the least-compressed one); deletion goes through the app's confirmation AND Android's own delete sheet. Plus a system-wide cache boost and a per-app cache dashboard. Nothing is ever removed silently — every byte is reviewed first.",
+      "description": "Storage rescue without root: junk scan (thumbnail caches, empty folders, leftover installers, temp files), the 25 biggest files, byte-identical duplicate finder, SIMILAR PHOTOS (perceptual hash) and SIMILAR VIDEOS (keyframe fingerprints) — v1.4.1 deletes through MediaStore so the gallery stays clean, handles Android 10 properly, and hardens the folder-safety filter. Each group keeps the LARGEST copy; deletion goes through the app's confirmation AND Android's own delete sheet. Nothing is ever removed silently.",
       "packageName": "com.deadlockstudio.junkcleaner",
-      "versionName": "1.4.0",
-      "versionCode": 6,
-      "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/junk-cleaner-v1.4.0.apk",
-      "sha256": "cda194118c4e54cd6f6cc59697a1d385a6a9c291bcd1c8e9d068380f68c871ea",
-      "sizeBytes": 7549594,
+      "versionName": "1.4.1",
+      "versionCode": 7,
+      "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/junk-cleaner-v1.4.1.apk",
+      "sha256": "9a6c4245f1db2eeef266cccffe8357a9b7281a09cdcafe2f986df55f156307f5",
+      "sizeBytes": 7549634,
       "changelog": [
+        {
+          "version": "1.4.1",
+          "date": "2026-10-01",
+          "notes": [
+            "MediaStore-aware deletes for Big Files & Duplicates — photos and videos leave the gallery database properly (no more broken 'ghost' thumbnails after cleaning)",
+            "Android 10 fixed: legacy-storage flag + the system's own permission sheet when another app's media needs a grant",
+            "Safety: empty-folder cleaning can never delete new files that arrived after the scan, and hidden .vault-style folders are actually skipped now",
+            "Storage overview refreshes after every clean (not just CLEAN ALL) and the app's own clean keeps its JIT profiles"
+          ]
+        },
         {
           "version": "1.4.0",
           "date": "2026-10-01",
@@ -155,20 +185,29 @@
           ]
         }
       ],
-      "releasedAt": "2026-10-01T11:35:00Z"
+      "releasedAt": "2026-10-01T14:33:42Z"
     },
     {
       "id": "easypair",
       "name": "EasyPair",
       "tagline": "Offline high-speed sharing — no data, no limits, and interrupted transfers RESUME",
-      "description": "Offline file sharing with zero limits — Wi-Fi Direct, hotspot, same Wi-Fi, USB cable or Bluetooth, no router and no data needed. Photos, videos, audio, files, folders, installed apps (APK) and clipboard text. v1.6.0 adds PARTIAL-FILE RESUME: big transfers (8 MB+) are received into a private .part buffer, so when the link drops mid-video the finished bytes STAY — tap RESUME and only the missing tail is re-sent (first-4KB SHA-256 proves it's the same file; works over every channel including Bluetooth and Wi-Fi Direct; partials self-clean after 14 days). v1.5.0 added the encrypted receiver (Android-Keystore TLS + pinned cert), v1.4.0 pinned encrypted LocalSend senders, v1.3.0 brought full LocalSend v2 interop, an in-app gallery and real runtime media permissions.",
+      "description": "Offline file sharing with zero limits — Wi-Fi Direct, hotspot, same Wi-Fi, USB cable or Bluetooth, no router and no data needed. Photos, videos, audio, files, folders, installed apps (APK) and clipboard text. v1.6.1 fixes the resume identity check (fragmented first reads hashed the wrong bytes, so interrupted big transfers restarted from zero), guards truncated small-file saves, and cleans up the group-owner send path. v1.6.0's resume engine, v1.5.0's encrypted TLS receiver and full LocalSend v2 interop are all intact.",
       "packageName": "com.deadlockstudio.easypair",
-      "versionName": "1.6.0",
-      "versionCode": 7,
-      "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/easypair-v1.6.0.apk",
-      "sha256": "299396bae86a165ebd0942aaa334b6200ee71f6648c50218eb80005797429427",
+      "versionName": "1.6.1",
+      "versionCode": 8,
+      "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/easypair-v1.6.1.apk",
+      "sha256": "4cf891714695d52a77a37f6727a12cb54308d030820cef676ca6941cf6e5153e",
       "sizeBytes": 2193509,
       "changelog": [
+        {
+          "version": "1.6.1",
+          "date": "2026-10-01",
+          "notes": [
+            "RESUME actually resumes: the partial-file head hash was computed with the wrong buffer offsets, so it never matched the sender's proof on fragmented (Bluetooth / slow Wi-Fi) reads — resume silently fell back to restart-from-zero. The hash math is fixed and unit-tested",
+            "A dropped small file is now reported as failed (connection dropped at X of Y) instead of being saved as a truncated 'success'",
+            "Wi-Fi Direct group-owner sends no longer push 0-byte extras; the About card shows the real version"
+          ]
+        },
         {
           "version": "1.6.0",
           "date": "2026-10-01",
@@ -210,7 +249,7 @@
           ]
         }
       ],
-      "releasedAt": "2026-10-01T11:05:00Z"
+      "releasedAt": "2026-10-01T14:33:42Z"
     }
   ]
 }
