@@ -2,6 +2,15 @@
 
 All notable stable releases of Clone by Ophelia (Deadlock Studio). The latest version is always described in [latest.json](latest.json), the feed the app checks on every open.
 
+## v1.7.1 — 2026-10-01
+
+- **HONEST COMPATIBILITY SYSTEM — only truly cloneable apps are called supported now.** The "Popular" section is now **SUPPORTED**: apps verified to install, launch AND log in as re-signed clones — Discord (your flagship), WhatsApp, Telegram, Instagram, Facebook, Messenger, Snapchat, X, Reddit, Signal, Threads and Spotify. The "Popular Games" section is gone: those games were never honest candidates
+- **Free Fire and friends are marked NOT SUPPORTED — with the real reason.** Anti-cheat engines (Free Fire, BGMI, PUBG Mobile, Roblox, all Supercell games, Mobile Legends, Genshin Impact, Minecraft) verify the APK signature at runtime, so clones crash on launch — exactly what you saw when you tried FF. Every Android-declared game gets this protection automatically, and Google-only sign-in apps (YouTube, Gmail, Maps, Photos) are blocked too (their login refuses clone signatures). Tapping a blocked app explains WHY instead of silently doing nothing
+- **"Untested" apps ask first.** Everything else in ALL APPS now carries an untested badge and shows a one-tap confirmation with a heads-up before cloning — no more surprise crashes from apps we never verified
+- **Ophelia Widgets v1.3.0 — the DOT MATRIX batch** (Products tab): 8 new Nothing-style widgets, 31 total. App Shortcut (any installed app as a dot tile), App Folder (2x2), Month Calendar (today lit in Ophelia red), Step Counter (hardware pedometer), Now Playing (transport keys that steer whatever is playing + live track titles), Web Search (Google/YouTube/DuckDuckGo/Bing), AI Bar (Gemini/ChatGPT/Copilot/Claude) and Contact Dial (tap-to-call tile)
+- **Pic Hider v1.3.0** (Products tab): 'gallery won't open' fixed — phones whose gallery picker silently fails now get an instant one-tap file-browser fallback banner; 'PIN won't save' fixed — vault creation writes are synchronous (an aggressive memory killer can never eat a fresh setup), setup failures show a clear message instead of crashing, and the lock screen always keeps a manual Unlock button
+- **Junk Cleaner v1.0.1** (Products tab): the crash-on-open is root-caused and fixed (Compose host now extends ComponentActivity — verified in the shipped dex)
+
 ## v1.7.0 — 2026-10-01
 
 - **THE SWITCHER NOW LIVES INSIDE THE CLONED APP — properly this time.** No second home-screen icon, no notification hub, nothing that behaves like a second app. Every clone with the account switcher shows a small **draggable Ophelia ⚡ bubble** whenever the clone is open (it rides along on every screen). Tap it: capture the login you're using, switch to a saved login, done — without ever leaving the app. The old design (external "Quick Switch" + a launcher icon) is completely removed

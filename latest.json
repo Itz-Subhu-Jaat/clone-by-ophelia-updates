@@ -1,13 +1,13 @@
 {
-  "versionCode": 8,
-  "versionName": "1.7.0",
-  "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/clone-by-ophelia-v1.7.0.apk",
-  "sha256": "641085768ab0e080fa65a38435f4b571ef205a3a7f7e48650df5938ca48cffaa",
+  "versionCode": 9,
+  "versionName": "1.7.1",
+  "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/clone-by-ophelia-v1.7.1.apk",
+  "sha256": "13b5bedc24393deb5366c3c64ac1866fca1ff1e632096bcc3232093d0d59ae76",
   "releaseNotes": [
-    "FIXED \u2014 THE SWITCHER NOW LIVES INSIDE THE CLONED APP. No more second home-screen icon, no more notification hub: every clone with the switcher shows a small draggable Ophelia \u26a1 bubble while the app is open. Tap it \u2014 capture your current login, switch to a saved one, done. The switching itself was rebuilt (all file work off the UI thread + a hard restart after each switch) so the crashes on the old Switch button are gone for good.",
-    "NEW \u2014 EDIT INSTALLED CLONES: the Edit button on every clone card lets you change the clone's NAME and ICON any time. It installs as an in-place update, so data, logins, chats and saved switcher accounts are all preserved.",
-    "FIXED \u2014 UNINSTALL BUTTON: the delete button on a clone card now reliably opens the Android uninstall confirmation (the old version silently did nothing).",
-    "FIXED \u2014 DEADLOCK STUDIO CREDIT PLACEMENT: the credit is never printed inside an app's own logo anymore (your Discord logo stays clean). It lives where it belongs: in the big teal\u2192rose gradient box pinned to the very bottom of the home screen and the switcher panel.",
-    "Switching auto-saves the login you are leaving, so you can hop back and forth without re-capturing. Old clones: tap \u21bb (update) on their card to rebuild them with the new in-app switcher."
+    "NEW \u2014 HONEST COMPATIBILITY SYSTEM: the 'Popular' section is now SUPPORTED \u2014 only apps we have verified to run perfectly as clones (Discord, WhatsApp, Telegram, Instagram, Facebook, Messenger, Snapchat, X, Reddit, Signal, Threads, Spotify). No more pretending: games like Free Fire, BGMI, PUBG, Roblox, Supercell and Genshin are now marked NOT SUPPORTED, because their anti-cheat verifies the APK signature and crashes cloned builds (real-world tested \u2014 that's why your FF clone crashed).",
+    "Every game Android declares as a game gets the same protection automatically, and Google-only sign-in apps (YouTube, Gmail, Maps, Photos) are blocked too \u2014 their login refuses clone signatures, so cloning them is a waste of time.",
+    "Tapping a NOT SUPPORTED app now explains exactly WHY it can't be cloned instead of doing nothing \u2014 no more silent dead ends.",
+    "Everything else in ALL APPS that we haven't verified now shows an 'untested' badge and asks for a one-tap confirmation before cloning, with a clear heads-up that security-hardened apps may crash.",
+    "The badge under app tiles now reads 'supported' / 'untested' / 'not supported' \u2014 exactly what it is."
   ]
 }
