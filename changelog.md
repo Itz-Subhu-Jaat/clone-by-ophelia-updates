@@ -1,10 +1,10 @@
-## v1.8.0+ — companion releases — 2026-10-01 (round 5)
-
-- **EasyPair v1.3.0 — FULL LOCALSEND INTEROP** (Products tab): the **real LocalSend app on any PC or phone now sees this device automatically**. EasyPair joins the LocalSend multicast group (224.0.0.167:53317) and announces itself exactly like a LocalSend device — so LocalSend on Windows/macOS/Linux/iOS/Android lists your phone as a target and **sends files straight to it over HTTP REST** (protocol v2.2: prepare-upload → upload, sha256-verified, files land in Downloads/LocalSend and appear in the Received Files screen). It works BOTH ways: **EasyPair also sends to any LocalSend receiver** the same way — LocalSend devices show up in the nearby list with a 📡 badge. Both wire generations are supported (classic token + current sessionId/per-file-token), verified against the LocalSend source. 27 new JVM protocol tests (announcement parsing, both upload query formats, chunked + content-length HTTP bodies, end-to-end round trip)
-
 ## v1.9.0 — 2026-10-01 (round 6)
 
 - **Clone by Ophelia v1.9.0 — STUDIO UPDATE CENTER**: the Products tab is now a real update center for the whole family. Every app card shows its **full release history** (each version, its date, what changed) pulled live from the official OTA feed, plus a clear badge: **UPDATE ready** / **UP TO DATE** / **NEW**. A status strip sums up the family (updates ready, installed count, last-checked time, manual refresh). **Real launcher icons** on every card (Widgets, Junk Cleaner, EasyPair composited from their actual adaptive icons), the tab renamed **Products → Studio** with a family-grid icon, and every install row marked **sha256-verified** — because it is. Cloning engine untouched.
+
+## v1.8.0+ — companion releases — 2026-10-01 (round 5)
+
+- **EasyPair v1.3.0 — FULL LOCALSEND INTEROP** (Products tab): the **real LocalSend app on any PC or phone now sees this device automatically**. EasyPair joins the LocalSend multicast group (224.0.0.167:53317) and announces itself exactly like a LocalSend device — so LocalSend on Windows/macOS/Linux/iOS/Android lists your phone as a target and **sends files straight to it over HTTP REST** (protocol v2.2: prepare-upload → upload, sha256-verified, files land in Downloads/LocalSend and appear in the Received Files screen). It works BOTH ways: **EasyPair also sends to any LocalSend receiver** the same way — LocalSend devices show up in the nearby list with a 📡 badge. Both wire generations are supported (classic token + current sessionId/per-file-token), verified against the LocalSend source. 27 new JVM protocol tests (announcement parsing, both upload query formats, chunked + content-length HTTP bodies, end-to-end round trip)
 
 ## v1.8.0+ — companion releases — 2026-10-01 (round 4)
 
