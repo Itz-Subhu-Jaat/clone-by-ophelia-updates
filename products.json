@@ -44,7 +44,8 @@
             "AES-256-GCM PIN vault, biometric unlock, encrypted viewer, export"
           ]
         }
-      ]
+      ],
+      "releasedAt": "2026-10-01T04:39:19Z"
     },
     {
       "id": "cool-widgets",
@@ -101,7 +102,8 @@
             "+11 widgets: Ophelia brand set, year/day/moon progress, world clock, storage & RAM gauges, tally, decision spinner"
           ]
         }
-      ]
+      ],
+      "releasedAt": "2026-10-01T09:52:43Z"
     },
     {
       "id": "junk-cleaner",
@@ -156,7 +158,8 @@
             "Smart Clean, system cache boost, per-app cache dashboard"
           ]
         }
-      ]
+      ],
+      "releasedAt": "2026-10-01T10:28:31Z"
     },
     {
       "id": "easypair",
@@ -227,7 +230,8 @@
             "Offline nearby transfer: Wi-Fi Direct, hotspot, same Wi-Fi, USB cable, Bluetooth — no limits"
           ]
         }
-      ]
+      ],
+      "releasedAt": "2026-10-01T09:27:05Z"
     }
   ]
 }

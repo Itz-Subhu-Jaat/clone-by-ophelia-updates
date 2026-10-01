@@ -8,5 +8,7 @@
     "UPDATE BADGES — every app card now wears a badge: UPDATE v-ready (red) when a newer build is out, UP TO DATE (green) when you're current, NEW for apps you haven't installed. A status strip on top sums it up: how many updates are ready, how many of the family you have installed, and when the feed was last checked — with a manual refresh button.",
     "REAL APP ICONS — every product card now shows the app's actual launcher icon (Ophelia Widgets, Junk Cleaner and EasyPair included — composited from their real adaptive icons), not the studio placeholder.",
     "The tab is renamed Products → STUDIO with a new family-grid icon, and every install row now says it out loud: sha256-verified — because every download IS hash-checked before the installer ever sees it. Cloning engine untouched — everything that worked in v1.8.0 works exactly the same."
-  ]
+  ],
+  "date": "2026-10-01",
+  "releasedAt": "2026-10-01T08:44:49Z"
 }
