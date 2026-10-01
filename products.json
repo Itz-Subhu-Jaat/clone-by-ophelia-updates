@@ -149,14 +149,24 @@
       "id": "easypair",
       "name": "EasyPair",
       "tagline": "Offline high-speed sharing between two nearby phones — no data, no limits",
-      "description": "Offline file sharing with zero limits — Wi-Fi Direct, hotspot, same Wi-Fi, USB cable or Bluetooth, no router and no data needed. Photos, videos, audio, files, folders, installed apps (APK) and clipboard text. NEW in v1.4.0: ENCRYPTED LOCALSEND — LocalSend receivers running their HTTPS mode now work too, with REAL certificate pinning: the peer's announced SHA-256 fingerprint must match the certificate it actually presents, or the transfer is refused (never trust-all). Encrypted peers are marked with a lock in the nearby list. v1.3.0 brought full LocalSend v2 interop both ways (multicast discovery + HTTP REST with SHA-256 verification), an in-app gallery, and real runtime media permissions.",
+      "description": "Offline file sharing with zero limits — Wi-Fi Direct, hotspot, same Wi-Fi, USB cable or Bluetooth, no router and no data needed. Photos, videos, audio, files, folders, installed apps (APK) and clipboard text. v1.5.0 adds the RECEIVER side of encryption: 'Encrypted receiver (HTTPS)' generates a self-signed certificate in the Android Keystore (hardware-backed, key never leaves the phone) and serves LocalSend port 53317 behind TLS, announcing the certificate's SHA-256 so senders pin it. v1.4.0 pinned ENCRYPTED LocalSend receivers on the send side; v1.3.0 brought full LocalSend v2 interop both ways, an in-app gallery and real runtime media permissions.",
       "packageName": "com.deadlockstudio.easypair",
-      "versionName": "1.4.0",
-      "versionCode": 5,
-      "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/easypair-v1.4.0.apk",
-      "sha256": "4c8b4b70e6a06e9b1936b4a24e9555fa2b20a72457d4527104c5b1734aabce30",
+      "versionName": "1.5.0",
+      "versionCode": 6,
+      "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/easypair-v1.5.0.apk",
+      "sha256": "8d816aaacd3a54dc9c795e001f642294a1be4f19238276ad21f0e5b6bfe7dd7d",
       "sizeBytes": 2177125,
       "changelog": [
+        {
+          "version": "1.5.0",
+          "date": "2026-10-01",
+          "notes": [
+            "NEW: ENCRYPTED RECEIVER — flip 'Encrypted receiver (HTTPS)' in Settings and EasyPair itself serves LocalSend behind TLS",
+            "Certificate is generated in the Android Keystore (hardware-backed where available); the private key never leaves your phone",
+            "Our announcement now carries the certificate's real SHA-256 — LocalSend and EasyPair senders PIN us, nothing travels in the clear",
+            "Default OFF (LocalSend's own default): plain-HTTP interop keeps working exactly as before until you opt in"
+          ]
+        },
         {
           "version": "1.4.0",
           "date": "2026-10-01",
