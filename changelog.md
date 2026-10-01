@@ -1,3 +1,7 @@
+## v1.9.0+ — companion releases — 2026-10-01 (round 7)
+
+- **EasyPair v1.4.0 — ENCRYPTED LOCALSEND** (Products tab): LocalSend receivers running their **HTTPS (encryption) mode** now work too. Announcements that say `"protocol": "https"` are honoured: the transfer goes over TLS with **REAL certificate pinning** — the peer's announced SHA-256 fingerprint must match the certificate it actually presents, or the handshake is refused with a clear reason (never trust-all, never a silent accept). Encrypted peers get a 🔒 + "encrypted" badge in the nearby list, and the fingerprint travels through both discovery paths (multicast announcements AND /register bodies). 8 new JVM tests including a real self-signed HTTPS server round-trip: pinned client passes, wrong pin is rejected mid-handshake, unpinned connection is rejected by default CA validation.
+
 ## v1.9.0 — 2026-10-01 (round 6)
 
 - **Clone by Ophelia v1.9.0 — STUDIO UPDATE CENTER**: the Products tab is now a real update center for the whole family. Every app card shows its **full release history** (each version, its date, what changed) pulled live from the official OTA feed, plus a clear badge: **UPDATE ready** / **UP TO DATE** / **NEW**. A status strip sums up the family (updates ready, installed count, last-checked time, manual refresh). **Real launcher icons** on every card (Widgets, Junk Cleaner, EasyPair composited from their actual adaptive icons), the tab renamed **Products → Studio** with a family-grid icon, and every install row marked **sha256-verified** — because it is. Cloning engine untouched.

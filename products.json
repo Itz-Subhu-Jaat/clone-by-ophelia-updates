@@ -149,14 +149,24 @@
       "id": "easypair",
       "name": "EasyPair",
       "tagline": "Offline high-speed sharing between two nearby phones — no data, no limits",
-      "description": "Offline nearby transfer done right — WiFi/WiFi-Direct/hotspot/USB-cable/Bluetooth, photos/videos/audio/files/folders/apps/text/clipboard, no limits. v1.3.0: FULL LOCALSEND INTEROP — the real LocalSend app on any PC or phone now sees this device automatically (protocol v2.2 over multicast) and can send files to it (HTTP REST transfer, SHA-256 verified, files land in Downloads/LocalSend and show up in the Received Files screen). EasyPair also SENDS to any LocalSend receiver the same way. Plus the in-app MediaStore gallery, one-tap media permissions, UDP LAN discovery, and your artwork as the launcher icon.",
+      "description": "Offline file sharing with zero limits — Wi-Fi Direct, hotspot, same Wi-Fi, USB cable or Bluetooth, no router and no data needed. Photos, videos, audio, files, folders, installed apps (APK) and clipboard text. NEW in v1.4.0: ENCRYPTED LOCALSEND — LocalSend receivers running their HTTPS mode now work too, with REAL certificate pinning: the peer's announced SHA-256 fingerprint must match the certificate it actually presents, or the transfer is refused (never trust-all). Encrypted peers are marked with a lock in the nearby list. v1.3.0 brought full LocalSend v2 interop both ways (multicast discovery + HTTP REST with SHA-256 verification), an in-app gallery, and real runtime media permissions.",
       "packageName": "com.deadlockstudio.easypair",
-      "versionName": "1.3.0",
-      "versionCode": 4,
-      "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/easypair-v1.3.0.apk",
-      "sha256": "b802693846c69ff9eb4456e89823992c05f2ddc43a4a6ef4b4f066e21e82e0bd",
+      "versionName": "1.4.0",
+      "versionCode": 5,
+      "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/easypair-v1.4.0.apk",
+      "sha256": "4c8b4b70e6a06e9b1936b4a24e9555fa2b20a72457d4527104c5b1734aabce30",
       "sizeBytes": 2177125,
       "changelog": [
+        {
+          "version": "1.4.0",
+          "date": "2026-10-01",
+          "notes": [
+            "NEW: ENCRYPTED LOCALSEND — LocalSend receivers that enable HTTPS mode are now supported",
+            "REAL certificate pinning: the announced SHA-256 fingerprint must match the presented certificate or the handshake is refused — never trust-all",
+            "Encrypted peers show a lock + 'encrypted' badge in the nearby device list",
+            "8 new tests including a real self-signed HTTPS server round-trip (pinned pass / wrong-pin reject / unpinned reject)"
+          ]
+        },
         {
           "version": "1.3.0",
           "date": "2026-10-01",
