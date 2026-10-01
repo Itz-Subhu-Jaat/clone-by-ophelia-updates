@@ -10,5 +10,6 @@
     "The tab is renamed Products → STUDIO with a new family-grid icon, and every install row now says it out loud: sha256-verified — because every download IS hash-checked before the installer ever sees it. Cloning engine untouched — everything that worked in v1.8.0 works exactly the same."
   ],
   "date": "2026-10-01",
-  "releasedAt": "2026-10-01T08:44:49Z"
+  "releasedAt": "2026-10-01T08:44:49Z",
+  "apkSize": 7280384
 }
