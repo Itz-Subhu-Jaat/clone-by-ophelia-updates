@@ -1,13 +1,13 @@
 {
-  "versionCode": 7,
-  "versionName": "1.6.0",
-  "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/clone-by-ophelia-v1.6.0.apk",
-  "sha256": "e0dc6867287b8c3c68c951f6dd9906a95e0afd0643bdbfd95832e4d55eeca034",
+  "versionCode": 8,
+  "versionName": "1.7.0",
+  "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/clone-by-ophelia-v1.7.0.apk",
+  "sha256": "641085768ab0e080fa65a38435f4b571ef205a3a7f7e48650df5938ca48cffaa",
   "releaseNotes": [
-    "NEW: ACCOUNT SWITCHER INSIDE CLONES — every clone now gets a second home-screen icon (⚡ Switch). Open it, tap CAPTURE CURRENT ACCOUNT to save a login, then switch between saved logins instantly. ONE clone, MANY accounts, no more extra downloads for more accounts.",
-    "NEW: QUICK SWITCH NOTIFICATION — a persistent notification with one-tap buttons for your clones. Pull the shade anywhere, tap a clone, you're in. Toggle it on the home screen.",
-    "How the switcher works (honest version): it snapshots the clone's saved login state and restores it on switch — the same trick power users do manually, automated. Discord's own login/session data stays on Discord's servers; nothing is shared or uploaded.",
-    "The account switcher is ON by default for new clones (switch it off in the options before creating). Old clones: tap the update (↻) button on their card to rebuild them with the switcher.",
-    "Full self-check in CI now also verifies the injected switcher on every build."
+    "FIXED \u2014 THE SWITCHER NOW LIVES INSIDE THE CLONED APP. No more second home-screen icon, no more notification hub: every clone with the switcher shows a small draggable Ophelia \u26a1 bubble while the app is open. Tap it \u2014 capture your current login, switch to a saved one, done. The switching itself was rebuilt (all file work off the UI thread + a hard restart after each switch) so the crashes on the old Switch button are gone for good.",
+    "NEW \u2014 EDIT INSTALLED CLONES: the Edit button on every clone card lets you change the clone's NAME and ICON any time. It installs as an in-place update, so data, logins, chats and saved switcher accounts are all preserved.",
+    "FIXED \u2014 UNINSTALL BUTTON: the delete button on a clone card now reliably opens the Android uninstall confirmation (the old version silently did nothing).",
+    "FIXED \u2014 DEADLOCK STUDIO CREDIT PLACEMENT: the credit is never printed inside an app's own logo anymore (your Discord logo stays clean). It lives where it belongs: in the big teal\u2192rose gradient box pinned to the very bottom of the home screen and the switcher panel.",
+    "Switching auto-saves the login you are leaving, so you can hop back and forth without re-capturing. Old clones: tap \u21bb (update) on their card to rebuild them with the new in-app switcher."
   ]
 }

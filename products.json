@@ -3,7 +3,7 @@
     {
       "id": "pic-hider",
       "name": "Pic Hider",
-      "tagline": "Private photo & video vault — locked behind your PIN",
+      "tagline": "Private photo & video vault \u2014 locked behind your PIN",
       "description": "Hide photos and videos behind a PIN-encrypted vault (AES-256). Fingerprint/face unlock (works on Class-2 sensors too), built-in viewer with zoom and video playback, and one-tap export back to your gallery. NEW in v1.2.0: photo import and custom shortcut icons work on every phone (crashes root-caused and fixed), a professional step-by-step PIN setup, and fingerprint login that no longer says 'not available' on budget sensors. Also: disguise the app as Calculator, Notes or Gallery, or add a custom home-screen shortcut with any name and picture.",
       "packageName": "com.deadlockstudio.pichider",
       "versionName": "1.2.0",
@@ -15,26 +15,38 @@
     {
       "id": "cool-widgets",
       "name": "Ophelia Widgets",
-      "tagline": "23 hand-crafted widgets, now with the Ophelia signature set",
-      "description": "23 home screen widgets in 9 categories: the neon-gothic OPHELIA signature set (Ophelia Clock, crimson Battery ring, ornate Signature lockup), a self-ticking Digital Clock (4 themes, 12/24h), Analog Clock, Big Date, event Countdowns, Year Progress (the famous bar), Day Progress, live Moon Phase, World Clock (3 cities), Battery Ring, Weather for ANY city (no location permission), Sticky Notes, Daily Quotes, Flashlight, Quick Search, Settings Shortcuts, Photo Frame, Storage gauge, RAM monitor, Tally counter and a Decision spinner. Only two permissions in the whole app, both explained up front. New studio wordmark icon and Ophelia-branded theme.",
+      "tagline": "23 hand-crafted widgets with the real Ophelia artwork as the app icon",
+      "description": "23 home screen widgets in 9 categories: the neon-gothic OPHELIA signature set (Ophelia Clock, crimson Battery ring, ornate Signature lockup), Digital Clock (4 themes, 12/24h), Analog Clock, Big Date, event Countdowns, Year Progress, Day Progress, live Moon Phase, World Clock, Battery Ring, Weather for ANY city (no location permission), Sticky Notes, Daily Quotes, Flashlight, Quick Search, Settings Shortcuts, Photo Frame, Storage gauge, RAM monitor, Tally counter and Decision spinner. NEW in v1.2.0: the launcher icon is now the real Ophelia artwork (the character + widgets lockup you know from the brand) instead of a plain wordmark. Only two permissions in the whole app, both explained up front.",
       "packageName": "com.deadlockstudio.coolwidgets",
-      "versionName": "1.1.0",
-      "versionCode": 2,
-      "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/cool-widgets-v1.1.0.apk",
-      "sha256": "d2e9b0f56eefb55e3c2528ddfa1cbb26c4832b3f7754fe4d252798096241eff9",
-      "sizeBytes": 7003506
+      "versionName": "1.2.0",
+      "versionCode": 3,
+      "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/cool-widgets-v1.2.0.apk",
+      "sha256": "3d998e20786eea8abbf19dd9dd2c63de94015202ea2b59641088e5897c66a876",
+      "sizeBytes": 7366734
     },
     {
       "id": "junk-cleaner",
       "name": "Junk Cleaner",
-      "tagline": "Advanced junk cleaner — smart clean, system cache boost, app cache dashboard",
-      "description": "One-tap SMART CLEAN scans shared storage for thumbnail caches, empty folders, leftover installers and temp files — everything is shown for review before deletion, nothing is removed silently. SYSTEM CACHE BOOST uses the official Android storage API pattern (the same lever Google's own tools use) to make the system evict app caches device-wide — no root. The APP CACHES dashboard lists how much cache every installed app holds and deep-links you to each app's storage settings. Never touches Android/data, never deletes without review, no fake RAM/CPU 'boost' nonsense.",
+      "tagline": "Advanced junk cleaner \u2014 smart clean, system cache boost, app cache dashboard",
+      "description": "One-tap SMART CLEAN scans shared storage for thumbnail caches, empty folders, leftover installers and temp files \u2014 everything is shown for review before deletion, nothing is removed silently. SYSTEM CACHE BOOST uses the official Android storage API pattern (the same lever Google's own tools use) to make the system evict app caches device-wide \u2014 no root. The APP CACHES dashboard lists how much cache every installed app holds and deep-links you to each app's storage settings. Never touches Android/data, never deletes without review, no fake RAM/CPU 'boost' nonsense.",
       "packageName": "com.deadlockstudio.junkcleaner",
       "versionName": "1.0.0",
       "versionCode": 1,
       "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/junk-cleaner-v1.0.0.apk",
       "sha256": "cd9add0c75ef935f9974c3d7a0e18ea8050abc38ea563c61cd067bbe31a61e37",
       "sizeBytes": 6440529
+    },
+    {
+      "id": "easypair",
+      "name": "EasyPair",
+      "tagline": "Offline high-speed sharing between two nearby phones \u2014 no data, no limits",
+      "description": "EasyPair by Ophelia transfers EVERYTHING between two nearby Android phones completely offline: photos, videos, audio, any files, entire folders, even installed apps (as APKs) and clipboard text \u2014 no size limit, never compressed, nothing uploaded anywhere. Flip the Visible switch and both phones find each other automatically over Wi-Fi Direct (full speed, no router needed), the same Wi-Fi, a phone hotspot, a USB data cable (USB tethering) or Bluetooth as the slow fallback. Files land in Downloads/EasyPair, text arrives as a one-tap-copy pop-up. EasyPair also appears inside every app's share sheet, and received files can be re-shared onward with any share tech on your phone. Privacy first: you are only visible while the switch is ON, transfers ask before they start, and history can be switched off entirely. A 1.3 MB app from Deadlock Studio.",
+      "packageName": "com.deadlockstudio.easypair",
+      "versionName": "1.0.0",
+      "versionCode": 1,
+      "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/easypair-v1.0.0.apk",
+      "sha256": "8165654fd7758559bcac885aade9705b5e1eee7ccdb2c15a30a87ff36cae0c59",
+      "sizeBytes": 1300373
     }
   ]
 }

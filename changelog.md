@@ -2,6 +2,16 @@
 
 All notable stable releases of Clone by Ophelia (Deadlock Studio). The latest version is always described in [latest.json](latest.json), the feed the app checks on every open.
 
+## v1.7.0 — 2026-10-01
+
+- **THE SWITCHER NOW LIVES INSIDE THE CLONED APP — properly this time.** No second home-screen icon, no notification hub, nothing that behaves like a second app. Every clone with the account switcher shows a small **draggable Ophelia ⚡ bubble** whenever the clone is open (it rides along on every screen). Tap it: capture the login you're using, switch to a saved login, done — without ever leaving the app. The old design (external "Quick Switch" + a launcher icon) is completely removed
+- **Switching is crash-free now.** All state copying happens on a background thread (the old version froze and then died mid-switch), the process-detection bug that left Discord running while its files were being swapped is fixed, and every switch ends with a clean hard restart — the app comes back fully reloaded on the new account. Switching away also **auto-saves** the login you're leaving, so hopping back is instant
+- **NEW — EDIT INSTALLED CLONES.** Every clone card has an **Edit** button now: change the clone's name and icon any time. Installs as an in-place update — data, logins, chats and saved switcher accounts all survive
+- **FIXED — UNINSTALL.** The delete button on a clone card now opens the real Android uninstall confirmation (it silently did nothing before)
+- **FIXED — DEADLOCK STUDIO CREDIT.** Never printed inside an app's own logo again (your Discord logo stays clean). The credit sits where it belongs: in the big teal→rose gradient box pinned to the bottom of the home screen and the switcher panel
+- **NEW Deadlock Studio app — EasyPair** (Products tab): offline high-speed sharing between two nearby phones — Wi-Fi Direct, hotspot, same Wi-Fi, USB cable (USB tethering) and Bluetooth. Send photos, videos, audio, files, whole folders, installed apps and clipboard text with no limit; files land in Downloads/EasyPair. 1.3 MB, privacy-first (only visible while you choose to be)
+- **Ophelia Widgets v1.2.0**: the launcher icon is now the real Ophelia artwork — the character + widgets lockup — instead of the plain wordmark
+
 ## v1.6.0 — 2026-09-30
 
 - **THE BIG ONE — ACCOUNT SWITCHER INSIDE EVERY CLONE.** Every new clone ships with a second home-screen icon: **"Discord Alt ⚡ Switch"** (your clone's name + ⚡). Open it and you get the Ophelia Quick Switch screen: tap **CAPTURE CURRENT ACCOUNT** while logged in with account A, then log out / log in as account B and capture again — from then on, switching between the two logins is ONE TAP. One clone, many accounts, **no need to create more clones just for more accounts** (exactly what you asked for). The switcher snapshots the clone's saved login state and restores it on switch — fully offline, nothing uploaded anywhere
