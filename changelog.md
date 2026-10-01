@@ -2,6 +2,10 @@
 
 All notable stable releases of Clone by Ophelia (Deadlock Studio). The latest version is always described in [latest.json](latest.json), the feed the app checks on every open.
 
+## v1.7.1+ — companion releases — 2026-10-01 (round 3)
+
+- **Ophelia Widgets v1.4.0 — the SECOND dot batch** (Products tab): 7 new widgets, **38 total**. **Game Score** — a two-team scoreboard with +/− keys per side and a centre reset. **Days Since** — the count-up mirror of Countdown (days since you quit, started, moved in). **Week Number** — ISO week + a Monday-to-Sunday dot strip with today lit red. **Uptime** — time since last boot, refreshed hourly. **Hydro** — hydration tracker: tap to log a glass, the dot strip fills, optional gentle reminder notifications (opt-in, notification permission asked once at configure). **Currency Rate** — live rates for any pair (USD→INR etc.) via a keyless open API, refreshed every 6 hours, tap refreshes instantly, ↑↓ change arrows. **Sunrise/Sunset** — for any city, computed OFFLINE with NOAA solar equations after a one-time lookup (polar day/night honestly says so). 9 new pure-math JVM tests (34 total green)
+- **EasyPair v1.1.0** (Products tab): NEW **Received Files screen** — every incoming file is registered with the URI the system handed us, so you can browse everything that landed in Downloads/EasyPair, **tap to open**, **re-share onward** (single file or Share-all) and **delete for good** with a confirm. History screen gains a one-tap "Browse received files" jump
 ## v1.7.1+ — companion releases — 2026-10-01 (round 2)
 
 - **Junk Cleaner v1.1.0** (Products tab): NEW **BIG FILES** — the 25 largest files on shared storage, each with a per-file confirm-delete. NEW **DUPLICATES** — byte-identical copies found by a 3-stage engine (size buckets → 64 KB head hash → full content MD5), so two files with the same name but different content never group, and two files with different names but identical content always do. One-tap "Clean copies" keeps the first copy of each group and removes the rest, after a full review dialog. 9 new JVM tests (17 total)
