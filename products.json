@@ -108,15 +108,25 @@
     {
       "id": "junk-cleaner",
       "name": "Junk Cleaner",
-      "tagline": "Smart clean · big files · duplicates · SIMILAR PHOTOS (no root)",
-      "description": "Storage rescue without root: junk scan (thumbnail caches, empty folders, leftover installers, temp files), the 25 biggest files, byte-identical duplicate finder (full-hash verified), and now SIMILAR PHOTOS — a perceptual hash groups photos that LOOK the same (burst shots, HDR takes, WhatsApp re-sends) even when the bytes differ. Each group keeps the LARGEST copy (the least-compressed one); deletion goes through the app's confirmation AND Android's own delete sheet. Plus a system-wide cache boost and a per-app cache dashboard. Nothing is ever removed silently — every byte is reviewed first.",
+      "tagline": "Smart clean · duplicates · SIMILAR PHOTOS + VIDEOS (no root)",
+      "description": "Storage rescue without root: junk scan (thumbnail caches, empty folders, leftover installers, temp files), the 25 biggest files, byte-identical duplicate finder (full-hash verified), SIMILAR PHOTOS — a perceptual hash groups photos that LOOK the same (burst shots, WhatsApp re-sends) even when bytes differ — and now SIMILAR VIDEOS: four keyframes are sampled across each clip's timeline and fingerprinted, so a re-sent or re-encoded copy of the SAME video groups with its original (the 200 MB heavy hitters, not just photos). Each group keeps the LARGEST copy (the least-compressed one); deletion goes through the app's confirmation AND Android's own delete sheet. Plus a system-wide cache boost and a per-app cache dashboard. Nothing is ever removed silently — every byte is reviewed first.",
       "packageName": "com.deadlockstudio.junkcleaner",
-      "versionName": "1.3.0",
-      "versionCode": 5,
-      "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/junk-cleaner-v1.3.0.apk",
-      "sha256": "b9f34e3f09c6b147d01e3b96e608e43b0b29cffd25bec4b0848a705b4243ac24",
-      "sizeBytes": 7533210,
+      "versionName": "1.4.0",
+      "versionCode": 6,
+      "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/junk-cleaner-v1.4.0.apk",
+      "sha256": "cda194118c4e54cd6f6cc59697a1d385a6a9c291bcd1c8e9d068380f68c871ea",
+      "sizeBytes": 7549594,
       "changelog": [
+        {
+          "version": "1.4.0",
+          "date": "2026-10-01",
+          "notes": [
+            "SIMILAR VIDEOS — the heavy hitters: re-sent and re-encoded copies of the SAME clip now group up (one 200 MB re-send chain frees more than every photo group combined)",
+            "4 keyframes sampled across each video's timeline, fingerprinted with the photo pipeline; flat frames are dropped so two 'opens on black' clips can't false-group",
+            "Duration gate (±1.5 s or ±8%) + both-directions 3-of-4 frame agreement — trimmed re-cuts are deliberately NOT grouped",
+            "keeper = the largest file · live progress while fingerprinting · Android's own delete sheet on 30+ · 20 new tests (55 total green)"
+          ]
+        },
         {
           "version": "1.3.0",
           "date": "2026-10-01",
@@ -143,23 +153,9 @@
             "NEW BIG FILES: the 25 largest files on storage, per-file confirm delete",
             "NEW DUPLICATES: byte-identical copies (size + full-hash verified), keep-first one-tap clean with review"
           ]
-        },
-        {
-          "version": "1.0.1",
-          "date": "2026-10-01",
-          "notes": [
-            "FIXED crash-on-open (Compose host base class — root-caused and dex-verified)"
-          ]
-        },
-        {
-          "version": "1.0.0",
-          "date": "2026-09-30",
-          "notes": [
-            "Smart Clean, system cache boost, per-app cache dashboard"
-          ]
         }
       ],
-      "releasedAt": "2026-10-01T10:28:31Z"
+      "releasedAt": "2026-10-01T11:35:00Z"
     },
     {
       "id": "easypair",
