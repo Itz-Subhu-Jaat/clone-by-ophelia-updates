@@ -1,12 +1,12 @@
 {
-  "versionCode": 10,
-  "versionName": "1.8.0",
-  "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/clone-by-ophelia-v1.8.0.apk",
-  "sha256": "0dc5e4fd98eb051e4d1e42c8d1ea984a6ff911b6c87bc4ef8ebeed170f4efd53",
+  "versionCode": 11,
+  "versionName": "1.9.0",
+  "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/clone-by-ophelia-v1.9.0.apk",
+  "sha256": "18946bd9d0445a10e37e384076e762420833fd6f53e344937cfc12b81a07fbcc",
   "releaseNotes": [
-    "FIXED — THE ACCOUNT SWITCHER IS REBUILT: the floating bubble and its button are GONE (that button was crashing the clone on open). Now it works the way Discord itself does — HOLD the app's own profile tab (bottom-right corner) and the Ophelia accounts drawer slides up: your logged-in account, one-tap switch, and an Add-account button that saves this login and restarts logged out for the next one. No logout, ever.",
-    "FIXED — CUSTOM APP LOGOS: whatever picture you pick, of ANY width or shape, is now fitted whole into the launcher's visible circle — the entire logo is shown, edge to edge, with zero blank space and no more cut-off wordmarks. Works in both the clone wizard and Edit clone.",
-    "REMOVED — the delete/uninstall button on clone cards. Uninstall a clone the normal Android way: hold its icon on the home screen/app drawer → Uninstall. Stale entries clean themselves up automatically.",
-    "Under the hood: the switcher now lives 100% inside the app's own window and main process (no more injected panel activity or secondary process) — the smallest possible footprint, and one less thing exotic ROMs can crash on."
+    "STUDIO UPDATE CENTER — the Products tab is now a real update center for the WHOLE family: every Deadlock Studio app shows its FULL release history (each version, its date, and what changed) right inside the app, straight from the official OTA feed. No need to visit the site to know what's new.",
+    "UPDATE BADGES — every app card now wears a badge: UPDATE v-ready (red) when a newer build is out, UP TO DATE (green) when you're current, NEW for apps you haven't installed. A status strip on top sums it up: how many updates are ready, how many of the family you have installed, and when the feed was last checked — with a manual refresh button.",
+    "REAL APP ICONS — every product card now shows the app's actual launcher icon (Ophelia Widgets, Junk Cleaner and EasyPair included — composited from their real adaptive icons), not the studio placeholder.",
+    "The tab is renamed Products → STUDIO with a new family-grid icon, and every install row now says it out loud: sha256-verified — because every download IS hash-checked before the installer ever sees it. Cloning engine untouched — everything that worked in v1.8.0 works exactly the same."
   ]
 }
