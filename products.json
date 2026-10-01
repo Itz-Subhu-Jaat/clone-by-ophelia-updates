@@ -106,15 +106,25 @@
     {
       "id": "junk-cleaner",
       "name": "Junk Cleaner",
-      "tagline": "Smart clean + big files + duplicate finder (no root)",
-      "description": "One-tap SMART CLEAN scans shared storage for thumbnail caches, empty folders, leftover installers and temp files — everything reviewed before deletion. BIG FILES and hash-verified DUPLICATES finders built in. NEW in v1.2.0: real runtime media permissions (the app asks for Photos/Videos/Audio like a normal app — the Android permissions page lists them now), and the launcher icon is your own Junk Cleaner artwork.",
+      "tagline": "Smart clean · big files · duplicates · SIMILAR PHOTOS (no root)",
+      "description": "Storage rescue without root: junk scan (thumbnail caches, empty folders, leftover installers, temp files), the 25 biggest files, byte-identical duplicate finder (full-hash verified), and now SIMILAR PHOTOS — a perceptual hash groups photos that LOOK the same (burst shots, HDR takes, WhatsApp re-sends) even when the bytes differ. Each group keeps the LARGEST copy (the least-compressed one); deletion goes through the app's confirmation AND Android's own delete sheet. Plus a system-wide cache boost and a per-app cache dashboard. Nothing is ever removed silently — every byte is reviewed first.",
       "packageName": "com.deadlockstudio.junkcleaner",
-      "versionName": "1.2.0",
-      "versionCode": 4,
-      "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/junk-cleaner-v1.2.0.apk",
-      "sha256": "3412f0b610f7138b7d86c607291affad2a224f399ef07921fffa1a183e8375c0",
-      "sizeBytes": 6849094,
+      "versionName": "1.3.0",
+      "versionCode": 5,
+      "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/junk-cleaner-v1.3.0.apk",
+      "sha256": "b9f34e3f09c6b147d01e3b96e608e43b0b29cffd25bec4b0848a705b4243ac24",
+      "sizeBytes": 7533210,
       "changelog": [
+        {
+          "version": "1.3.0",
+          "date": "2026-10-01",
+          "notes": [
+            "SIMILAR PHOTOS: perceptual-hash review — burst shots, HDR takes and WhatsApp re-sends grouped even when bytes differ",
+            "Each group keeps the LARGEST copy (least compressed); a '% alike' chip shows how close they are",
+            "Deletion is double-confirmed: the app's dialog, then Android's own system delete sheet (API 30+)",
+            "Live progress while fingerprinting the library ('Fingerprinting 320/1,245 photos…') + unreadable-image skip count"
+          ]
+        },
         {
           "version": "1.2.0",
           "date": "2026-10-01",
