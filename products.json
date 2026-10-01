@@ -50,14 +50,24 @@
       "id": "cool-widgets",
       "name": "Ophelia Widgets",
       "tagline": "31 hand-crafted widgets — now with the NewThing-style DOT MATRIX set",
-      "description": "38 home-screen widgets in the Ophelia red-on-black look — clocks, weather, battery, notes, tools, gauges, fun — plus TWO full Nothing-style DOT MATRIX batches. v1.4.0 adds: Game Score scoreboard (two teams, + and - keys, centre reset), Days Since count-up, Week Number with a Monday-Sunday dot strip, Uptime since boot, Hydro tracker (tap to log a glass, the dot strip fills, optional gentle reminder notifications), Currency Rate (live USD-INR-EUR-GBP and more with change arrows, refreshed every 6 hours) and Sunrise/Sunset for any city (offline solar math, day length included). v1.3.0 batch: App Shortcut, App Folder, Month Calendar, Step Counter, Now Playing, Web Search, AI Bar, Contact Dial. The launcher icon is the real Ophelia artwork.",
+      "description": "38 home-screen widgets in the Ophelia red-on-black look — clocks, weather, battery, notes, tools, gauges, fun — plus TWO full Nothing-style DOT MATRIX batches (15 dot widgets). NEW in v1.5.0: the Sunrise/Sunset widget runs in the CITY’s own timezone — Tokyo times are Tokyo wall-clock with a live NOW line and a UTC offset chip, and the day flips at the city’s local midnight. v1.4.0 added Game Score scoreboard, Days Since, Week Number, Uptime, Hydro hydration tracker (with optional reminders), live Currency Rate (USD→INR with change arrows) and Sunrise/Sunset (offline NOAA math). v1.3.0 added App Shortcut, App Folder, Month Calendar, Steps, Now Playing, Web Search, AI Bar and Contact Dial — all in the dot look. Everything is offline-first: no accounts, no analytics; only weather/rates fetch (keyless) when you place those widgets.",
       "packageName": "com.deadlockstudio.coolwidgets",
-      "versionName": "1.4.0",
-      "versionCode": 5,
-      "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/cool-widgets-v1.4.0.apk",
-      "sha256": "446d40d699da384c27fd33e6a9eb149385319fd64b96dd0e4d4c2a61dba1cd9f",
-      "sizeBytes": 7474082,
+      "versionName": "1.5.0",
+      "versionCode": 6,
+      "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/cool-widgets-v1.5.0.apk",
+      "sha256": "0101b02d851af807e1f1493f5e67ad116659fef256343bbca82f32ec1219f69f",
+      "sizeBytes": 7474078,
       "changelog": [
+        {
+          "version": "1.5.0",
+          "date": "2026-10-01",
+          "notes": [
+            "Sunrise/Sunset now runs in the CITY’s own timezone — pick Tokyo on an Indian phone and the times are Tokyo wall-clock, not IST",
+            "Live NOW line on the sun tile (city’s current time, refreshes hourly) + short UTC offset next to the city name (TOKYO +9)",
+            "Zone-aware midnight scheduling: the day flips at the CITY’s local midnight, not just the phone’s",
+            "Config screen shows the resolved IANA zone after lookup; older widgets keep working (fall back to the phone zone)"
+          ]
+        },
         {
           "version": "1.4.0",
           "date": "2026-10-01",
@@ -89,13 +99,6 @@
           "date": "2026-09-30",
           "notes": [
             "+11 widgets: Ophelia brand set, year/day/moon progress, world clock, storage & RAM gauges, tally, decision spinner"
-          ]
-        },
-        {
-          "version": "1.0.0",
-          "date": "2026-09-30",
-          "notes": [
-            "12 widgets in 7 categories"
           ]
         }
       ]
