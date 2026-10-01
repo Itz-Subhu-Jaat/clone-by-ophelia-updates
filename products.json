@@ -159,7 +159,7 @@
       "changelog": [
         {
           "version": "1.3.0",
-          "date": "2025-06-06",
+          "date": "2026-10-01",
           "notes": [
             "NEW: LocalSend interop — receive from the LocalSend app on Windows/macOS/Linux/iOS/Android (multicast discovery 224.0.0.167, HTTP REST v2.2 on port 53317)",
             "NEW: send TO any LocalSend receiver over HTTP REST (prepare-upload + upload, both wire generations supported)",
