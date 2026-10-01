@@ -2,6 +2,11 @@
 
 All notable stable releases of Clone by Ophelia (Deadlock Studio). The latest version is always described in [latest.json](latest.json), the feed the app checks on every open.
 
+## v1.7.1+ — companion releases — 2026-10-01 (round 2)
+
+- **Junk Cleaner v1.1.0** (Products tab): NEW **BIG FILES** — the 25 largest files on shared storage, each with a per-file confirm-delete. NEW **DUPLICATES** — byte-identical copies found by a 3-stage engine (size buckets → 64 KB head hash → full content MD5), so two files with the same name but different content never group, and two files with different names but identical content always do. One-tap "Clean copies" keeps the first copy of each group and removes the rest, after a full review dialog. 9 new JVM tests (17 total)
+- **Per-product changelogs**: products.json now carries a structured `changelog` array for every product (version · date · notes) — the release hub timeline reads the same data
+
 ## v1.7.1 — 2026-10-01
 
 - **HONEST COMPATIBILITY SYSTEM — only truly cloneable apps are called supported now.** The "Popular" section is now **SUPPORTED**: apps verified to install, launch AND log in as re-signed clones — Discord (your flagship), WhatsApp, Telegram, Instagram, Facebook, Messenger, Snapchat, X, Reddit, Signal, Threads and Spotify. The "Popular Games" section is gone: those games were never honest candidates

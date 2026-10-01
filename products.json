@@ -10,7 +10,41 @@
       "versionCode": 4,
       "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/pic-hider-v1.3.0.apk",
       "sha256": "7262cd4a9054962cc6139689269e345662403f96b0de8481b033e64c409cd8c8",
-      "sizeBytes": 7876055
+      "sizeBytes": 7876055,
+      "changelog": [
+        {
+          "version": "1.3.0",
+          "date": "2026-10-01",
+          "notes": [
+            "FIXED 'gallery won't open': phones whose gallery picker silently fails now get a one-tap file-browser fallback",
+            "FIXED 'PIN won't save': synchronous vault writes — an aggressive memory killer can never eat a fresh setup",
+            "Setup failures show a clear in-wizard message; the lock screen always keeps a manual Unlock button"
+          ]
+        },
+        {
+          "version": "1.2.0",
+          "date": "2026-09-29",
+          "notes": [
+            "Photo import + custom shortcut icons fixed on every phone",
+            "Step-by-step professional PIN setup wizard",
+            "Fingerprint login works on Class-2 (budget) sensors"
+          ]
+        },
+        {
+          "version": "1.1.0",
+          "date": "2026-09-28",
+          "notes": [
+            "App disguise — Calculator / Notes / Gallery launcher looks"
+          ]
+        },
+        {
+          "version": "1.0.0",
+          "date": "2026-09-27",
+          "notes": [
+            "AES-256-GCM PIN vault, biometric unlock, encrypted viewer, export"
+          ]
+        }
+      ]
     },
     {
       "id": "cool-widgets",
@@ -22,19 +56,75 @@
       "versionCode": 4,
       "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/cool-widgets-v1.3.0.apk",
       "sha256": "acc11fd075b0fb9d71716126314b4fbb26e20950101839836f0da8ec784c2373",
-      "sizeBytes": 7426565
+      "sizeBytes": 7426565,
+      "changelog": [
+        {
+          "version": "1.3.0",
+          "date": "2026-10-01",
+          "notes": [
+            "NEW DOT MATRIX batch (8 widgets, 31 total): App Shortcut, App Folder, Month Calendar, Step Counter, Now Playing, Web Search, AI Bar, Contact Dial",
+            "Now Playing: transport keys steer whatever app is playing; track titles via optional notification access",
+            "AI Bar: Gemini, ChatGPT, Copilot and Claude in one tile"
+          ]
+        },
+        {
+          "version": "1.2.0",
+          "date": "2026-10-01",
+          "notes": [
+            "Launcher icon = the real Ophelia artwork"
+          ]
+        },
+        {
+          "version": "1.1.0",
+          "date": "2026-09-30",
+          "notes": [
+            "+11 widgets: Ophelia brand set, year/day/moon progress, world clock, storage & RAM gauges, tally, decision spinner"
+          ]
+        },
+        {
+          "version": "1.0.0",
+          "date": "2026-09-30",
+          "notes": [
+            "12 widgets in 7 categories"
+          ]
+        }
+      ]
     },
     {
       "id": "junk-cleaner",
       "name": "Junk Cleaner",
-      "tagline": "Advanced junk cleaner — smart clean, system cache boost, app cache dashboard",
-      "description": "One-tap SMART CLEAN scans shared storage for thumbnail caches, empty folders, leftover installers and temp files — everything is shown for review before deletion, nothing is removed silently. SYSTEM CACHE BOOST uses the official Android storage API pattern (the same lever Google's own tools use) to make the system evict app caches device-wide — no root. The APP CACHES dashboard lists how much cache every installed app holds and deep-links you to each app's storage settings. v1.0.1 fixes the crash-on-open some phones hit at launch (the Compose host now uses the correct activity base class — root-caused, fixed and verified). Never touches Android/data, never deletes without review, no fake RAM/CPU 'boost' nonsense.",
+      "tagline": "Smart clean + big files + duplicate finder (no root)",
+      "description": "One-tap SMART CLEAN scans shared storage for thumbnail caches, empty folders, leftover installers and temp files — everything reviewed before deletion. NEW in v1.1.0 — BIG FILES: the 25 largest files on your storage with per-file confirm-delete. DUPLICATES: byte-identical copies found via a 3-stage engine (size buckets → 64 KB head hash → full content hash) — one tap keeps the first copy and cleans the rest, always after a review dialog. Plus SYSTEM CACHE BOOST (the official Android storage API pattern, the same lever Google's own tools use) and the per-app APP CACHES dashboard. Never touches Android/data, never deletes without review, no fake RAM/CPU 'boost' nonsense.",
       "packageName": "com.deadlockstudio.junkcleaner",
-      "versionName": "1.0.1",
-      "versionCode": 2,
-      "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/junk-cleaner-v1.0.1.apk",
-      "sha256": "09047d88904b2d8115122975392f0786b1f4357e81cb29636edb04cfb152e399",
-      "sizeBytes": 6832710
+      "versionName": "1.1.0",
+      "versionCode": 3,
+      "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/junk-cleaner-v1.1.0.apk",
+      "sha256": "bd32e77cea78a0976c77c71b1fd0d20d676e4ea09712c140422dc88436425229",
+      "sizeBytes": 6849094,
+      "changelog": [
+        {
+          "version": "1.1.0",
+          "date": "2026-10-01",
+          "notes": [
+            "NEW BIG FILES: the 25 largest files on storage, per-file confirm delete",
+            "NEW DUPLICATES: byte-identical copies (size + full-hash verified), keep-first one-tap clean with review"
+          ]
+        },
+        {
+          "version": "1.0.1",
+          "date": "2026-10-01",
+          "notes": [
+            "FIXED crash-on-open (Compose host base class — root-caused and dex-verified)"
+          ]
+        },
+        {
+          "version": "1.0.0",
+          "date": "2026-09-30",
+          "notes": [
+            "Smart Clean, system cache boost, per-app cache dashboard"
+          ]
+        }
+      ]
     },
     {
       "id": "easypair",
@@ -46,7 +136,16 @@
       "versionCode": 1,
       "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/easypair-v1.0.0.apk",
       "sha256": "8165654fd7758559bcac885aade9705b5e1eee7ccdb2c15a30a87ff36cae0c59",
-      "sizeBytes": 1300373
+      "sizeBytes": 1300373,
+      "changelog": [
+        {
+          "version": "1.0.0",
+          "date": "2026-10-01",
+          "notes": [
+            "Offline nearby transfer: Wi-Fi Direct, hotspot, same Wi-Fi, USB cable, Bluetooth — no limits"
+          ]
+        }
+      ]
     }
   ]
 }
