@@ -2,16 +2,27 @@
   "products": [
     {
       "id": "pic-hider",
-      "name": "Pic Hider",
-      "tagline": "Private photo & video vault — locked behind your PIN",
-      "description": "Hide photos and videos behind a PIN-encrypted vault (AES-256). Fingerprint/face unlock (works on Class-2 sensors too), built-in viewer with zoom and video playback, and one-tap export back to your gallery. v1.3.1 is the durability pass: vault creation is a single atomic verified write with full rollback, broken half-written vaults self-heal, imports stream to disk (huge videos no longer OOM), unlocks run off the main thread, and the viewer decodes photos at screen size. Plus app disguise (Calculator / Notes / Gallery / custom icon) and recovery question.",
+      "name": "Ophelia Pic Hider",
+      "tagline": "Encrypted photo/video vault — now it ASKS for gallery permission properly",
+      "description": "AES-256-GCM vault with PBKDF2, PIN 4-8, recovery, duress PIN, biometric unlock, break-in log and streaming import. v2.0.0 is THE permission fix: the app now properly requests READ_MEDIA_IMAGES/VIDEO (with partial-access handling) and imports work with OR without permission via the system photo picker — plus a real calculator disguise mode and share-sheet import from any app.",
       "packageName": "com.deadlockstudio.pichider",
-      "versionName": "1.3.1",
-      "versionCode": 5,
-      "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/pic-hider-v1.3.1.apk",
-      "sha256": "f4fa0e2ce0354fa78c3b904c77b0edcee24d2a3d934fecedea3f5a86bfe03d79",
-      "sizeBytes": 7876059,
+      "versionName": "2.0.0",
+      "versionCode": 6,
+      "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/pic-hider-v2.0.0.apk",
+      "sha256": "c4d917323c0b3855c24237ab118106dada06f08d75fa607d1810172f33e1e4e5",
+      "sizeBytes": 9171850,
       "changelog": [
+        {
+          "version": "2.0.0",
+          "date": "2026-10-02",
+          "notes": [
+            "THE permission fix: READ_MEDIA_IMAGES/VIDEO with partial-access handling, rationale card, and a full MediaStore gallery browser once granted",
+            "Import works with OR WITHOUT permission — the system photo picker path needs no permission at all",
+            "Calculator disguise mode: the vault can look like a plain calculator; the secret sequence unlocks it",
+            "Share-sheet import — hide photos/videos straight from any app (gallery, WhatsApp…)",
+            "Delete-originals via the system grant sheet; break-in log, duress PIN and encrypted backup/restore"
+          ]
+        },
         {
           "version": "1.3.1",
           "date": "2026-10-01",
@@ -55,20 +66,31 @@
           ]
         }
       ],
-      "releasedAt": "2026-10-01T14:33:42Z"
+      "releasedAt": "2026-10-02T12:00:00Z"
     },
     {
       "id": "cool-widgets",
       "name": "Ophelia Widgets",
-      "tagline": "31 hand-crafted widgets — now with the NewThing-style DOT MATRIX set",
-      "description": "38 home-screen widgets in the Ophelia red-on-black look — clocks, weather, battery, notes, tools, gauges, fun — plus TWO full Nothing-style DOT MATRIX batches. v1.5.1: photo frames survive reboots, battery/weather scheduling is single-source and reboot-proof, the sun widget's timezone flip survives reschedules, and the dot widgets' rendering is thread-safe. Everything is offline-first: no accounts, no analytics.",
+      "tagline": "12 colorful painted widgets — every one with a transparency slider & live preview",
+      "description": "A full family of home-screen widgets painted as crisp bitmaps (works on ANY launcher): digital + analog clocks, battery, weather (Open-Meteo), steps, hydro tracker, countdown, photo frame, quick note, tally counter, week strip and app shortcuts. v2.0.0 is the complete redesign you asked for: every widget gets the colorful gradient/glass/solid skin treatment, a background transparency slider (0-100%), 6 gradient presets, 12 accent swatches, custom RGB and automatic text contrast — all previewed live in the config screen before you save.",
       "packageName": "com.deadlockstudio.coolwidgets",
-      "versionName": "1.5.1",
-      "versionCode": 7,
-      "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/cool-widgets-v1.5.1.apk",
-      "sha256": "a338439da9cb29e56e581c7809246e67f0e5b411f6fc309f8737f2b4e4784c01",
-      "sizeBytes": 7474074,
+      "versionName": "2.0.0",
+      "versionCode": 8,
+      "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/cool-widgets-v2.0.0.apk",
+      "sha256": "9275c237d4203e238d55eff9a4bf8e4306138e6ba6326de4ad9e6123427094a2",
+      "sizeBytes": 8402551,
       "changelog": [
+        {
+          "version": "2.0.0",
+          "date": "2026-10-02",
+          "notes": [
+            "COMPLETE UI REDESIGN — every widget painted with a colorful gradient/glass/solid panel (no more flat gray boxes; works on any launcher)",
+            "Background TRANSPARENCY slider (0-100%) on every single widget",
+            "Live-preview config screen: tweak the skin and watch the real widget re-render",
+            "6 gradient presets + 12 accent swatches + custom RGB color + automatic text contrast",
+            "All 38 widget kinds configurable (12 that had no config screen before now have one)"
+          ]
+        },
         {
           "version": "1.5.1",
           "date": "2026-10-01",
@@ -123,20 +145,31 @@
           ]
         }
       ],
-      "releasedAt": "2026-10-01T14:33:42Z"
+      "releasedAt": "2026-10-02T12:00:00Z"
     },
     {
       "id": "junk-cleaner",
-      "name": "Junk Cleaner",
-      "tagline": "Smart clean · duplicates · SIMILAR PHOTOS + VIDEOS (no root)",
-      "description": "Storage rescue without root: junk scan (thumbnail caches, empty folders, leftover installers, temp files), the 25 biggest files, byte-identical duplicate finder, SIMILAR PHOTOS (perceptual hash) and SIMILAR VIDEOS (keyframe fingerprints) — v1.4.1 deletes through MediaStore so the gallery stays clean, handles Android 10 properly, and hardens the folder-safety filter. Each group keeps the LARGEST copy; deletion goes through the app's confirmation AND Android's own delete sheet. Nothing is ever removed silently.",
+      "name": "Ophelia Junk Cleaner",
+      "tagline": "Full redevelopment: storage-health ring, colorful category grid, whitelist, history & streaks",
+      "description": "Smart, review-first junk cleaning: cache junk, thumbnails, Download installers, temp/log files, EMPTY FOLDERS (race-safe, children first), 0-byte husks, APK residue (orphan vs installed), large-file finder, SHA-1 duplicates, photo/video sweeps, the honest system cache boost and a per-app cache dashboard. v2.0.0 is the full UI redevelopment: animated storage-health ring, colorful category grid, plus a whitelist (long-press anything), cleaning history with total-freed stats and day streaks.",
       "packageName": "com.deadlockstudio.junkcleaner",
-      "versionName": "1.4.1",
-      "versionCode": 7,
-      "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/junk-cleaner-v1.4.1.apk",
-      "sha256": "9a6c4245f1db2eeef266cccffe8357a9b7281a09cdcafe2f986df55f156307f5",
-      "sizeBytes": 7549634,
+      "versionName": "2.0.0",
+      "versionCode": 8,
+      "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/junk-cleaner-v2.0.0.apk",
+      "sha256": "68c8b95ef6d75b4e19aebc204eb3380c054ad3aaf3c507fcc5c727b28466783e",
+      "sizeBytes": 8315963,
       "changelog": [
+        {
+          "version": "2.0.0",
+          "date": "2026-10-02",
+          "notes": [
+            "Full UI redevelopment — animated storage-health ring, colorful category grid, scan → review → clean → done state machine",
+            "NEW: Whitelist — long-press any found file, folder or app; whitelisted paths are skipped by every scan",
+            "NEW: Cleaning history (every session logged, day-grouped, total freed all-time) and day streaks with yesterday-grace",
+            "NEW: 0-byte empty files and APK residue categories (orphan / installed / bundle split)",
+            "Empty-folder cleaning preserved and race-safe — children first, never a recursive delete"
+          ]
+        },
         {
           "version": "1.4.1",
           "date": "2026-10-01",
@@ -185,7 +218,7 @@
           ]
         }
       ],
-      "releasedAt": "2026-10-01T14:33:42Z"
+      "releasedAt": "2026-10-02T12:00:00Z"
     },
     {
       "id": "easypair",
@@ -250,6 +283,110 @@
         }
       ],
       "releasedAt": "2026-10-01T14:33:42Z"
+    },
+    {
+      "id": "calculator",
+      "name": "Ophelia Calculator",
+      "tagline": "Scientific calculator + unit converter + date math",
+      "description": "A real calculator app: basic and scientific pads (trig, ln/log, powers, factorials, pi/e), DEG/RAD, live result preview as you type, a 100-entry history tape, memory keys, a unit converter (8 categories, 69 units), a date calculator (differences + add/subtract with month-end clamping) and Epley-grade percent semantics (200+10% = 220). Four color themes, per-key haptics, long-press to copy. The expression engine is a hand-written shunting-yard parser — no eval, no WebView.",
+      "packageName": "com.deadlockstudio.calculator",
+      "versionName": "1.0.0",
+      "versionCode": 1,
+      "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/calculator-v1.0.0.apk",
+      "sha256": "09aa52dac4cc0182e6980a554b26bbebbb13ce41034b2317e9c48d3e3d3eca2d",
+      "sizeBytes": 8063240,
+      "changelog": [
+        {
+          "version": "1.0.0",
+          "date": "2026-10-02",
+          "notes": [
+            "Brand-new app in the Ophelia family",
+            "Basic + scientific pads with DEG/RAD and live result preview",
+            "History tape (100), memory keys, unit converter (8 categories), date math",
+            "Percent-of semantics: 200+10% = 220",
+            "4 themes + per-key haptics — 69 unit tests over the engine"
+          ]
+        }
+      ],
+      "releasedAt": "2026-10-02T12:00:00Z"
+    },
+    {
+      "id": "compass",
+      "name": "Ophelia Compass",
+      "tagline": "Modern sensor-fused compass with waypoints, level bubble and field meter",
+      "description": "A modern powerful compass: sensor-fused heading (rotation-matrix fusion + complementary filter — smooth, no jitter, no 359→0 backspin), correct both flat on a table AND upright in your hand, pitch-compensated with pose blending. 3 colorful dial themes, level bubble with tilt warning, calibration detector with an animated figure-8 hint, true north via GPS declination, bearing lock with named waypoints, coordinates + altitude (tap to copy), a magnetic-field meter with a metal-nearby alert, and cardinal-crossing haptics. 16 unit tests over the math.",
+      "packageName": "com.deadlockstudio.compass",
+      "versionName": "1.0.0",
+      "versionCode": 1,
+      "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/compass-v1.0.0.apk",
+      "sha256": "b0adbd4c763bdb550c1bcddfcbab43ecb753e9fe2f7235f15e686c6f9bd91440",
+      "sizeBytes": 8186752,
+      "changelog": [
+        {
+          "version": "1.0.0",
+          "date": "2026-10-02",
+          "notes": [
+            "Brand-new app in the Ophelia family",
+            "Sensor-fused dial — smooth, tilt-compensated, any grip angle",
+            "3 dial themes, level bubble, calibration detector, field meter",
+            "Bearing lock + named waypoints; true north via GPS declination",
+            "Coordinates + altitude, tap to copy; cardinal haptics"
+          ]
+        }
+      ],
+      "releasedAt": "2026-10-02T12:00:00Z"
+    },
+    {
+      "id": "game-booster",
+      "name": "Ophelia Game Booster",
+      "tagline": "Boost, monitor and track your games — with REAL numbers only",
+      "description": "A game booster that never lies: RAM freed is the actual availMem before/after delta, kill counts are what the OS actually did, battery temp comes from the real battery broadcast. Game detection with a manual add-any-app grid, one-tap BOOST (killBackgroundProcesses sweep with a whitelist), live RAM ring, DND-on-launch with auto-revert, per-game session tracking via usage access, a draggable FPS overlay (green/amber/red), Balanced/Performance/Battery profiles, and post-session report cards. 22 unit tests.",
+      "packageName": "com.deadlockstudio.gamebooster",
+      "versionName": "1.0.0",
+      "versionCode": 1,
+      "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/game-booster-v1.0.0.apk",
+      "sha256": "d14501d35eb22ec3f380d3399a473f90863a444ca2b33c72548a920ea53eaf35",
+      "sizeBytes": 8057181,
+      "changelog": [
+        {
+          "version": "1.0.0",
+          "date": "2026-10-02",
+          "notes": [
+            "Brand-new app in the Ophelia family",
+            "BOOST with real before/after RAM delta — no fake numbers",
+            "Draggable FPS overlay + DND on launch (auto-revert) + session tracking",
+            "3 profiles, whitelist + hidden-list managers, report cards",
+            "Every permission gated with an honest explainer card"
+          ]
+        }
+      ],
+      "releasedAt": "2026-10-02T12:00:00Z"
+    },
+    {
+      "id": "fit",
+      "name": "Ophelia Fit",
+      "tagline": "Gym + running + steps + HIIT — the full fitness companion",
+      "description": "Everything fitness in one dark colorful app: an 85-exercise library with cues, a routine builder with an active set-by-set logger (rest timer with beeps, last-session hints), a GPS run tracker (distance/pace/kcal, pause & resume, live stats) in a proper foreground service, a hardware step counter with daily goal ring and weekly bars, a full Tabata/HIIT timer with presets, weekly volume charts, streaks, Epley 1RM estimates, a body-weight log with trend chart and complete JSON export. kg/lb units. 50 unit tests over the math.",
+      "packageName": "com.deadlockstudio.fit",
+      "versionName": "1.0.0",
+      "versionCode": 1,
+      "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/fit-v1.0.0.apk",
+      "sha256": "a2ec1b30711a33d62aacdcab5b0337cfeb739b73907186fbedb034d00101db3e",
+      "sizeBytes": 8059453,
+      "changelog": [
+        {
+          "version": "1.0.0",
+          "date": "2026-10-02",
+          "notes": [
+            "Brand-new app in the Ophelia family",
+            "85-exercise library, routine builder, active logger with rest timer",
+            "GPS run tracker + step counter + Tabata/HIIT timer",
+            "Volume charts, streaks, Epley PRs, body log, JSON export",
+            "kg/lb units, colorful dark Ophelia theme"
+          ]
+        }
+      ],
+      "releasedAt": "2026-10-02T12:00:00Z"
     }
   ]
 }

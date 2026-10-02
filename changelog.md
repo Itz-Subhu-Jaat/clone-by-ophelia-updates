@@ -1,5 +1,39 @@
 # Clone by Ophelia — release log
 
+## round 8 · 2026-10-02 — the signature-continuity round: widgets/Junk Cleaner/Pic Hider 2.0.0 + 4 NEW apps
+
+**Ophelia Widgets v2.0.0 (code 8)** · sha256 `9275c237…27094a2` · 8,402,551 B
+- COMPLETE UI REDESIGN: every widget painted with a colorful gradient/glass/solid panel (works on any launcher).
+- Background TRANSPARENCY slider (0-100%) on every single widget + 6 gradient presets, 12 accent swatches, custom RGB, auto text contrast.
+- Live-preview config screen — tweak the skin, watch the real widget re-render before saving.
+- All 38 widget kinds now configurable (12 had no config screen before).
+
+**Junk Cleaner v2.0.0 (code 8)** · sha256 `68c8b95e…466783e` · 8,315,963 B
+- Full UI redevelopment: animated storage-health ring, colorful category grid, scan → review → clean → done.
+- NEW: Whitelist (long-press any found item), cleaning history + total-freed stats, day streaks.
+- NEW: 0-byte empty files + APK residue (orphan vs installed vs bundle) categories.
+- Empty-folder cleaning preserved (race-safe, children-first) — and it really works.
+
+**Pic Hider v2.0.0 (code 6)** · sha256 `c4d91732…f33e1e4e` · 9,171,850 B
+- THE permission fix: READ_MEDIA_IMAGES/VIDEO + partial-access handling + rationale card + full MediaStore gallery browser.
+- Import works with OR without permission (system photo picker path — zero permission needed).
+- Calculator disguise mode (secret sequence unlocks the vault) + share-sheet import from any app.
+
+**Ophelia Calculator v1.0.0 (code 1) — NEW APP** · sha256 `09aa52da…d3d3eca2` · 8,063,240 B
+- Scientific + basic pads, DEG/RAD, live preview, history tape, memory keys, unit converter (8 categories / 69 units), date math, percent-of semantics (200+10% = 220), 4 themes, haptics. 69 unit tests.
+
+**Ophelia Compass v1.0.0 (code 1) — NEW APP** · sha256 `b0adbd4c…f9bd9144` · 8,186,752 B
+- Sensor-fused heading (rotation-matrix + complementary filter, no backspin), 3 dial themes, level bubble, calibration detector, true north (GPS declination), bearing lock + waypoints, field meter, haptics. 16 unit tests.
+
+**Ophelia Game Booster v1.0.0 (code 1) — NEW APP** · sha256 `d14501d3…9a53eaf3` · 8,057,181 B
+- BOOST with REAL before/after availMem delta, draggable FPS overlay, DND-on-launch (auto-revert), per-game session tracking, profiles, whitelist. 22 unit tests.
+
+**Ophelia Fit v1.0.0 (code 1) — NEW APP** · sha256 `a2ec1b30…d00101db3e` · 8,059,453 B
+- 85-exercise library, routine builder + set-by-set logger, GPS run tracker, step counter, Tabata/HIIT timer, volume charts, Epley PRs, body log, JSON export. 50 unit tests.
+
+**Signing continuity**: all three upgraded apps are signed with the SAME keys as the versions you already have installed — normal in-place updates, nothing to uninstall. The four new apps are fresh installs with their own keys.
+
+---
 ## round 7 · 2026-10-01 — Roblox supported + Discord quick menu + the family-wide bug-scan round
 
 **Clone by Ophelia v2.0.0 (code 12)** · sha256 `ebf35a55…58470ff` · 7,293,184 B
