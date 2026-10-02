@@ -1,5 +1,46 @@
 # Clone by Ophelia — release log
 
+## round 9 · 2026-10-02 — OTA EVERYWHERE: Ophelia Update Center inside all 8 apps + the compass parse-fix round
+
+Every individual app now checks the PUBLIC release feed by itself and prompts when a new version is out —
+no need to come back through the cloner. Downloads are streamed + sha-256 VERIFIED in-app, so a corrupted
+download can never be installed. All 8 APKs are signed with BOTH v1+v2 schemes now (same keys).
+
+**Ophelia Compass v1.0.1 (code 2)** · sha256 `264a7fef…26914e3a` · 8,215,189 B
+- THE PARSE FIX: APK now signed with BOTH v1 + v2 schemes — fixes 'there was a problem parsing the package' on devices/OEM installers that choked on v2-only APKs (delete a failed old download and grab this one).
+- Ophelia Update Center: silent update check on open + 'Check for updates' in Settings; downloads are sha-256 VERIFIED in-app — a corrupt download can never be installed.
+- Same signing key as v1.0.0 → installs as a normal update. Version footer now reads the real installed version.
+
+**Ophelia Calculator v1.0.1 (code 2)** · sha256 `971314cf…b3c9672c` · 8,108,072 B
+- Ophelia Update Center: the app now checks for updates BY ITSELF (silent check on open + 'Check for updates' in Settings) with sha-256 verified in-app download.
+- v1+v2 signature schemes (install-compat). Honest About copy: the only network use is the optional update check.
+
+**Ophelia Game Booster v1.0.1 (code 2)** · sha256 `f4d4ab06…a9a23d7e` · 8,102,124 B
+- Ophelia Update Center: self-update check + prompt with sha-256 verified in-app download (About section).
+- v1+v2 signature schemes (install-compat). Home header shows the live installed version.
+
+**Ophelia Fit v1.0.1 (code 2)** · sha256 `2e86910c…e34b51c5` · 8,088,619 B
+- Ophelia Update Center: silent check on open + 'Check for updates' row in the More tab, sha-256 verified in-app download.
+- v1+v2 signature schemes (install-compat). All version labels now dynamic.
+
+**Ophelia Junk Cleaner v2.0.1 (code 9)** · sha256 `eded9efc…db820694` · 8,344,363 B
+- Ophelia Update Center on the Home tab — the cleaner updates ITSELF: silent check on open, sha-256 verified in-app download, 'Not now' snooze.
+- v1+v2 signature schemes (install-compat). SAME OLD KEY — installs over v2.0.0 keeping all data/whitelist/history.
+
+**Ophelia Pic Hider v2.0.1 (code 7)** · sha256 `5e7dfa88…8bb937f1` · 9,232,419 B
+- Ophelia Update Center in Settings → About: silent check on open + manual 'Check', sha-256 verified in-app download.
+- v1+v2 signature schemes (install-compat). SAME OLD KEY — vault data untouched.
+- Disguise safety: update prompts NEVER appear inside the calculator disguise.
+
+**Ophelia Widgets v2.0.1 (code 9)** · sha256 `0ad67fbc…1c888f1f` · 8,443,922 B
+- Ophelia Update Center in the widget browser: silent check on open + 'CHECK' row, sha-256 verified in-app download.
+- v1+v2 signature schemes (install-compat). SAME OLD KEY — all configured widgets survive the update.
+- Widget config screens stay interruption-free.
+
+**Ophelia EasyPair v1.6.2 (code 9)** · sha256 `05d02be6…8c5689c4` · 2,218,868 B
+- Ophelia Update Center in Settings → About: silent check on open + manual 'Check', sha-256 verified in-app download.
+- v1+v2 signature schemes (install-compat). SAME OLD KEY — installs over 1.6.1.
+- Transfers keep priority: an incoming-transfer prompt always wins over the update dialog.
 ## round 8 · 2026-10-02 — the signature-continuity round: widgets/Junk Cleaner/Pic Hider 2.0.0 + 4 NEW apps
 
 **Ophelia Widgets v2.0.0 (code 8)** · sha256 `9275c237…27094a2` · 8,402,551 B
