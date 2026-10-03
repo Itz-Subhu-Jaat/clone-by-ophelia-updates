@@ -1,16 +1,16 @@
 {
-  "versionCode": 12,
-  "versionName": "2.0.0",
-  "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/clone-by-ophelia-v2.0.0.apk",
-  "sha256": "ebf35a55292489d90b74479262b2acdf7249cdfd2ff8ea365596b0e3b58470ff",
+  "versionCode": 13,
+  "versionName": "2.0.1",
+  "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/clone-by-ophelia-v2.0.1.apk",
+  "sha256": "963091c694a1f93363f5c785b11124a100b05acc21e1419ce25e5f20b62af74d",
   "releaseNotes": [
-    "ROBLOX IS SUPPORTED — removed from the blocked list and verified as a curated clone (username + password login). Clone Roblox exactly like Discord: unlimited parallel installs, separate accounts per clone.",
-    "SPLIT-SCREEN + SMALL-SCREEN UNLOCK FOR ROBLOX — the stock Roblox app ships locked (resizeableActivity=false, smallScreens=false, min-width 300dp), which is why it refuses split-screen and small windows. Every Ophelia Roblox clone rewrites all three locks in the manifest, so your clone runs side-by-side with anything, in any window size. Verified against the real Roblox 2.740.931 build.",
-    "DISCORD QUICK MENU (account switcher, rebuilt) — hold your own profile tab (bottom-right) and a Discord-style menu opens: SET STATUS (Online / Idle / Do Not Disturb / Invisible with the exact presence dots) and SWITCH ACCOUNTS below it. Status rows call Discord's own settings API; when the live token can't be read from inside the app they gracefully open your profile instead. The switcher is now Discord-only and inert everywhere else, exactly as designed.",
-    "Bug scan round across the whole family: this cloner release also hardens the patcher self-check (the new resize tests run in CI on every push) and fixes a stuck-drawer state in the switcher host plus a slot-naming off-by-one.",
-    "Cloning engine untouched where it was already solid — everything that worked in v1.9.0 works exactly the same."
+    "THE SWITCHER FIX — Discord clones no longer crash and the account switcher actually appears now. If you cloned Discord on v2.0.0 and the clone crashed (or holding your profile tab did nothing), update the cloner and CLONE AGAIN: the new clone is stable and the quick menu opens when you hold your own profile tab.",
+    "WHAT WAS BROKEN: the switcher module injected into Discord clones contained helper classes whose shortened names collided with Discord's own internal class names. Android picked Discord's classes over ours, so the switcher broke the moment it tried to open — crash or dead gesture. Every helper class now lives under a name Discord can never have, and the build refuses to ship if that rule is ever violated again.",
+    "The fix is proven against the exact current Discord stable build (34712) — patched, installed-structure verified, zero name collisions with Discord's 17,800+ classes (and Roblox's 26,500+).",
+    "Same signing key as v2.0.0 — this installs as a normal update over your existing cloner, keeping all your clone registry and settings.",
+    "Everything else is untouched: Roblox support with the split-screen/small-screen unlock, the full family app list, and all v1.9.0 features work exactly as before."
   ],
-  "date": "2026-10-01",
-  "releasedAt": "2026-10-01T14:33:42Z",
-  "apkSize": 7293184
+  "date": "2026-10-03",
+  "releasedAt": "2026-10-03T06:30:00Z",
+  "apkSize": 7293288
 }

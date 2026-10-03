@@ -1,5 +1,13 @@
 # Clone by Ophelia — release log
 
+## round 10 · 2026-10-03 — the switcher fix: Discord clones stop crashing, the quick menu finally appears
+
+**Clone by Ophelia v2.0.1 (code 13)** · sha256 `963091c6…62af74d` · 7,293,288 B
+- THE BUG: on v2.0.0, Discord clones crashed and/or the account switcher never appeared (hold your profile tab → nothing). Root cause: the injected switcher module's helper classes were auto-renamed into short packages (a/, b/, i/, m/…) that collide with class names Discord itself ships — Android resolves the name from the HOST's dex first, so the switcher's calls hit Discord's code instead of its own → crash on drawer open / silently dead bootstrap. The v2.0.0 quick-menu rewrite pulled in more helpers, growing the collision set from 22 to 43 names and making the failure near-universal.
+- THE FIX: every helper class in the injected dex now lives under the unique `opheliak` namespace (plus the kept `ophelia.switcher` classes) — a name no host app can ever define. A new build-time guard parses the built dex and fails the build if ANY class lands outside those namespaces, so this bug class can never ship again.
+- VERIFIED: invoke-target scan of the old dex showed SlotStore/DiscordStatus/OpheliaBootstrap calling collided names (Ll/a, Lm/i, Lm/j, Li/b …); the new dex has 0 collisions against Discord's full 17,838-class set and Roblox's 26,528-class set; the real Discord stable 34712 base was patched end-to-end (provider injection, classes5.dex 86,392 B, zipalign + apksigner green, selfcheck PASS).
+- ACTION FOR USERS: update the cloner, then re-clone Discord — old broken clones should be deleted. Same signing key → in-place update, registry and settings intact.
+
 ## round 9 · 2026-10-02 — OTA EVERYWHERE: Ophelia Update Center inside all 8 apps + the compass parse-fix round
 
 Every individual app now checks the PUBLIC release feed by itself and prompts when a new version is out —
