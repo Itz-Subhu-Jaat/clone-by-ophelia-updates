@@ -1,5 +1,15 @@
 # Clone by Ophelia — release log
 
+## round 12 · 2026-10-07 — the old-clone rescue: Update-all straight from the cloner
+
+**Clone by Ophelia v2.2.0 (code 15)** · sha256 `39ac57ec…945d00` · 7,333,018 B
+- THE GAP THIS CLOSES: clones made BEFORE v2.1.0 could never see the in-clone "Update this clone" button — that button ships INSIDE switcher dex v4, so an old clone (dex v3-) literally has no way to ask for the update (chicken-and-egg). And the cloner's own Home update icon only ever lit up when the ORIGINAL Discord version was newer — an outdated Ophelia engine never triggered anything. Old clones were stuck.
+- THE FIX — CLONER-SIDE UPDATE PATH: the clone registry now records the baked-in switcher generation of every clone (0 = legacy clone made before tracking existed). On the Home screen, each clone whose engine is older than the cloner's gets a full-width crimson "Update clone" button with the reason spelled out under it, AND a big "Ophelia engine update" banner sits at the top of the list: "N old clones have the old engine — update them now… Logins, data and settings stay exactly as they are — no re-cloning." with one "Update all" button.
+- UPDATE ALL = sequential in-place re-patches: the engine re-patches clone #1, WAITS for the system installer's outcome, then #2, then #3 (quiet on Android 12+ — USER_ACTION_NOT_REQUIRED for updates we staged ourselves). Same identity, same signing key → every login, saved switcher account, setting and chat cache survives. The banner shows live progress ("N clones left — keep this app open"); the queue aborts cleanly at the first failure with the reason on the Progress screen.
+- ONE-TIME PASS, THEN FOREVER ONE TAP: after this single Update-all, every clone carries switcher dex v4 → the profile-panel "Switch Accounts" row (above Quests) + the in-clone "Update this clone" button. All FUTURE fixes (ours or Discord's) then arrive as one tap from inside the clone — exactly as promised in round 11, now actually reachable for old clones too.
+- NO DEX CHANGE: the embedded switcher stays v4 byte-identical (106,124 B, OpheliaUpdate marker verified in the release APK); build re-verified end-to-end — tests, both assembles, lintDebug, CI-equivalent selfcheck PASS, release signed with the same certificate as every release (in-place update).
+- ACTION FOR USERS: update the cloner (in-place, same key) → open it → tap "Update all" on the red banner → done. No re-cloning, no re-login, nothing to configure.
+
 ## round 11 · 2026-10-07 — the switcher becomes a real, visible button + one-tap clone updates (no re-cloning ever again)
 
 **Clone by Ophelia v2.1.0 (code 14)** · sha256 `a49d08bc…69069` · 7,314,605 B

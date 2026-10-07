@@ -1,22 +1,20 @@
 {
-  "versionCode": 14,
-  "versionName": "2.1.0",
-  "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/clone-by-ophelia-v2.1.0.apk",
-  "sha256": "a49d08bc33a0b22dda71a5ec9308f85b05c5d90c982d8fc25c21fbf1a4b69069",
+  "versionCode": 15,
+  "versionName": "2.2.0",
+  "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/clone-by-ophelia-v2.2.0.apk",
+  "sha256": "39ac57ec8334a73df7f65d2cc180092e14add9c7cb0c449594d7883814945d00",
   "switcherVersion": 4,
   "releaseNotes": [
-    "ACCOUNT SWITCHING IS NOW A VISIBLE BUTTON — no hidden gesture needed. Tap your profile tab (bottom-right) like normal: when the panel with Quests / Shop / Settings opens, an Ophelia 'Switch Accounts' row sits right above Quests. Tap it to save and switch between accounts. (Holding your profile tab still opens the full quick menu with status + accounts.)",
-    "ONE-TAP CLONE UPDATES — no more re-cloning to get a fix. Whenever Deadlock Studio ships a switcher bug-fix OR the Discord app itself gets updated on your phone, an 'Update this clone' button appears right under Switch Accounts in your profile panel (and at the top of the hold-menu). One tap, Clone by Ophelia re-patches that clone in place — same identity, same key, your logins and data stay exactly as they are.",
-    "The update check is fully silent: it runs in the background once every 6 hours and only shows the button when there is actually something newer. No notifications, no nagging, nothing breaks offline.",
-    "Updated clones keep everything: accounts saved in the switcher, Discord logins, settings, chats cache.",
-    "The cloner app itself now signs releases with both v1+v2 schemes (same certificate — installs as a normal update; this fixes 'there was a problem parsing the package' on some phones)."
+    "UPDATE YOUR OLD CLONES WITHOUT RE-CLONING — clones made before the last update can't show the in-clone Update button (it has to be installed first, chicken-and-egg). This version fixes that: open Clone by Ophelia and a big 'Ophelia engine update' banner appears at the top of your clone list with an 'Update all' button. One tap re-patches every old clone in place — same name, same icon, same logins, same data, nothing to set up again.",
+    "Every clone card now also gets its own full-width 'Update clone' button whenever there is something to update (old engine OR a newer Discord), with the reason written right under it — no more hunting for a tiny refresh icon.",
+    "Updating a clone keeps EVERYTHING: saved switcher accounts, Discord logins, settings, chats cache. It's the same app, just with the new engine inside.",
+    "After this one update pass, future fixes really are one tap from INSIDE the clone: tap your profile tab → 'Update this clone' under Switch Accounts (above Quests).",
+    "Install is quiet on Android 12+ (no repeated confirm dialogs) when updating several clones at once."
   ],
   "switcherReleaseNotes": [
-    "New: 'Switch Accounts' + 'Update this clone' rows injected above the Quests row of Discord's own profile panel (matches the panel's theme, light or dark).",
-    "New: in-clone update center — compares the release feed's switcherVersion and the installed original Discord's versionCode, and hands an in-place re-patch request to the cloner app.",
-    "New: self-healing fallback pill if the host app's layout leaves the injected row unmeasured."
+    "No switcher dex change this round — the embedded engine stays v4 (the in-panel Switch Accounts row above Quests + the in-clone Update button). This update is the cloner-side rescue path that finally DELIVERS v4 to clones made before it existed."
   ],
   "date": "2026-10-07",
-  "releasedAt": "2026-10-07T17:10:00Z",
-  "apkSize": 7314605
+  "releasedAt": "2026-10-07T18:30:00Z",
+  "apkSize": 7333018
 }
