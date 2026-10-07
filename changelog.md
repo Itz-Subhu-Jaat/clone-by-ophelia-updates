@@ -1,5 +1,15 @@
 # Clone by Ophelia — release log
 
+## round 11 · 2026-10-07 — the switcher becomes a real, visible button + one-tap clone updates (no re-cloning ever again)
+
+**Clone by Ophelia v2.1.0 (code 14)** · sha256 `a49d08bc…69069` · 7,314,605 B
+- SWITCH ACCOUNTS, VISIBLY: tap your profile tab (bottom-right) → the panel with Quests / Shop / Settings opens → an Ophelia "Switch Accounts" row now sits directly ABOVE Quests, styled to match the panel's own theme. The hold-your-profile quick menu still works (status + accounts + update banner). A self-healing floating pill covers the rare case where the host layout leaves the row unmeasured.
+- ONE-TAP CLONE UPDATES: the injected switcher now checks (silently, max every 6h) the release feed's switcherVersion and the installed ORIGINAL Discord's versionCode. When a switcher bug-fix OR a newer Discord is available, an "Update this clone" row appears under Switch Accounts (plus a banner at the top of the hold-menu). Tapping it launches the cloner, which re-patches that exact clone IN PLACE — same identity, same signing key → logins, saved switcher slots and data all preserved. No re-cloning, no re-login.
+- CLONER-SIDE: MainActivity is singleTask now and handles the update-request intent (registry lookup, or a synthesized entry for clones the registry doesn't know); a dex-version gate sends the user to the cloner's own OTA update first when the installed cloner is too old to embed the requested switcher version.
+- GUARDS: build-switcher-dex.sh now also fails the build when the switcher's DEX_VERSION drifts from the app's DexVersions.EMBEDDED_SWITCHER (both v4 this release); the class-collision guard re-verified — 141 classes, 0 collisions vs Discord's 17,838 classes; real Discord 34712 base patched end-to-end (provider + classes5.dex 106,124 B + apksigner + aapt green, CI selfcheck PASS).
+- Cloner APK now signed v1+v2 (same certificate as every release — in-place update).
+- ACTION FOR USERS: update the cloner (in-place). Existing clones keep working as-is; to get the new in-panel button + update row, update each clone once via the cloner's own "update" (or the clone's new Update button after updating the cloner) — OR simply re-clone. After that, all future fixes arrive as one-tap updates inside the clone.
+
 ## round 10 · 2026-10-03 — the switcher fix: Discord clones stop crashing, the quick menu finally appears
 
 **Clone by Ophelia v2.0.1 (code 13)** · sha256 `963091c6…62af74d` · 7,293,288 B

@@ -1,16 +1,22 @@
 {
-  "versionCode": 13,
-  "versionName": "2.0.1",
-  "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/clone-by-ophelia-v2.0.1.apk",
-  "sha256": "963091c694a1f93363f5c785b11124a100b05acc21e1419ce25e5f20b62af74d",
+  "versionCode": 14,
+  "versionName": "2.1.0",
+  "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/clone-by-ophelia-v2.1.0.apk",
+  "sha256": "a49d08bc33a0b22dda71a5ec9308f85b05c5d90c982d8fc25c21fbf1a4b69069",
+  "switcherVersion": 4,
   "releaseNotes": [
-    "THE SWITCHER FIX — Discord clones no longer crash and the account switcher actually appears now. If you cloned Discord on v2.0.0 and the clone crashed (or holding your profile tab did nothing), update the cloner and CLONE AGAIN: the new clone is stable and the quick menu opens when you hold your own profile tab.",
-    "WHAT WAS BROKEN: the switcher module injected into Discord clones contained helper classes whose shortened names collided with Discord's own internal class names. Android picked Discord's classes over ours, so the switcher broke the moment it tried to open — crash or dead gesture. Every helper class now lives under a name Discord can never have, and the build refuses to ship if that rule is ever violated again.",
-    "The fix is proven against the exact current Discord stable build (34712) — patched, installed-structure verified, zero name collisions with Discord's 17,800+ classes (and Roblox's 26,500+).",
-    "Same signing key as v2.0.0 — this installs as a normal update over your existing cloner, keeping all your clone registry and settings.",
-    "Everything else is untouched: Roblox support with the split-screen/small-screen unlock, the full family app list, and all v1.9.0 features work exactly as before."
+    "ACCOUNT SWITCHING IS NOW A VISIBLE BUTTON — no hidden gesture needed. Tap your profile tab (bottom-right) like normal: when the panel with Quests / Shop / Settings opens, an Ophelia 'Switch Accounts' row sits right above Quests. Tap it to save and switch between accounts. (Holding your profile tab still opens the full quick menu with status + accounts.)",
+    "ONE-TAP CLONE UPDATES — no more re-cloning to get a fix. Whenever Deadlock Studio ships a switcher bug-fix OR the Discord app itself gets updated on your phone, an 'Update this clone' button appears right under Switch Accounts in your profile panel (and at the top of the hold-menu). One tap, Clone by Ophelia re-patches that clone in place — same identity, same key, your logins and data stay exactly as they are.",
+    "The update check is fully silent: it runs in the background once every 6 hours and only shows the button when there is actually something newer. No notifications, no nagging, nothing breaks offline.",
+    "Updated clones keep everything: accounts saved in the switcher, Discord logins, settings, chats cache.",
+    "The cloner app itself now signs releases with both v1+v2 schemes (same certificate — installs as a normal update; this fixes 'there was a problem parsing the package' on some phones)."
   ],
-  "date": "2026-10-03",
-  "releasedAt": "2026-10-03T06:30:00Z",
-  "apkSize": 7293288
+  "switcherReleaseNotes": [
+    "New: 'Switch Accounts' + 'Update this clone' rows injected above the Quests row of Discord's own profile panel (matches the panel's theme, light or dark).",
+    "New: in-clone update center — compares the release feed's switcherVersion and the installed original Discord's versionCode, and hands an in-place re-patch request to the cloner app.",
+    "New: self-healing fallback pill if the host app's layout leaves the injected row unmeasured."
+  ],
+  "date": "2026-10-07",
+  "releasedAt": "2026-10-07T17:10:00Z",
+  "apkSize": 7314605
 }
