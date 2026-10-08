@@ -1,5 +1,15 @@
 # Clone by Ophelia — release log
 
+## round 14 · 2026-10-08 — the Play Protect hard-block: honest handling + quiet self-updates
+
+**Clone by Ophelia v2.2.1 (code 16)** · sha256 `0725411f…3c98ff` · 7,333,008 B
+- WHAT CHANGED (user-visible): Google Play Protect recently moved the cloner from the soft "Unsafe app blocked" warning (which has an "Install anyway" button) to the HARD "Harmful app blocked" block (only a "Got it" button, NO bypass). That verdict is made on Google's servers per APK file — nothing inside the app can change that dialog. The same family as the original App Cloner, which has been flagged for years.
+- THE APP-SIDE FIX: the cloner's own OTA update now stages through a PackageInstaller session (silent on Android 12+; we already hold the install-unknown-apps permission for cloning). When Play Protect blocks it, the failure arrives as a broadcast the app SEES — a clear in-app dialog explains what happened and gives the exact 30-second way out: Play Store → profile picture → Play Protect → gear → turn OFF "Scan apps with Play Protect" → tap Update again. ACTION_VIEW fallback kept for devices where the session path fails.
+- Clone installs blocked the same way now surface a dedicated, actionable Failed message (exact steps + pointer to the new About section) instead of a cryptic installer status code.
+- New About/Help card "Blocked by Play Protect?" — the two dialog types (warning vs hard block), why re-signing cloners get flagged, the steps, and the trade-off of turning scanning back on (periodic scans may re-flag the cloner or clones with removal warnings).
+- NO DEX CHANGE: switcher stays v4; same signing key → in-place update; tests, both assembles, lintDebug, selfcheck all green; CI-equivalent selfcheck PASS.
+- USER ACTION IF BLOCKED RIGHT NOW: turn off "Scan apps with Play Protect" once (steps above), then update — after v2.2.1, future blocks explain themselves.
+
 ## round 12 · 2026-10-07 — the old-clone rescue: Update-all straight from the cloner
 
 **Clone by Ophelia v2.2.0 (code 15)** · sha256 `39ac57ec…945d00` · 7,333,018 B

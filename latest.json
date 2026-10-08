@@ -1,20 +1,20 @@
 {
-  "versionCode": 15,
-  "versionName": "2.2.0",
-  "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/clone-by-ophelia-v2.2.0.apk",
-  "sha256": "39ac57ec8334a73df7f65d2cc180092e14add9c7cb0c449594d7883814945d00",
+  "versionCode": 16,
+  "versionName": "2.2.1",
+  "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/clone-by-ophelia-v2.2.1.apk",
+  "sha256": "0725411fd72f30e408d5574804103cfc2fb2659829b97e1ec8b656a44e3c98ff",
   "switcherVersion": 4,
   "releaseNotes": [
-    "UPDATE YOUR OLD CLONES WITHOUT RE-CLONING — clones made before the last update can't show the in-clone Update button (it has to be installed first, chicken-and-egg). This version fixes that: open Clone by Ophelia and a big 'Ophelia engine update' banner appears at the top of your clone list with an 'Update all' button. One tap re-patches every old clone in place — same name, same icon, same logins, same data, nothing to set up again.",
-    "Every clone card now also gets its own full-width 'Update clone' button whenever there is something to update (old engine OR a newer Discord), with the reason written right under it — no more hunting for a tiny refresh icon.",
-    "Updating a clone keeps EVERYTHING: saved switcher accounts, Discord logins, settings, chats cache. It's the same app, just with the new engine inside.",
-    "After this one update pass, future fixes really are one tap from INSIDE the clone: tap your profile tab → 'Update this clone' under Switch Accounts (above Quests).",
-    "Install is quiet on Android 12+ (no repeated confirm dialogs) when updating several clones at once."
+    "IF GOOGLE PLAY PROTECT BLOCKS THE UPDATE (\u201cHarmful app blocked\u201d with only a Got-it button, no Install-anyway): that is Google's cloud scanner hard-flagging the cloner (same treatment the original App Cloner has gotten for years) — it is NOT a new bug in the app. Let it through once: open the Play Store \u2192 tap your profile picture \u2192 Play Protect \u2192 gear icon \u2192 turn OFF \u201cScan apps with Play Protect\u201d \u2192 come back and tap Update again. 30 seconds, once. (If you can't update the app at all because of the block, do the same Play Protect steps, then update.)",
+    "Updates of the cloner itself now install QUIETLY on Android 12+ (no repeated confirm screens) and, when Play Protect blocks one, the app tells you exactly what happened and what to do instead of failing silently.",
+    "Clone installs blocked by Play Protect now show clear instructions on the progress screen too (steps: Play Store \u2192 profile \u2192 Play Protect \u2192 gear \u2192 turn off scanning \u2192 retry). Your logins and data are never touched by a blocked attempt.",
+    "New About/Help section: \u201cBlocked by Play Protect?\u201d explains the difference between the \u201cUnsafe app blocked\u201d warning (has Install-anyway) and the \u201cHarmful app blocked\u201d hard block (no bypass), plus the re-enabling trade-off.",
+    "Every update is still sha-256 verified inside the app before it is installed — a corrupt or tampered download can never be staged."
   ],
   "switcherReleaseNotes": [
-    "No switcher dex change this round — the embedded engine stays v4 (the in-panel Switch Accounts row above Quests + the in-clone Update button). This update is the cloner-side rescue path that finally DELIVERS v4 to clones made before it existed."
+    "No switcher dex change — the engine stays v4 (in-panel Switch Accounts above Quests + in-clone Update button; the cloner-side Update-all rescue from the previous release)."
   ],
-  "date": "2026-10-07",
-  "releasedAt": "2026-10-07T18:30:00Z",
-  "apkSize": 7333018
+  "date": "2026-10-08",
+  "releasedAt": "2026-10-08T10:45:00Z",
+  "apkSize": 7333008
 }
