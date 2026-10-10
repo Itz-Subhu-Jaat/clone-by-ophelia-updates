@@ -1,22 +1,22 @@
 {
-  "versionCode": 17,
-  "versionName": "2.2.2",
-  "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/clone-by-ophelia-v2.2.2.apk",
-  "sha256": "4fd7a96d0ae8104cacda0b7bb326dca8bdf2ee20c38676fa3ef0958c73adf618",
-  "switcherVersion": 5,
+  "versionCode": 18,
+  "versionName": "2.2.3",
+  "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/clone-by-ophelia-v2.2.3.apk",
+  "sha256": "ebbe51a14e14fa21310d1b5676e97198263afe86a54ab1da3fecdaa23ae2ba11",
+  "switcherVersion": 6,
   "releaseNotes": [
-    "THE BIG ONE — ACCOUNT SWITCHER IN EVERY CLONE: the switcher is no longer Discord-only. EVERY clone you create now has a small draggable \u2384 button floating inside the app — tap it and the Ophelia quick menu opens: switch accounts (one clone, many logins, NO logout), add accounts, rename them, update the clone itself. Works in WhatsApp, Telegram, Instagram, Roblox, any clone. Drag the button wherever you like (it remembers), hold it 600ms to hide it for the session.",
-    "Discord clones keep ALL the extras: Set Status (Online/Idle/DND/Invisible) in the menu, the Switch Accounts row above Quests in your profile panel, and hold-your-profile-tab gesture.",
-    "OLD CLONES: after updating, open the cloner — the red banner at the top (\u201cN clones are missing the new Ophelia engine\u201d) now counts ALL old clones, not just Discord ones. Update all \u2192 every clone gets the \u2384 button, in place, logins and data untouched.",
-    "Clones also know which app they were built from now (recorded inside the clone) — so the in-clone \u201cUpdate this clone\u201d button works for every app, and it can tell when the ORIGINAL app on your phone is newer than the clone.",
+    "NEW: IMAGE CLICKER — teach your phone to click by picture, PC-style. Open the new IMAGE CLICKER card on the cloner home: record your taps live, or drag a box around any button in a screenshot and the clicker learns it (image recognition, works even if the button moves). Build sequences: tap here, wait, swipe, IF the image appears tap it, loop forever with random intervals. A tiny control pill shows while it runs (drag it, tap to expand play/pause/stop) — nothing floats when you're not running anything.",
+    "SWITCHER v6 — DISCORD ONLY, YOUR WAY: the always-visible floating ⇄ button is gone (it irritated). In Discord clones you now switch accounts by HOLDING your profile tab (bottom-right, ~half a second) — or tap the quiet top notification's ⇄ Switch account action while the clone is open. Same quick menu as before: switch accounts, set status, update the clone.",
+    "OTHER APPS (Roblox, WhatsApp, etc.): their own built-in account switchers stay untouched — Ophelia no longer adds anything inside non-Discord clones. If an older clone still has the floating button, Update-all below removes it.",
+    "UPDATE-ALL now also fixes old clones: Discord clones get the new hold + notification switcher, and clones of other apps get the old floating button REMOVED — in place, logins and data untouched.",
     "IF PLAY PROTECT BLOCKS THIS UPDATE (\u201cHarmful app blocked\u201d, no Install-anyway): Play Store \u2192 your profile picture \u2192 Play Protect \u2192 gear \u2192 turn OFF \u201cScan apps with Play Protect\u201d \u2192 tap Update again. That verdict is Google's server-side call on apps that re-sign other apps (the original App Cloner has been flagged the same way for years) — nothing in the app changed to cause it. You can turn scanning back on afterwards."
   ],
   "switcherReleaseNotes": [
-    "dex v5 — GENERIC: every clone gets the draggable \u2384 bubble (tap = quick menu, drag = move + edge-snap, hold = hide for session); Discord-only extras (status rows, profile-tab hold, in-panel rows) are gated at runtime by the host probe.",
-    "The clone's source app is recorded as ophelia_source_package meta-data at patch time — the in-clone update center finds the ORIGINAL app for any host now (Discord fallback preserved for v4 clones).",
-    "Snapshot/restore engine unchanged and already host-agnostic (shared_prefs + databases + files, media skipped)."
+    "dex v6 — DISCORD-ONLY: the v5 draggable bubble is retired. Entry points: (a) profile-tab hold zone (400ms, replay-safe), (b) quiet persistent notification (IMPORTANCE_LOW, alive only while the clone is on screen, tap or its action opens the quick menu). Non-Discord clones get NO switcher dex at all.",
+    "OpheliaSwitchNotification: framework-only APIs (no androidx in the dex), RECEIVER_EXPORTED on 33+, dynamic receiver resolves the current activity; notification channel 'ophelia_switcher', silent, no badge.",
+    "Update engine unchanged (feed check + source-package meta-data); DEX_VERSION 5→6; selfcheck now asserts OpheliaSwitchNotification + ophelia.switcher.OPEN present AND OpheliaBubble absent."
   ],
-  "date": "2026-10-08",
-  "releasedAt": "2026-10-08T09:05:00Z",
-  "apkSize": 7335874
+  "date": "2026-10-10",
+  "releasedAt": "2026-10-10T12:10:00Z",
+  "apkSize": 7452309
 }
