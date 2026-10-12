@@ -1,464 +1,586 @@
 {
-  "products": [
+ "products": [
+  {
+   "id": "browser",
+   "name": "Ophelia Browser",
+   "tagline": "Your web, your rules — Ophelia Search + real add-ons",
+   "description": "Chromium-powered (Android System WebView) browser with Ophelia Search as the default engine, a real add-on system (Ad & Tracker Blocker with 2,000+ host rules, Web Dark Mode, Image Saver, Translate, Screenshot, Video Download Helper, Privacy Guard), Tampermonkey-style userscript support with a GM_* bridge and @connect whitelist, multi-tab management with a WebView pool, incognito tabs, find-in-page, reader mode, night mode, downloads, bookmarks + history, speed-dial start page, HTTPS-first, and full settings (engine, UA, clear data).",
+   "packageName": "com.deadlockstudio.browser",
+   "versionName": "1.0.0",
+   "versionCode": 1,
+   "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/browser-v1.0.0.apk",
+   "sha256": "c6a6785a270587b9a446c22c09bd2c51bf79ca799eb76b9b23dfc71f0f668340",
+   "sizeBytes": 6836992,
+   "changelog": [
     {
-      "id": "pic-hider",
-      "name": "Ophelia Pic Hider",
-      "tagline": "Encrypted photo/video vault — now with self-updates (Ophelia Update Center)",
-      "description": "AES-256-GCM vault with PBKDF2, PIN 4-8, recovery, duress PIN, biometric unlock, break-in log and streaming import. v2.0.0 is THE permission fix: the app now properly requests READ_MEDIA_IMAGES/VIDEO (with partial-access handling) and imports work with OR without permission via the system photo picker — plus a real calculator disguise mode and share-sheet import from any app.",
-      "packageName": "com.deadlockstudio.pichider",
-      "versionName": "2.0.1",
-      "versionCode": 7,
-      "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/pic-hider-v2.0.1.apk",
-      "sha256": "5e7dfa885468fd8cd5f02bf6258ac5c9c0255742400b09a7ab35e38b8bb937f1",
-      "sizeBytes": 9232419,
-      "changelog": [
-        {
-          "version": "2.0.1",
-          "date": "2026-10-02",
-          "notes": [
-            "Ophelia Update Center in Settings → About: silent update check on open plus manual 'Check' — updates download in-app with sha-256 verification (same signing key: installs over v2.0.0, vault data untouched)",
-            "v1 + v2 signature schemes on the APK — install issues fixed on some devices",
-            "Disguise safety: update prompts NEVER appear inside the calculator disguise — the fake calculator stays 100% clean"
-          ]
-        },
-        {
-          "version": "2.0.0",
-          "date": "2026-10-02",
-          "notes": [
-            "THE permission fix: READ_MEDIA_IMAGES/VIDEO with partial-access handling, rationale card, and a full MediaStore gallery browser once granted",
-            "Import works with OR WITHOUT permission — the system photo picker path needs no permission at all",
-            "Calculator disguise mode: the vault can look like a plain calculator; the secret sequence unlocks it",
-            "Share-sheet import — hide photos/videos straight from any app (gallery, WhatsApp…)",
-            "Delete-originals via the system grant sheet; break-in log, duress PIN and encrypted backup/restore"
-          ]
-        },
-        {
-          "version": "1.3.1",
-          "date": "2026-10-01",
-          "notes": [
-            "The REAL 'PIN won't save' fix: vault creation is now ONE atomic, verified write (index first, setup flag last, disk result checked, full rollback) — a kill or full disk can no longer fake a successful setup",
-            "Self-heal: a vault corrupted by the old partial writes is detected at launch, reset cleanly and the wizard tells you what happened (no more permanently-unlockable lock screen)",
-            "The REAL 'gallery won't open' hardening: the import guard survives process death mid-pick, thumbnails and durations read straight from the picker's file descriptor, and a half-typed PIN survives dark-mode/split-screen flips",
-            "Big imports stream-encrypt to disk (a 500 MB video used to run out of memory mid-import), the viewer decodes photos off the main thread at screen size, and every unlock/key change runs off the frozen-free path"
-          ]
-        },
-        {
-          "version": "1.3.0",
-          "date": "2026-10-01",
-          "notes": [
-            "FIXED 'gallery won't open': phones whose gallery picker silently fails now get a one-tap file-browser fallback",
-            "FIXED 'PIN won't save': synchronous vault writes — an aggressive memory killer can never eat a fresh setup",
-            "Setup failures show a clear in-wizard message; the lock screen always keeps a manual Unlock button"
-          ]
-        },
-        {
-          "version": "1.2.0",
-          "date": "2026-09-29",
-          "notes": [
-            "Photo import + custom shortcut icons fixed on every phone",
-            "Step-by-step professional PIN setup wizard",
-            "Fingerprint login works on Class-2 (budget) sensors"
-          ]
-        },
-        {
-          "version": "1.1.0",
-          "date": "2026-09-28",
-          "notes": [
-            "App disguise — Calculator / Notes / Gallery launcher looks"
-          ]
-        },
-        {
-          "version": "1.0.0",
-          "date": "2026-09-27",
-          "notes": [
-            "AES-256-GCM PIN vault, biometric unlock, encrypted viewer, export"
-          ]
-        }
-      ],
-      "releasedAt": "2026-10-02T14:00:00Z"
-    },
-    {
-      "id": "cool-widgets",
-      "name": "Ophelia Widgets",
-      "tagline": "12 colorful painted widgets — now with self-updates (Ophelia Update Center)",
-      "description": "A full family of home-screen widgets painted as crisp bitmaps (works on ANY launcher): digital + analog clocks, battery, weather (Open-Meteo), steps, hydro tracker, countdown, photo frame, quick note, tally counter, week strip and app shortcuts. v2.0.0 is the complete redesign you asked for: every widget gets the colorful gradient/glass/solid skin treatment, a background transparency slider (0-100%), 6 gradient presets, 12 accent swatches, custom RGB and automatic text contrast — all previewed live in the config screen before you save.",
-      "packageName": "com.deadlockstudio.coolwidgets",
-      "versionName": "2.0.1",
-      "versionCode": 9,
-      "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/cool-widgets-v2.0.1.apk",
-      "sha256": "0ad67fbc1b4ee818ec7cfb88c54248d8f515c747eab7be4db9a1e5231c888f1f",
-      "sizeBytes": 8443922,
-      "changelog": [
-        {
-          "version": "2.0.1",
-          "date": "2026-10-02",
-          "notes": [
-            "Ophelia Update Center in the widget browser: silent update check on open plus a 'CHECK' row — sha-256 verified in-app download (same signing key: installs over v2.0.0 with all your configured widgets intact)",
-            "v1 + v2 signature schemes on the APK — install issues fixed on some devices",
-            "Widget configuration screens stay interruption-free — update prompts only ever appear in the main browser"
-          ]
-        },
-        {
-          "version": "2.0.0",
-          "date": "2026-10-02",
-          "notes": [
-            "COMPLETE UI REDESIGN — every widget painted with a colorful gradient/glass/solid panel (no more flat gray boxes; works on any launcher)",
-            "Background TRANSPARENCY slider (0-100%) on every single widget",
-            "Live-preview config screen: tweak the skin and watch the real widget re-render",
-            "6 gradient presets + 12 accent swatches + custom RGB color + automatic text contrast",
-            "All 38 widget kinds configurable (12 that had no config screen before now have one)"
-          ]
-        },
-        {
-          "version": "1.5.1",
-          "date": "2026-10-01",
-          "notes": [
-            "Photo frame widgets survive reboots — picked photos are copied into the app's private storage at pick time (Android 13+ photo-picker grants were never persistable, the old widget went blank after a restart)",
-            "Battery widgets re-arm correctly after reboot (Ophelia-battery-only setups were frozen) and weather/battery stop quadruple-fetching (one scheduling source)",
-            "Sun widget's city-timezone midnight flip survives other widgets' reschedules; step counter's sensor listener no longer leaks and resets its baseline after reboot",
-            "Currency arrows work for rates ≥ 1000 and empty picks no longer silently no-op in the shortcut/dial configs"
-          ]
-        },
-        {
-          "version": "1.5.0",
-          "date": "2026-10-01",
-          "notes": [
-            "Sunrise/Sunset now runs in the CITY’s own timezone — pick Tokyo on an Indian phone and the times are Tokyo wall-clock, not IST",
-            "Live NOW line on the sun tile (city’s current time, refreshes hourly) + short UTC offset next to the city name (TOKYO +9)",
-            "Zone-aware midnight scheduling: the day flips at the CITY’s local midnight, not just the phone’s",
-            "Config screen shows the resolved IANA zone after lookup; older widgets keep working (fall back to the phone zone)"
-          ]
-        },
-        {
-          "version": "1.4.0",
-          "date": "2026-10-01",
-          "notes": [
-            "NEW Game Score widget — two-team scoreboard with +/− keys and centre reset",
-            "NEW Hydro tracker — tap to log glasses, opt-in reminder notifications",
-            "NEW Currency Rate (USD→INR live, 6-hour refresh, change arrows) and Sunrise/Sunset (offline solar math)",
-            "NEW Days Since, Week Number and Uptime — 7 new widgets, 38 total"
-          ]
-        },
-        {
-          "version": "1.3.0",
-          "date": "2026-10-01",
-          "notes": [
-            "NEW DOT MATRIX batch (8 widgets, 31 total): App Shortcut, App Folder, Month Calendar, Step Counter, Now Playing, Web Search, AI Bar, Contact Dial",
-            "Now Playing: transport keys steer whatever app is playing; track titles via optional notification access",
-            "AI Bar: Gemini, ChatGPT, Copilot and Claude in one tile"
-          ]
-        },
-        {
-          "version": "1.2.0",
-          "date": "2026-10-01",
-          "notes": [
-            "Launcher icon = the real Ophelia artwork"
-          ]
-        },
-        {
-          "version": "1.1.0",
-          "date": "2026-09-30",
-          "notes": [
-            "+11 widgets: Ophelia brand set, year/day/moon progress, world clock, storage & RAM gauges, tally, decision spinner"
-          ]
-        }
-      ],
-      "releasedAt": "2026-10-02T14:00:00Z"
-    },
-    {
-      "id": "junk-cleaner",
-      "name": "Ophelia Junk Cleaner",
-      "tagline": "Deep junk sweep, empty folders & residue — now with self-updates (Ophelia Update Center)",
-      "description": "Smart, review-first junk cleaning: cache junk, thumbnails, Download installers, temp/log files, EMPTY FOLDERS (race-safe, children first), 0-byte husks, APK residue (orphan vs installed), large-file finder, SHA-1 duplicates, photo/video sweeps, the honest system cache boost and a per-app cache dashboard. v2.0.0 is the full UI redevelopment: animated storage-health ring, colorful category grid, plus a whitelist (long-press anything), cleaning history with total-freed stats and day streaks.",
-      "packageName": "com.deadlockstudio.junkcleaner",
-      "versionName": "2.0.1",
-      "versionCode": 9,
-      "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/junk-cleaner-v2.0.1.apk",
-      "sha256": "eded9efc096e5e295fccd193bc3111157778d16cdd0a6e3a4546c366db820694",
-      "sizeBytes": 8344363,
-      "changelog": [
-        {
-          "version": "2.0.1",
-          "date": "2026-10-02",
-          "notes": [
-            "Ophelia Update Center on the Home tab: the cleaner now updates ITSELF — silent check on open plus a 'CHECK' row, with a sha-256 verified in-app download (same signing key, so this installs over your current version keeping all data)",
-            "v1 + v2 signature schemes on the APK — install issues fixed on devices with picky package parsers",
-            "The version footer and hero chip now always show the real installed version"
-          ]
-        },
-        {
-          "version": "2.0.0",
-          "date": "2026-10-02",
-          "notes": [
-            "Full UI redevelopment — animated storage-health ring, colorful category grid, scan → review → clean → done state machine",
-            "NEW: Whitelist — long-press any found file, folder or app; whitelisted paths are skipped by every scan",
-            "NEW: Cleaning history (every session logged, day-grouped, total freed all-time) and day streaks with yesterday-grace",
-            "NEW: 0-byte empty files and APK residue categories (orphan / installed / bundle split)",
-            "Empty-folder cleaning preserved and race-safe — children first, never a recursive delete"
-          ]
-        },
-        {
-          "version": "1.4.1",
-          "date": "2026-10-01",
-          "notes": [
-            "MediaStore-aware deletes for Big Files & Duplicates — photos and videos leave the gallery database properly (no more broken 'ghost' thumbnails after cleaning)",
-            "Android 10 fixed: legacy-storage flag + the system's own permission sheet when another app's media needs a grant",
-            "Safety: empty-folder cleaning can never delete new files that arrived after the scan, and hidden .vault-style folders are actually skipped now",
-            "Storage overview refreshes after every clean (not just CLEAN ALL) and the app's own clean keeps its JIT profiles"
-          ]
-        },
-        {
-          "version": "1.4.0",
-          "date": "2026-10-01",
-          "notes": [
-            "SIMILAR VIDEOS — the heavy hitters: re-sent and re-encoded copies of the SAME clip now group up (one 200 MB re-send chain frees more than every photo group combined)",
-            "4 keyframes sampled across each video's timeline, fingerprinted with the photo pipeline; flat frames are dropped so two 'opens on black' clips can't false-group",
-            "Duration gate (±1.5 s or ±8%) + both-directions 3-of-4 frame agreement — trimmed re-cuts are deliberately NOT grouped",
-            "keeper = the largest file · live progress while fingerprinting · Android's own delete sheet on 30+ · 20 new tests (55 total green)"
-          ]
-        },
-        {
-          "version": "1.3.0",
-          "date": "2026-10-01",
-          "notes": [
-            "SIMILAR PHOTOS: perceptual-hash review — burst shots, HDR takes and WhatsApp re-sends grouped even when bytes differ",
-            "Each group keeps the LARGEST copy (least compressed); a '% alike' chip shows how close they are",
-            "Deletion is double-confirmed: the app's dialog, then Android's own system delete sheet (API 30+)",
-            "Live progress while fingerprinting the library ('Fingerprinting 320/1,245 photos…') + unreadable-image skip count"
-          ]
-        },
-        {
-          "version": "1.2.0",
-          "date": "2026-10-01",
-          "notes": [
-            "The app now asks for real Android permissions (Photos & videos, Music & audio) with a one-tap card — the app-info Permissions page lists them properly instead of showing 'no permissions requested'.",
-            "New launcher icon: your own Junk Cleaner artwork, full-bleed adaptive icon.",
-            "All v1.1.0 features unchanged: Big Files top-25, hash-verified duplicate finder, cache boost, per-app cache dashboard."
-          ]
-        },
-        {
-          "version": "1.1.0",
-          "date": "2026-10-01",
-          "notes": [
-            "NEW BIG FILES: the 25 largest files on storage, per-file confirm delete",
-            "NEW DUPLICATES: byte-identical copies (size + full-hash verified), keep-first one-tap clean with review"
-          ]
-        }
-      ],
-      "releasedAt": "2026-10-02T14:00:00Z"
-    },
-    {
-      "id": "easypair",
-      "name": "EasyPair",
-      "tagline": "Nearby sharing with true resume — now with self-updates (Ophelia Update Center)",
-      "description": "Offline file sharing with zero limits — Wi-Fi Direct, hotspot, same Wi-Fi, USB cable or Bluetooth, no router and no data needed. Photos, videos, audio, files, folders, installed apps (APK) and clipboard text. v1.6.1 fixes the resume identity check (fragmented first reads hashed the wrong bytes, so interrupted big transfers restarted from zero), guards truncated small-file saves, and cleans up the group-owner send path. v1.6.0's resume engine, v1.5.0's encrypted TLS receiver and full LocalSend v2 interop are all intact.",
-      "packageName": "com.deadlockstudio.easypair",
-      "versionName": "1.6.2",
-      "versionCode": 9,
-      "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/easypair-v1.6.2.apk",
-      "sha256": "05d02be6a692df0d84751550f8e165a04611fbf7ac1f1a62a51f814c8c5689c4",
-      "sizeBytes": 2218868,
-      "changelog": [
-        {
-          "version": "1.6.2",
-          "date": "2026-10-02",
-          "notes": [
-            "Ophelia Update Center in Settings → About: silent update check on open plus manual 'Check' — downloads are sha-256 verified in-app (same signing key: installs over 1.6.1)",
-            "v1 + v2 signature schemes on the APK — install issues fixed on some devices",
-            "Transfers keep priority: an incoming-transfer prompt always wins over the update dialog"
-          ]
-        },
-        {
-          "version": "1.6.1",
-          "date": "2026-10-01",
-          "notes": [
-            "RESUME actually resumes: the partial-file head hash was computed with the wrong buffer offsets, so it never matched the sender's proof on fragmented (Bluetooth / slow Wi-Fi) reads — resume silently fell back to restart-from-zero. The hash math is fixed and unit-tested",
-            "A dropped small file is now reported as failed (connection dropped at X of Y) instead of being saved as a truncated 'success'",
-            "Wi-Fi Direct group-owner sends no longer push 0-byte extras; the About card shows the real version"
-          ]
-        },
-        {
-          "version": "1.6.0",
-          "date": "2026-10-01",
-          "notes": [
-            "NEW: PARTIAL-FILE RESUME — interrupted transfers continue from the exact byte, never from zero",
-            "Big files (8 MB+) are received into a private .part buffer; a drop at 80% of a video keeps those bytes safe",
-            "RESUME TRANSFER card on Home + Queue after a failed batch — one tap and only the missing tail travels",
-            "Same-file proof: first-4KB SHA-256 must match, so a different file with the same name can never corrupt a partial; stale partials (14 days) self-clean"
-          ]
-        },
-        {
-          "version": "1.5.0",
-          "date": "2026-10-01",
-          "notes": [
-            "NEW: ENCRYPTED RECEIVER — flip 'Encrypted receiver (HTTPS)' in Settings and EasyPair itself serves LocalSend behind TLS",
-            "Certificate is generated in the Android Keystore (hardware-backed where available); the private key never leaves your phone",
-            "Our announcement now carries the certificate's real SHA-256 — LocalSend and EasyPair senders PIN us, nothing travels in the clear",
-            "Default OFF (LocalSend's own default): plain-HTTP interop keeps working exactly as before until you opt in"
-          ]
-        },
-        {
-          "version": "1.4.0",
-          "date": "2026-10-01",
-          "notes": [
-            "NEW: ENCRYPTED LOCALSEND — LocalSend receivers that enable HTTPS mode are now supported",
-            "REAL certificate pinning: the announced SHA-256 fingerprint must match the presented certificate or the handshake is refused — never trust-all",
-            "Encrypted peers show a lock + 'encrypted' badge in the nearby device list",
-            "8 new tests including a real self-signed HTTPS server round-trip (pinned pass / wrong-pin reject / unpinned reject)"
-          ]
-        },
-        {
-          "version": "1.3.0",
-          "date": "2026-10-01",
-          "notes": [
-            "NEW: LocalSend interop — receive from the LocalSend app on Windows/macOS/Linux/iOS/Android (multicast discovery 224.0.0.167, HTTP REST v2.2 on port 53317)",
-            "NEW: send TO any LocalSend receiver over HTTP REST (prepare-upload + upload, both wire generations supported)",
-            "NEW: incoming LocalSend files verified with SHA-256 when the sender provides a hash, saved to Downloads/LocalSend and listed in Received Files",
-            "27 new JVM protocol tests; gesture/UI untouched — same look, same flow"
-          ]
-        }
-      ],
-      "releasedAt": "2026-10-02T14:00:00Z"
-    },
-    {
-      "id": "calculator",
-      "name": "Ophelia Calculator",
-      "tagline": "Real calculator engine, converter & history tape — now with self-updates (Ophelia Update Center)",
-      "description": "A real calculator app: basic and scientific pads (trig, ln/log, powers, factorials, pi/e), DEG/RAD, live result preview as you type, a 100-entry history tape, memory keys, a unit converter (8 categories, 69 units), a date calculator (differences + add/subtract with month-end clamping) and Epley-grade percent semantics (200+10% = 220). Four color themes, per-key haptics, long-press to copy. The expression engine is a hand-written shunting-yard parser — no eval, no WebView.",
-      "packageName": "com.deadlockstudio.calculator",
-      "versionName": "1.0.1",
-      "versionCode": 2,
-      "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/calculator-v1.0.1.apk",
-      "sha256": "971314cfe09b1a6d1fd8ea438a936e53c302aee58031a54bc3e84eaeb3c9672c",
-      "sizeBytes": 8108072,
-      "changelog": [
-        {
-          "version": "1.0.1",
-          "date": "2026-10-02",
-          "notes": [
-            "Ophelia Update Center: the calculator now checks for updates by itself (silent check on open + 'Check for updates' in Settings) — updates download in-app with sha-256 verification, no browser needed",
-            "v1 + v2 signature schemes on the APK — install issues fixed on devices with picky package parsers",
-            "About copy updated honestly: the only network use is the optional update check"
-          ]
-        },
-        {
-          "version": "1.0.0",
-          "date": "2026-10-02",
-          "notes": [
-            "Brand-new app in the Ophelia family",
-            "Basic + scientific pads with DEG/RAD and live result preview",
-            "History tape (100), memory keys, unit converter (8 categories), date math",
-            "Percent-of semantics: 200+10% = 220",
-            "4 themes + per-key haptics — 69 unit tests over the engine"
-          ]
-        }
-      ],
-      "releasedAt": "2026-10-02T14:00:00Z"
-    },
-    {
-      "id": "compass",
-      "name": "Ophelia Compass",
-      "tagline": "Sensor-fused compass, level & waypoints — parse-fix + self-updates (Ophelia Update Center)",
-      "description": "A modern powerful compass: sensor-fused heading (rotation-matrix fusion + complementary filter — smooth, no jitter, no 359→0 backspin), correct both flat on a table AND upright in your hand, pitch-compensated with pose blending. 3 colorful dial themes, level bubble with tilt warning, calibration detector with an animated figure-8 hint, true north via GPS declination, bearing lock with named waypoints, coordinates + altitude (tap to copy), a magnetic-field meter with a metal-nearby alert, and cardinal-crossing haptics. 16 unit tests over the math.",
-      "packageName": "com.deadlockstudio.compass",
-      "versionName": "1.0.1",
-      "versionCode": 2,
-      "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/compass-v1.0.1.apk",
-      "sha256": "264a7fef51a9f6e8f4f0c7f72662afd1d19942e2bf25d0e96f0291a626914e3a",
-      "sizeBytes": 8215189,
-      "changelog": [
-        {
-          "version": "1.0.1",
-          "date": "2026-10-02",
-          "notes": [
-            "THE PARSE FIX: the APK is now signed with BOTH v1 + v2 signature schemes — devices that showed 'there was a problem parsing the package' can now install it (if your old download failed, delete it and use this file or the in-app update)",
-            "Ophelia Update Center: the compass now checks the public release feed by itself — a silent check on open plus 'Check for updates' in Settings, with a sha-256 VERIFIED in-app download (a corrupt download can never be installed)",
-            "The version footer now always shows the real installed version"
-          ]
-        },
-        {
-          "version": "1.0.0",
-          "date": "2026-10-02",
-          "notes": [
-            "Brand-new app in the Ophelia family",
-            "Sensor-fused dial — smooth, tilt-compensated, any grip angle",
-            "3 dial themes, level bubble, calibration detector, field meter",
-            "Bearing lock + named waypoints; true north via GPS declination",
-            "Coordinates + altitude, tap to copy; cardinal haptics"
-          ]
-        }
-      ],
-      "releasedAt": "2026-10-02T14:00:00Z"
-    },
-    {
-      "id": "game-booster",
-      "name": "Ophelia Game Booster",
-      "tagline": "RAM boost, FPS overlay & game launcher — now with self-updates (Ophelia Update Center)",
-      "description": "A game booster that never lies: RAM freed is the actual availMem before/after delta, kill counts are what the OS actually did, battery temp comes from the real battery broadcast. Game detection with a manual add-any-app grid, one-tap BOOST (killBackgroundProcesses sweep with a whitelist), live RAM ring, DND-on-launch with auto-revert, per-game session tracking via usage access, a draggable FPS overlay (green/amber/red), Balanced/Performance/Battery profiles, and post-session report cards. 22 unit tests.",
-      "packageName": "com.deadlockstudio.gamebooster",
-      "versionName": "1.0.1",
-      "versionCode": 2,
-      "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/game-booster-v1.0.1.apk",
-      "sha256": "f4d4ab0622c347b890206b153b82187da8c742c39d7228e51c176456a9a23d7e",
-      "sizeBytes": 8102124,
-      "changelog": [
-        {
-          "version": "1.0.1",
-          "date": "2026-10-02",
-          "notes": [
-            "Ophelia Update Center: Game Booster now checks for updates by itself and prompts you — sha-256 verified in-app download",
-            "v1 + v2 signature schemes — install issues fixed on some devices",
-            "The home header now shows the live installed version"
-          ]
-        },
-        {
-          "version": "1.0.0",
-          "date": "2026-10-02",
-          "notes": [
-            "Brand-new app in the Ophelia family",
-            "BOOST with real before/after RAM delta — no fake numbers",
-            "Draggable FPS overlay + DND on launch (auto-revert) + session tracking",
-            "3 profiles, whitelist + hidden-list managers, report cards",
-            "Every permission gated with an honest explainer card"
-          ]
-        }
-      ],
-      "releasedAt": "2026-10-02T14:00:00Z"
-    },
-    {
-      "id": "fit",
-      "name": "Ophelia Fit",
-      "tagline": "Gym logger, GPS run tracker & Tabata timer — now with self-updates (Ophelia Update Center)",
-      "description": "Everything fitness in one dark colorful app: an 85-exercise library with cues, a routine builder with an active set-by-set logger (rest timer with beeps, last-session hints), a GPS run tracker (distance/pace/kcal, pause & resume, live stats) in a proper foreground service, a hardware step counter with daily goal ring and weekly bars, a full Tabata/HIIT timer with presets, weekly volume charts, streaks, Epley 1RM estimates, a body-weight log with trend chart and complete JSON export. kg/lb units. 50 unit tests over the math.",
-      "packageName": "com.deadlockstudio.fit",
-      "versionName": "1.0.1",
-      "versionCode": 2,
-      "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/fit-v1.0.1.apk",
-      "sha256": "2e86910c2ec062037405b42574953718f684531957952626d9afac48e34b51c5",
-      "sizeBytes": 8088619,
-      "changelog": [
-        {
-          "version": "1.0.1",
-          "date": "2026-10-02",
-          "notes": [
-            "Ophelia Update Center: a silent update check on open plus a 'Check for updates' row in the More tab — downloads are sha-256 verified in-app",
-            "v1 + v2 signature schemes — install issues fixed on some devices",
-            "Every version label in the app now reads the real installed version"
-          ]
-        },
-        {
-          "version": "1.0.0",
-          "date": "2026-10-02",
-          "notes": [
-            "Brand-new app in the Ophelia family",
-            "85-exercise library, routine builder, active logger with rest timer",
-            "GPS run tracker + step counter + Tabata/HIIT timer",
-            "Volume charts, streaks, Epley PRs, body log, JSON export",
-            "kg/lb units, colorful dark Ophelia theme"
-          ]
-        }
-      ],
-      "releasedAt": "2026-10-02T14:00:00Z"
+     "version": "1.0.0",
+     "date": "2026-10-13",
+     "notes": [
+      "First release: Ophelia Search, tabs + incognito, add-ons (ad-block / dark web / image saver / translate / screenshot / video helper / privacy guard), userscripts (GM_* + @connect), reader + night mode, find-in-page, downloads, bookmarks/history, HTTPS-first, keyboard shortcuts. 119 unit tests."
+     ]
     }
-  ]
+   ],
+   "releasedAt": "2026-10-13T00:00:00Z"
+  },
+  {
+   "id": "imageclicker",
+   "name": "Ophelia Image Clicker",
+   "tagline": "Teach your phone to click by picture",
+   "description": "The Image Clicker from Clone by Ophelia, now its own app. Capture the screen with MediaProjection, draw a box around any button, and the NCC vision engine (grayscale template matching on an image pyramid, multi-scale) finds and clicks it — even when it moves. Build step sequences (TAP / SWIPE / WAIT / IF-TARGET-CLICK / LOOP) with intervals, jitter and random delays. Draggable control pill while running, live match-score HUD, battery guard. All the crash paths from the cloner build are fixed here (guarded projection startup, packed-stride frames, honest failure states).",
+   "packageName": "com.deadlockstudio.imageclicker",
+   "versionName": "1.0.0",
+   "versionCode": 1,
+   "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/image-clicker-v1.0.0.apk",
+   "sha256": "f2bca7d4d6f90e2ca067d1cde08e11d1e8580fa4f3d70e47a519108a1f7fe3c9",
+   "sizeBytes": 8175147,
+   "changelog": [
+    {
+     "version": "1.0.0",
+     "date": "2026-10-13",
+     "notes": [
+      "First release: screenshot capture, box-select targets with live NCC match score, threshold + multi-scale, step editor (tap/swipe/wait/if-image/loop), run pill + HUD, crash-guarded capture service. 57 unit tests."
+     ]
+    }
+   ],
+   "releasedAt": "2026-10-13T00:00:00Z"
+  },
+  {
+   "id": "autoclicker",
+   "name": "Ophelia Auto Clicker",
+   "tagline": "The OP Auto Clicker classic, rebuilt for Android",
+   "description": "Multi-point auto clicker in the OP Auto Clicker tradition: unlimited draggable crosshair targets (numbered, with a nudge panel), tap or swipe gestures, interval from hours to milliseconds, random delay ranges, repeat infinite / xN / for-duration, floating start/stop bubble with live HUD, volume-down double-tap hotkey, keep-awake, battery guard, named presets. Accessibility-gesture based — no root, no screen content read.",
+   "packageName": "com.deadlockstudio.autoclicker",
+   "versionName": "1.0.0",
+   "versionCode": 1,
+   "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/auto-clicker-v1.0.0.apk",
+   "sha256": "0555741b41d63b990ec8c7aba0abb348d39ae7ab6ee193b4eaf6f7689a7f16e3",
+   "sizeBytes": 6603932,
+   "changelog": [
+    {
+     "version": "1.0.0",
+     "date": "2026-10-13",
+     "notes": [
+      "First release: single/multi-target, tap+swipe, h/m/s/ms intervals, random delay, repeat policies, crosshair overlay + nudge, floating bubble + HUD, volume-key toggle, presets, battery guard. 67 unit tests."
+     ]
+    }
+   ],
+   "releasedAt": "2026-10-13T00:00:00Z"
+  },
+  {
+   "id": "pic-hider",
+   "name": "Ophelia Pic Hider",
+   "tagline": "Encrypted photo/video vault — now with self-updates (Ophelia Update Center)",
+   "description": "AES-256-GCM vault with PBKDF2, PIN 4-8, recovery, duress PIN, biometric unlock, break-in log and streaming import. v2.0.0 is THE permission fix: the app now properly requests READ_MEDIA_IMAGES/VIDEO (with partial-access handling) and imports work with OR without permission via the system photo picker — plus a real calculator disguise mode and share-sheet import from any app.",
+   "packageName": "com.deadlockstudio.pichider",
+   "versionName": "2.0.2",
+   "versionCode": 8,
+   "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/pic-hider-v2.0.2.apk",
+   "sha256": "1ae16eee095db37cf582e0e771c70b685b7167d5a18c46a3dbd706a44f767d71",
+   "sizeBytes": 9232516,
+   "changelog": [
+    {
+     "version": "2.0.2",
+     "date": "2026-10-13",
+     "notes": [
+      "Vault index is now written atomically (temp file + rename) — a crash mid-save can no longer orphan hidden photos.",
+      "Duress PINs longer than the real PIN now work (the wipe actually triggers).",
+      "Large videos: streaming decrypt + export (no more OOM), GCM tag always verified, failed exports clean up after themselves.",
+      "Portrait photos no longer show rotated (EXIF orientation respected on display; files untouched).",
+      "The calculator-disguise screen is now FLAG_SECURE — no half-typed PIN in the recents screenshot.",
+      "PIN change / recovery dialogs no longer freeze the UI (PBKDF2 moved off the main thread)."
+     ]
+    },
+    {
+     "version": "2.0.1",
+     "date": "2026-10-02",
+     "notes": [
+      "Ophelia Update Center in Settings → About: silent update check on open plus manual 'Check' — updates download in-app with sha-256 verification (same signing key: installs over v2.0.0, vault data untouched)",
+      "v1 + v2 signature schemes on the APK — install issues fixed on some devices",
+      "Disguise safety: update prompts NEVER appear inside the calculator disguise — the fake calculator stays 100% clean"
+     ]
+    },
+    {
+     "version": "2.0.0",
+     "date": "2026-10-02",
+     "notes": [
+      "THE permission fix: READ_MEDIA_IMAGES/VIDEO with partial-access handling, rationale card, and a full MediaStore gallery browser once granted",
+      "Import works with OR WITHOUT permission — the system photo picker path needs no permission at all",
+      "Calculator disguise mode: the vault can look like a plain calculator; the secret sequence unlocks it",
+      "Share-sheet import — hide photos/videos straight from any app (gallery, WhatsApp…)",
+      "Delete-originals via the system grant sheet; break-in log, duress PIN and encrypted backup/restore"
+     ]
+    },
+    {
+     "version": "1.3.1",
+     "date": "2026-10-01",
+     "notes": [
+      "The REAL 'PIN won't save' fix: vault creation is now ONE atomic, verified write (index first, setup flag last, disk result checked, full rollback) — a kill or full disk can no longer fake a successful setup",
+      "Self-heal: a vault corrupted by the old partial writes is detected at launch, reset cleanly and the wizard tells you what happened (no more permanently-unlockable lock screen)",
+      "The REAL 'gallery won't open' hardening: the import guard survives process death mid-pick, thumbnails and durations read straight from the picker's file descriptor, and a half-typed PIN survives dark-mode/split-screen flips",
+      "Big imports stream-encrypt to disk (a 500 MB video used to run out of memory mid-import), the viewer decodes photos off the main thread at screen size, and every unlock/key change runs off the frozen-free path"
+     ]
+    },
+    {
+     "version": "1.3.0",
+     "date": "2026-10-01",
+     "notes": [
+      "FIXED 'gallery won't open': phones whose gallery picker silently fails now get a one-tap file-browser fallback",
+      "FIXED 'PIN won't save': synchronous vault writes — an aggressive memory killer can never eat a fresh setup",
+      "Setup failures show a clear in-wizard message; the lock screen always keeps a manual Unlock button"
+     ]
+    },
+    {
+     "version": "1.2.0",
+     "date": "2026-09-29",
+     "notes": [
+      "Photo import + custom shortcut icons fixed on every phone",
+      "Step-by-step professional PIN setup wizard",
+      "Fingerprint login works on Class-2 (budget) sensors"
+     ]
+    },
+    {
+     "version": "1.1.0",
+     "date": "2026-09-28",
+     "notes": [
+      "App disguise — Calculator / Notes / Gallery launcher looks"
+     ]
+    },
+    {
+     "version": "1.0.0",
+     "date": "2026-09-27",
+     "notes": [
+      "AES-256-GCM PIN vault, biometric unlock, encrypted viewer, export"
+     ]
+    }
+   ],
+   "releasedAt": "2026-10-13T00:00:00Z"
+  },
+  {
+   "id": "cool-widgets",
+   "name": "Ophelia Widgets",
+   "tagline": "12 colorful painted widgets — now with self-updates (Ophelia Update Center)",
+   "description": "A full family of home-screen widgets painted as crisp bitmaps (works on ANY launcher): digital + analog clocks, battery, weather (Open-Meteo), steps, hydro tracker, countdown, photo frame, quick note, tally counter, week strip and app shortcuts. v2.0.0 is the complete redesign you asked for: every widget gets the colorful gradient/glass/solid skin treatment, a background transparency slider (0-100%), 6 gradient presets, 12 accent swatches, custom RGB and automatic text contrast — all previewed live in the config screen before you save.",
+   "packageName": "com.deadlockstudio.coolwidgets",
+   "versionName": "2.0.2",
+   "versionCode": 10,
+   "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/cool-widgets-v2.0.2.apk",
+   "sha256": "3312e256ac237d360a05c1c773ed33ddcd0e3282a4cf81b5c6977030c383f4b1",
+   "sizeBytes": 8443919,
+   "changelog": [
+    {
+     "version": "2.0.2",
+     "date": "2026-10-13",
+     "notes": [
+      "Battery drain fixed: stale repeating alarms (battery/system/hydro ticks) are now cancelled when the last widget goes away or the toggle turns off.",
+      "Boot no longer re-arms battery ticks when no battery widget exists.",
+      "12 stale imports removed, zero-!! pass."
+     ]
+    },
+    {
+     "version": "2.0.1",
+     "date": "2026-10-02",
+     "notes": [
+      "Ophelia Update Center in the widget browser: silent update check on open plus a 'CHECK' row — sha-256 verified in-app download (same signing key: installs over v2.0.0 with all your configured widgets intact)",
+      "v1 + v2 signature schemes on the APK — install issues fixed on some devices",
+      "Widget configuration screens stay interruption-free — update prompts only ever appear in the main browser"
+     ]
+    },
+    {
+     "version": "2.0.0",
+     "date": "2026-10-02",
+     "notes": [
+      "COMPLETE UI REDESIGN — every widget painted with a colorful gradient/glass/solid panel (no more flat gray boxes; works on any launcher)",
+      "Background TRANSPARENCY slider (0-100%) on every single widget",
+      "Live-preview config screen: tweak the skin and watch the real widget re-render",
+      "6 gradient presets + 12 accent swatches + custom RGB color + automatic text contrast",
+      "All 38 widget kinds configurable (12 that had no config screen before now have one)"
+     ]
+    },
+    {
+     "version": "1.5.1",
+     "date": "2026-10-01",
+     "notes": [
+      "Photo frame widgets survive reboots — picked photos are copied into the app's private storage at pick time (Android 13+ photo-picker grants were never persistable, the old widget went blank after a restart)",
+      "Battery widgets re-arm correctly after reboot (Ophelia-battery-only setups were frozen) and weather/battery stop quadruple-fetching (one scheduling source)",
+      "Sun widget's city-timezone midnight flip survives other widgets' reschedules; step counter's sensor listener no longer leaks and resets its baseline after reboot",
+      "Currency arrows work for rates ≥ 1000 and empty picks no longer silently no-op in the shortcut/dial configs"
+     ]
+    },
+    {
+     "version": "1.5.0",
+     "date": "2026-10-01",
+     "notes": [
+      "Sunrise/Sunset now runs in the CITY’s own timezone — pick Tokyo on an Indian phone and the times are Tokyo wall-clock, not IST",
+      "Live NOW line on the sun tile (city’s current time, refreshes hourly) + short UTC offset next to the city name (TOKYO +9)",
+      "Zone-aware midnight scheduling: the day flips at the CITY’s local midnight, not just the phone’s",
+      "Config screen shows the resolved IANA zone after lookup; older widgets keep working (fall back to the phone zone)"
+     ]
+    },
+    {
+     "version": "1.4.0",
+     "date": "2026-10-01",
+     "notes": [
+      "NEW Game Score widget — two-team scoreboard with +/− keys and centre reset",
+      "NEW Hydro tracker — tap to log glasses, opt-in reminder notifications",
+      "NEW Currency Rate (USD→INR live, 6-hour refresh, change arrows) and Sunrise/Sunset (offline solar math)",
+      "NEW Days Since, Week Number and Uptime — 7 new widgets, 38 total"
+     ]
+    },
+    {
+     "version": "1.3.0",
+     "date": "2026-10-01",
+     "notes": [
+      "NEW DOT MATRIX batch (8 widgets, 31 total): App Shortcut, App Folder, Month Calendar, Step Counter, Now Playing, Web Search, AI Bar, Contact Dial",
+      "Now Playing: transport keys steer whatever app is playing; track titles via optional notification access",
+      "AI Bar: Gemini, ChatGPT, Copilot and Claude in one tile"
+     ]
+    },
+    {
+     "version": "1.2.0",
+     "date": "2026-10-01",
+     "notes": [
+      "Launcher icon = the real Ophelia artwork"
+     ]
+    },
+    {
+     "version": "1.1.0",
+     "date": "2026-09-30",
+     "notes": [
+      "+11 widgets: Ophelia brand set, year/day/moon progress, world clock, storage & RAM gauges, tally, decision spinner"
+     ]
+    }
+   ],
+   "releasedAt": "2026-10-13T00:00:00Z"
+  },
+  {
+   "id": "junk-cleaner",
+   "name": "Ophelia Junk Cleaner",
+   "tagline": "Deep junk sweep, empty folders & residue — now with self-updates (Ophelia Update Center)",
+   "description": "Smart, review-first junk cleaning: cache junk, thumbnails, Download installers, temp/log files, EMPTY FOLDERS (race-safe, children first), 0-byte husks, APK residue (orphan vs installed), large-file finder, SHA-1 duplicates, photo/video sweeps, the honest system cache boost and a per-app cache dashboard. v2.0.0 is the full UI redevelopment: animated storage-health ring, colorful category grid, plus a whitelist (long-press anything), cleaning history with total-freed stats and day streaks.",
+   "packageName": "com.deadlockstudio.junkcleaner",
+   "versionName": "2.0.2",
+   "versionCode": 10,
+   "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/junk-cleaner-v2.0.2.apk",
+   "sha256": "d071812316e131b11f69aad786b58dd66356688f26ba9d95bd72b45d5c67d861",
+   "sizeBytes": 8344355,
+   "changelog": [
+    {
+     "version": "2.0.2",
+     "date": "2026-10-13",
+     "notes": [
+      "Safety: the empty-folder scan can never offer DCIM/Download/Pictures roots as junk any more (nested empty folders still clean).",
+      "Android 10 similar-video cleaning no longer silently does nothing — it now walks you through the one-time grant.",
+      "Zero-!! crash-risk pass + test hardening."
+     ]
+    },
+    {
+     "version": "2.0.1",
+     "date": "2026-10-02",
+     "notes": [
+      "Ophelia Update Center on the Home tab: the cleaner now updates ITSELF — silent check on open plus a 'CHECK' row, with a sha-256 verified in-app download (same signing key, so this installs over your current version keeping all data)",
+      "v1 + v2 signature schemes on the APK — install issues fixed on devices with picky package parsers",
+      "The version footer and hero chip now always show the real installed version"
+     ]
+    },
+    {
+     "version": "2.0.0",
+     "date": "2026-10-02",
+     "notes": [
+      "Full UI redevelopment — animated storage-health ring, colorful category grid, scan → review → clean → done state machine",
+      "NEW: Whitelist — long-press any found file, folder or app; whitelisted paths are skipped by every scan",
+      "NEW: Cleaning history (every session logged, day-grouped, total freed all-time) and day streaks with yesterday-grace",
+      "NEW: 0-byte empty files and APK residue categories (orphan / installed / bundle split)",
+      "Empty-folder cleaning preserved and race-safe — children first, never a recursive delete"
+     ]
+    },
+    {
+     "version": "1.4.1",
+     "date": "2026-10-01",
+     "notes": [
+      "MediaStore-aware deletes for Big Files & Duplicates — photos and videos leave the gallery database properly (no more broken 'ghost' thumbnails after cleaning)",
+      "Android 10 fixed: legacy-storage flag + the system's own permission sheet when another app's media needs a grant",
+      "Safety: empty-folder cleaning can never delete new files that arrived after the scan, and hidden .vault-style folders are actually skipped now",
+      "Storage overview refreshes after every clean (not just CLEAN ALL) and the app's own clean keeps its JIT profiles"
+     ]
+    },
+    {
+     "version": "1.4.0",
+     "date": "2026-10-01",
+     "notes": [
+      "SIMILAR VIDEOS — the heavy hitters: re-sent and re-encoded copies of the SAME clip now group up (one 200 MB re-send chain frees more than every photo group combined)",
+      "4 keyframes sampled across each video's timeline, fingerprinted with the photo pipeline; flat frames are dropped so two 'opens on black' clips can't false-group",
+      "Duration gate (±1.5 s or ±8%) + both-directions 3-of-4 frame agreement — trimmed re-cuts are deliberately NOT grouped",
+      "keeper = the largest file · live progress while fingerprinting · Android's own delete sheet on 30+ · 20 new tests (55 total green)"
+     ]
+    },
+    {
+     "version": "1.3.0",
+     "date": "2026-10-01",
+     "notes": [
+      "SIMILAR PHOTOS: perceptual-hash review — burst shots, HDR takes and WhatsApp re-sends grouped even when bytes differ",
+      "Each group keeps the LARGEST copy (least compressed); a '% alike' chip shows how close they are",
+      "Deletion is double-confirmed: the app's dialog, then Android's own system delete sheet (API 30+)",
+      "Live progress while fingerprinting the library ('Fingerprinting 320/1,245 photos…') + unreadable-image skip count"
+     ]
+    },
+    {
+     "version": "1.2.0",
+     "date": "2026-10-01",
+     "notes": [
+      "The app now asks for real Android permissions (Photos & videos, Music & audio) with a one-tap card — the app-info Permissions page lists them properly instead of showing 'no permissions requested'.",
+      "New launcher icon: your own Junk Cleaner artwork, full-bleed adaptive icon.",
+      "All v1.1.0 features unchanged: Big Files top-25, hash-verified duplicate finder, cache boost, per-app cache dashboard."
+     ]
+    },
+    {
+     "version": "1.1.0",
+     "date": "2026-10-01",
+     "notes": [
+      "NEW BIG FILES: the 25 largest files on storage, per-file confirm delete",
+      "NEW DUPLICATES: byte-identical copies (size + full-hash verified), keep-first one-tap clean with review"
+     ]
+    }
+   ],
+   "releasedAt": "2026-10-13T00:00:00Z"
+  },
+  {
+   "id": "easypair",
+   "name": "EasyPair",
+   "tagline": "Nearby sharing with true resume — now with self-updates (Ophelia Update Center)",
+   "description": "Offline file sharing with zero limits — Wi-Fi Direct, hotspot, same Wi-Fi, USB cable or Bluetooth, no router and no data needed. Photos, videos, audio, files, folders, installed apps (APK) and clipboard text. v1.6.1 fixes the resume identity check (fragmented first reads hashed the wrong bytes, so interrupted big transfers restarted from zero), guards truncated small-file saves, and cleans up the group-owner send path. v1.6.0's resume engine, v1.5.0's encrypted TLS receiver and full LocalSend v2 interop are all intact.",
+   "packageName": "com.deadlockstudio.easypair",
+   "versionName": "1.6.3",
+   "versionCode": 10,
+   "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/easypair-v1.6.3.apk",
+   "sha256": "1608a7cc4b9fefcb27830aa2ebb70d45b7fcecefa7d0ffa1984a47b7d3acfb3d",
+   "sizeBytes": 2218859,
+   "changelog": [
+    {
+     "version": "1.6.3",
+     "date": "2026-10-13",
+     "notes": [
+      "Every accepted socket now actually closes (fd leak per transfer fixed), including the RFCOMM server + owner-poll loop.",
+      "Dead links can no longer park the receiver forever — read timeouts at every stage.",
+      "DoS hardening: frame cap 64MB to 4MB, header/line read caps, Content-Length reads capped.",
+      "Device map / history stores are now thread-safe (no more ConcurrentModificationException).",
+      "History screens no longer do file IO during composition."
+     ]
+    },
+    {
+     "version": "1.6.2",
+     "date": "2026-10-02",
+     "notes": [
+      "Ophelia Update Center in Settings → About: silent update check on open plus manual 'Check' — downloads are sha-256 verified in-app (same signing key: installs over 1.6.1)",
+      "v1 + v2 signature schemes on the APK — install issues fixed on some devices",
+      "Transfers keep priority: an incoming-transfer prompt always wins over the update dialog"
+     ]
+    },
+    {
+     "version": "1.6.1",
+     "date": "2026-10-01",
+     "notes": [
+      "RESUME actually resumes: the partial-file head hash was computed with the wrong buffer offsets, so it never matched the sender's proof on fragmented (Bluetooth / slow Wi-Fi) reads — resume silently fell back to restart-from-zero. The hash math is fixed and unit-tested",
+      "A dropped small file is now reported as failed (connection dropped at X of Y) instead of being saved as a truncated 'success'",
+      "Wi-Fi Direct group-owner sends no longer push 0-byte extras; the About card shows the real version"
+     ]
+    },
+    {
+     "version": "1.6.0",
+     "date": "2026-10-01",
+     "notes": [
+      "NEW: PARTIAL-FILE RESUME — interrupted transfers continue from the exact byte, never from zero",
+      "Big files (8 MB+) are received into a private .part buffer; a drop at 80% of a video keeps those bytes safe",
+      "RESUME TRANSFER card on Home + Queue after a failed batch — one tap and only the missing tail travels",
+      "Same-file proof: first-4KB SHA-256 must match, so a different file with the same name can never corrupt a partial; stale partials (14 days) self-clean"
+     ]
+    },
+    {
+     "version": "1.5.0",
+     "date": "2026-10-01",
+     "notes": [
+      "NEW: ENCRYPTED RECEIVER — flip 'Encrypted receiver (HTTPS)' in Settings and EasyPair itself serves LocalSend behind TLS",
+      "Certificate is generated in the Android Keystore (hardware-backed where available); the private key never leaves your phone",
+      "Our announcement now carries the certificate's real SHA-256 — LocalSend and EasyPair senders PIN us, nothing travels in the clear",
+      "Default OFF (LocalSend's own default): plain-HTTP interop keeps working exactly as before until you opt in"
+     ]
+    },
+    {
+     "version": "1.4.0",
+     "date": "2026-10-01",
+     "notes": [
+      "NEW: ENCRYPTED LOCALSEND — LocalSend receivers that enable HTTPS mode are now supported",
+      "REAL certificate pinning: the announced SHA-256 fingerprint must match the presented certificate or the handshake is refused — never trust-all",
+      "Encrypted peers show a lock + 'encrypted' badge in the nearby device list",
+      "8 new tests including a real self-signed HTTPS server round-trip (pinned pass / wrong-pin reject / unpinned reject)"
+     ]
+    },
+    {
+     "version": "1.3.0",
+     "date": "2026-10-01",
+     "notes": [
+      "NEW: LocalSend interop — receive from the LocalSend app on Windows/macOS/Linux/iOS/Android (multicast discovery 224.0.0.167, HTTP REST v2.2 on port 53317)",
+      "NEW: send TO any LocalSend receiver over HTTP REST (prepare-upload + upload, both wire generations supported)",
+      "NEW: incoming LocalSend files verified with SHA-256 when the sender provides a hash, saved to Downloads/LocalSend and listed in Received Files",
+      "27 new JVM protocol tests; gesture/UI untouched — same look, same flow"
+     ]
+    }
+   ],
+   "releasedAt": "2026-10-13T00:00:00Z"
+  },
+  {
+   "id": "calculator",
+   "name": "Ophelia Calculator",
+   "tagline": "Real calculator engine, converter & history tape — now with self-updates (Ophelia Update Center)",
+   "description": "A real calculator app: basic and scientific pads (trig, ln/log, powers, factorials, pi/e), DEG/RAD, live result preview as you type, a 100-entry history tape, memory keys, a unit converter (8 categories, 69 units), a date calculator (differences + add/subtract with month-end clamping) and Epley-grade percent semantics (200+10% = 220). Four color themes, per-key haptics, long-press to copy. The expression engine is a hand-written shunting-yard parser — no eval, no WebView.",
+   "packageName": "com.deadlockstudio.calculator",
+   "versionName": "1.0.1",
+   "versionCode": 2,
+   "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/calculator-v1.0.1.apk",
+   "sha256": "971314cfe09b1a6d1fd8ea438a936e53c302aee58031a54bc3e84eaeb3c9672c",
+   "sizeBytes": 8108072,
+   "changelog": [
+    {
+     "version": "1.0.1",
+     "date": "2026-10-02",
+     "notes": [
+      "Ophelia Update Center: the calculator now checks for updates by itself (silent check on open + 'Check for updates' in Settings) — updates download in-app with sha-256 verification, no browser needed",
+      "v1 + v2 signature schemes on the APK — install issues fixed on devices with picky package parsers",
+      "About copy updated honestly: the only network use is the optional update check"
+     ]
+    },
+    {
+     "version": "1.0.0",
+     "date": "2026-10-02",
+     "notes": [
+      "Brand-new app in the Ophelia family",
+      "Basic + scientific pads with DEG/RAD and live result preview",
+      "History tape (100), memory keys, unit converter (8 categories), date math",
+      "Percent-of semantics: 200+10% = 220",
+      "4 themes + per-key haptics — 69 unit tests over the engine"
+     ]
+    }
+   ],
+   "releasedAt": "2026-10-02T14:00:00Z"
+  },
+  {
+   "id": "compass",
+   "name": "Ophelia Compass",
+   "tagline": "Sensor-fused compass, level & waypoints — parse-fix + self-updates (Ophelia Update Center)",
+   "description": "A modern powerful compass: sensor-fused heading (rotation-matrix fusion + complementary filter — smooth, no jitter, no 359→0 backspin), correct both flat on a table AND upright in your hand, pitch-compensated with pose blending. 3 colorful dial themes, level bubble with tilt warning, calibration detector with an animated figure-8 hint, true north via GPS declination, bearing lock with named waypoints, coordinates + altitude (tap to copy), a magnetic-field meter with a metal-nearby alert, and cardinal-crossing haptics. 16 unit tests over the math.",
+   "packageName": "com.deadlockstudio.compass",
+   "versionName": "1.0.1",
+   "versionCode": 2,
+   "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/compass-v1.0.1.apk",
+   "sha256": "264a7fef51a9f6e8f4f0c7f72662afd1d19942e2bf25d0e96f0291a626914e3a",
+   "sizeBytes": 8215189,
+   "changelog": [
+    {
+     "version": "1.0.1",
+     "date": "2026-10-02",
+     "notes": [
+      "THE PARSE FIX: the APK is now signed with BOTH v1 + v2 signature schemes — devices that showed 'there was a problem parsing the package' can now install it (if your old download failed, delete it and use this file or the in-app update)",
+      "Ophelia Update Center: the compass now checks the public release feed by itself — a silent check on open plus 'Check for updates' in Settings, with a sha-256 VERIFIED in-app download (a corrupt download can never be installed)",
+      "The version footer now always shows the real installed version"
+     ]
+    },
+    {
+     "version": "1.0.0",
+     "date": "2026-10-02",
+     "notes": [
+      "Brand-new app in the Ophelia family",
+      "Sensor-fused dial — smooth, tilt-compensated, any grip angle",
+      "3 dial themes, level bubble, calibration detector, field meter",
+      "Bearing lock + named waypoints; true north via GPS declination",
+      "Coordinates + altitude, tap to copy; cardinal haptics"
+     ]
+    }
+   ],
+   "releasedAt": "2026-10-02T14:00:00Z"
+  },
+  {
+   "id": "game-booster",
+   "name": "Ophelia Game Booster",
+   "tagline": "RAM boost, FPS overlay & game launcher — now with self-updates (Ophelia Update Center)",
+   "description": "A game booster that never lies: RAM freed is the actual availMem before/after delta, kill counts are what the OS actually did, battery temp comes from the real battery broadcast. Game detection with a manual add-any-app grid, one-tap BOOST (killBackgroundProcesses sweep with a whitelist), live RAM ring, DND-on-launch with auto-revert, per-game session tracking via usage access, a draggable FPS overlay (green/amber/red), Balanced/Performance/Battery profiles, and post-session report cards. 22 unit tests.",
+   "packageName": "com.deadlockstudio.gamebooster",
+   "versionName": "1.0.2",
+   "versionCode": 3,
+   "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/game-booster-v1.0.2.apk",
+   "sha256": "0ddb452eee220d0361edea6d93106c0c3ba255e92b78d0c0d309ef02c7a55df8",
+   "sizeBytes": 8102120,
+   "changelog": [
+    {
+     "version": "1.0.2",
+     "date": "2026-10-13",
+     "notes": [
+      "FPS overlay no longer runs usage-stats queries on the UI thread (jank fix)."
+     ]
+    },
+    {
+     "version": "1.0.1",
+     "date": "2026-10-02",
+     "notes": [
+      "Ophelia Update Center: Game Booster now checks for updates by itself and prompts you — sha-256 verified in-app download",
+      "v1 + v2 signature schemes — install issues fixed on some devices",
+      "The home header now shows the live installed version"
+     ]
+    },
+    {
+     "version": "1.0.0",
+     "date": "2026-10-02",
+     "notes": [
+      "Brand-new app in the Ophelia family",
+      "BOOST with real before/after RAM delta — no fake numbers",
+      "Draggable FPS overlay + DND on launch (auto-revert) + session tracking",
+      "3 profiles, whitelist + hidden-list managers, report cards",
+      "Every permission gated with an honest explainer card"
+     ]
+    }
+   ],
+   "releasedAt": "2026-10-13T00:00:00Z"
+  },
+  {
+   "id": "fit",
+   "name": "Ophelia Fit",
+   "tagline": "Gym logger, GPS run tracker & Tabata timer — now with self-updates (Ophelia Update Center)",
+   "description": "Everything fitness in one dark colorful app: an 85-exercise library with cues, a routine builder with an active set-by-set logger (rest timer with beeps, last-session hints), a GPS run tracker (distance/pace/kcal, pause & resume, live stats) in a proper foreground service, a hardware step counter with daily goal ring and weekly bars, a full Tabata/HIIT timer with presets, weekly volume charts, streaks, Epley 1RM estimates, a body-weight log with trend chart and complete JSON export. kg/lb units. 50 unit tests over the math.",
+   "packageName": "com.deadlockstudio.fit",
+   "versionName": "1.0.2",
+   "versionCode": 3,
+   "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/fit-v1.0.2.apk",
+   "sha256": "df785ffa14507e1af8063829fc3d6bc51c3f8a0e39effff02a68a53beacfebd5",
+   "sizeBytes": 8088615,
+   "changelog": [
+    {
+     "version": "1.0.2",
+     "date": "2026-10-13",
+     "notes": [
+      "Rest countdown ring now sweeps for the whole rest, not just the last second.",
+      "A corrupt/hand-edited sessions file can no longer crash the history screens (dates clamped)."
+     ]
+    },
+    {
+     "version": "1.0.1",
+     "date": "2026-10-02",
+     "notes": [
+      "Ophelia Update Center: a silent update check on open plus a 'Check for updates' row in the More tab — downloads are sha-256 verified in-app",
+      "v1 + v2 signature schemes — install issues fixed on some devices",
+      "Every version label in the app now reads the real installed version"
+     ]
+    },
+    {
+     "version": "1.0.0",
+     "date": "2026-10-02",
+     "notes": [
+      "Brand-new app in the Ophelia family",
+      "85-exercise library, routine builder, active logger with rest timer",
+      "GPS run tracker + step counter + Tabata/HIIT timer",
+      "Volume charts, streaks, Epley PRs, body log, JSON export",
+      "kg/lb units, colorful dark Ophelia theme"
+     ]
+    }
+   ],
+   "releasedAt": "2026-10-13T00:00:00Z"
+  }
+ ]
 }

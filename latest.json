@@ -1,22 +1,20 @@
 {
-  "versionCode": 18,
-  "versionName": "2.2.3",
-  "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/clone-by-ophelia-v2.2.3.apk",
-  "sha256": "ebbe51a14e14fa21310d1b5676e97198263afe86a54ab1da3fecdaa23ae2ba11",
+  "versionCode": 19,
+  "versionName": "2.2.4",
+  "apkUrl": "https://raw.githubusercontent.com/Itz-Subhu-Jaat/clone-by-ophelia-updates/main/apk/clone-by-ophelia-v2.2.4.apk",
+  "sha256": "89d3eb4e86b4c47fb071d88658bdae45c3cf74de2605032e72b4b48179a93c7f",
   "switcherVersion": 6,
   "releaseNotes": [
-    "NEW: IMAGE CLICKER — teach your phone to click by picture, PC-style. Open the new IMAGE CLICKER card on the cloner home: record your taps live, or drag a box around any button in a screenshot and the clicker learns it (image recognition, works even if the button moves). Build sequences: tap here, wait, swipe, IF the image appears tap it, loop forever with random intervals. A tiny control pill shows while it runs (drag it, tap to expand play/pause/stop) — nothing floats when you're not running anything.",
-    "SWITCHER v6 — DISCORD ONLY, YOUR WAY: the always-visible floating ⇄ button is gone (it irritated). In Discord clones you now switch accounts by HOLDING your profile tab (bottom-right, ~half a second) — or tap the quiet top notification's ⇄ Switch account action while the clone is open. Same quick menu as before: switch accounts, set status, update the clone.",
-    "OTHER APPS (Roblox, WhatsApp, etc.): their own built-in account switchers stay untouched — Ophelia no longer adds anything inside non-Discord clones. If an older clone still has the floating button, Update-all below removes it.",
-    "UPDATE-ALL now also fixes old clones: Discord clones get the new hold + notification switcher, and clones of other apps get the old floating button REMOVED — in place, logins and data untouched.",
-    "IF PLAY PROTECT BLOCKS THIS UPDATE (\u201cHarmful app blocked\u201d, no Install-anyway): Play Store \u2192 your profile picture \u2192 Play Protect \u2192 gear \u2192 turn OFF \u201cScan apps with Play Protect\u201d \u2192 tap Update again. That verdict is Google's server-side call on apps that re-sign other apps (the original App Cloner has been flagged the same way for years) — nothing in the app changed to cause it. You can turn scanning back on afterwards."
+    "IMAGE CLICKER STABILITY: the crash on start (unguarded MediaProjection start-up) is fixed — any consent/OEM error now shows a retry state instead of killing the app. The 1080p stride bug that made the matcher see garbage frames is fixed too, so IF-IMAGE steps actually work on real screens. The pill can no longer strand; the engine stops honestly if the accessibility or capture service dies mid-run.",
+    "The Image Clicker is ALSO its own app now — Ophelia Image Clicker 1.0.0 (see the family list) with the same vision engine, plus a dedicated UI. If you only want the clicker, you no longer need the cloner.",
+    "TWO MORE NEW FAMILY APPS: Ophelia Browser 1.0.0 (Ophelia Search, tabs, add-ons + userscripts, ad-block, night mode) and Ophelia Auto Clicker 1.0.0 (the OP Auto Clicker classic — crosshair targets, intervals, swipes, floating bubble).",
+    "Family fix wave installed in place (same signing keys, update right over): pic-hider 2.0.2 (vault atomic saves, duress fix, big-video streaming), easypair 1.6.3 (socket leaks + timeouts + DoS caps), cool-widgets 2.0.2 (battery drain fix), junk-cleaner 2.0.2 (safety rails), fit 1.0.2, game-booster 1.0.2.",
+    "If Play Protect blocks the update (Harmful app blocked, no Install-anyway): Play Store, profile, Play Protect, gear, turn OFF Scan apps with Play Protect, tap Update again (Google's server-side verdict on re-signing cloners — the original App Cloner is flagged the same way). You can turn scanning back on afterwards."
   ],
   "switcherReleaseNotes": [
-    "dex v6 — DISCORD-ONLY: the v5 draggable bubble is retired. Entry points: (a) profile-tab hold zone (400ms, replay-safe), (b) quiet persistent notification (IMPORTANCE_LOW, alive only while the clone is on screen, tap or its action opens the quick menu). Non-Discord clones get NO switcher dex at all.",
-    "OpheliaSwitchNotification: framework-only APIs (no androidx in the dex), RECEIVER_EXPORTED on 33+, dynamic receiver resolves the current activity; notification channel 'ophelia_switcher', silent, no badge.",
-    "Update engine unchanged (feed check + source-package meta-data); DEX_VERSION 5→6; selfcheck now asserts OpheliaSwitchNotification + ophelia.switcher.OPEN present AND OpheliaBubble absent."
+    "dex v6 unchanged in this release (crash fixes live in the cloner app + the new standalone Image Clicker)."
   ],
-  "date": "2026-10-10",
-  "releasedAt": "2026-10-10T12:10:00Z",
-  "apkSize": 7452309
+  "date": "2026-10-13",
+  "releasedAt": "2026-10-13T04:30:00Z",
+  "apkSize": 7452311
 }
