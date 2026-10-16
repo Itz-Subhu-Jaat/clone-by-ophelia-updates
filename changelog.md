@@ -172,3 +172,27 @@ download can never be installed. All 8 APKs are signed with BOTH v1+v2 schemes n
 ## v1.9.0+ — companion releases — 2026-10-01 (round 12)
 
 - **Junk Cleaner v1.4.0 — SIMILAR VIDEOS** (Storage): the photo trick, one level up — **re-sent and re-encoded copies of the SAME video clip** are the heavy hitters of storage waste, and now they group up. Four **keyframes are sampled across each video's timeline** (at 1/5, 2/5, 3/5 and 4/5 of the runtime) and each frame is fingerprinted with the proven photo pipeline (aHash + dHash over box-downsampled luminance). Two clips group when their **durations agree** (±1.5 s or ±8 %, whichever is larger — a re-encode keeps length, a trimmed re-cut has a genuinely different one and is deliberately left alone) AND at least **3 of the 4 frames find a matching counterpart in the other video, in BOTH directions** (the both-ways rule stops a static/slideshow clip from swallowing a real edit that happens to share one frame). Frames match against ANY slot — keyframes can sit a beat differently after a re-encode — and **flat frames (black screens) are dropped** from fingerprints, so two clips that merely open on black can never false-group. Keep rule identical to photos: **keeper = the largest file** (the least-compressed original — WhatsApp shrinks, the original is bigger). Decoding stays fast on real libraries: `getScaledFrameAtTime` decodes straight to thumbnail size (a 4K clip never materialises a full-res frame), the newest 600 videos are walked with live progress ("Fingerprinting 40/812 videos…"), and an empty DURATION column on old databases is healed from MediaMetadataRetriever. Deletion is double-confirmed as always: the app's dialog, then **Android's own system delete sheet** on API 30+ (createDeleteRequest); API 26-29 uses the sanctioned resolver path. 20 new pure-JVM tests (55 total green): duration tolerance windows, re-encode bit-flip tolerance, one-way-agreement rejection, keyframe misalignment, transitive re-send chains through three chats, shuffled-input determinism, keeper selection, effective-duration fallback, and the both-thresholds frame rule.
+
+## Round 18 — 2026-10-17
+
+### Ophelia Browser 1.0.1
+- Contrast overhaul: the old dark palette rendered cards, buttons and the
+  omnibox at a ~4-RGB-unit difference from the background (effectively
+  invisible). All panels now use a real elevated tone + 1px outlines.
+- The keyboard's Search/Enter key now actually submits in the omnibox,
+  start-page search, find-in-page and dialogs (was a dead key everywhere).
+- Chrome Web Store support (CRX-lite): "Add to Chrome" now works — Ophelia
+  forces the desktop UA on the store, hooks the install button, downloads
+  the CRX from the public endpoint and injects the extension's content
+  scripts + CSS on every matching site. Managed in Add-ons → Chrome Web
+  Store. 15 new JVM tests (132 total).
+
+### Ophelia Auto Clicker 1.0.1
+- OP-Auto-Clicker overlay-first flow: START now hides the app and shows the
+  floating bubble + crosshair directly on the target screen; drag the
+  crosshair where you want clicks, tap the bubble to run.
+- Floating config menu (long-press the bubble): interval steppers
+  (H/M/S/mS), repeat policy, tap⇄swipe, swipe duration, add/enable/remove
+  targets, open app, exit.
+- A crosshair is auto-seeded at screen center when none exists; first-arm
+  tip on the bubble HUD; ARMED phase is now a real state.
